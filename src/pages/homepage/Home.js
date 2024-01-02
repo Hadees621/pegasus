@@ -1,10 +1,13 @@
 import React from 'react'
+import Footer from '../../components/Footer'
+
 
 const Home = () => {
     return (
-        <div>
-            <h1>HOME</h1>
-        </div>
+        <>
+            {/* <h1>HOME</h1> */}
+            <Footer />
+        </>
     )
 }
 
