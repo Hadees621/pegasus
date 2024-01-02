@@ -2,14 +2,14 @@ import React from "react";
 import { FoooterSocialMediaLinks, belowFooter, browsers, imprints, usefulLinks } from "./Utils";
 const Footer = () => {
 
-    const renderList = (title = 0, items) => (
+    const renderList = (title, items) => (
         <div>
             {title && (
-                <h2 className="mb-6 text-sm font-semibold text-[#B6B4B9]">
+                <h2 className="mb-6 text-sm font-semibold text-[#B6B4B9] w-full flex flex-col items-center">
                     {title}
                 </h2>
             )}
-            <ul className="text-[#F7FFFF] font-medium">
+            <ul className="text-[#F7FFFF] font-medium w-full flex flex-col items-center">
                 {items.map((item, index) => (
                     <li key={index} className="mb-4">
                         <a href="#" className="">
@@ -24,27 +24,28 @@ const Footer = () => {
 
     return (
         <footer className="bg-[#0F1824]">
-            <div className="mx-auto w-full max-w-screen-2xl p-4 py-32 lg:py-">
+            <div className="mx-auto w-full max-w-screen-2xl 320:py-10 py-32">
                 <div className="md:flex md:justify-between md:items-start">
-                    <div className="grid grid-cols-2 sm:gap-6 sm:grid-cols-3 px-12">
+
+                    <div className="grid grid-cols-1 320:gap-12 320:justify-items-center">
                         {renderList("Useful Links", usefulLinks)}
                         {renderList("Browsers", browsers)}
                         {renderList("Imprints", imprints)}
                     </div>
-                    <div class="sm:flex sm:items-center sm:justify-between">
-                        <div className="flex flex-col justify-center">
-                            <p className="text-[#B6B4B9] mb-4 mx-1 text-[20px]">Follow us </p>
-                            <div class="flex mt-4 sm:justify-center sm:mt-0 gap-10">
-                                {FoooterSocialMediaLinks.map((link, index) => (
-                                    <a href={link.href} className="text-white " key={index}>
-                                        <svg className={`w-10 h-10 ${link.class}`} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d={link.path} />
-                                        </svg>
-                                    </a>
-                                ))}
-                            </div>
+                    
+                    <div className="flex flex-col justify-center 320:items-center 320:mt-8">
+                        <p className="text-[#B6B4B9] mb-4 mx-1 text-[20px]">Follow us </p>
+                        <div class="flex mt-4 sm:justify-center sm:mt-0 gap-10">
+                            {FoooterSocialMediaLinks.map((link, index) => (
+                                <a href={link.href} className="text-white" key={index}>
+                                    <svg className={`320:w-[28px] 425:w-[40px] ${link.class}`} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d={link.path} />
+                                    </svg>
+                                </a>
+                            ))}
                         </div>
                     </div>
+
                 </div>
 
                 <div className="md:flex md:justify-between md:items-start mt-10">
@@ -56,8 +57,8 @@ const Footer = () => {
                     </div>
                     <div class="sm:flex sm:items-center sm:justify-between">
                         <div className="flex mt-4 sm:justify-center sm:mt-0 gap-7">
-                            <img src="assests\footer\logo.jpg" alt="First Logo" className="w-40 h-24" />
-                            <img src="assests\footer\logo.jpg" alt="Second Logo" className="w-40 h-24" />
+                            <img src="assests\footer\logo.jpg" alt="First Logo" className="w-20 h-20" />
+                            <img src="assests\footer\logo.jpg" alt="Second Logo" className="w-20 h-20" />
                         </div>
                     </div>
                 </div>
