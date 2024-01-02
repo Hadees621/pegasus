@@ -68,8 +68,8 @@ const Footer = () => {
                 {/* line */}
                 <hr className="my-9 border-gray-200 lg:my-8" />
 
-                <div className="flex flex-col gap-10 1024:flex-row justify-between border w-full 1024:flex-1">
-                    <div className="text-[15px] text-[#B6B4B9] text-center 1024:text-start 1024:w-max border">
+                <div className="flex flex-col gap-10 1024:flex-row justify-between  w-full 1024:flex-1">
+                    <div className="text-[15px] text-[#B6B4B9] text-center 1024:text-start 1024:w-max ">
                         © 1999 - 2020 Pegasus Elliot Mackenzie Publishers Ltd
                     </div>
                     <div className="flex 320:flex-col 1024:flex-row gap-5 text-center">
