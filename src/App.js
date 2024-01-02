@@ -1,10 +1,18 @@
-import React from 'react';
-import './App.css';
+import "./App.css";
+import React from "react";
+import Home from "./pages/homepage/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="bg-blue-500 text-white p-80 text-lg">
-      Hello, Tailwind CSS!
+    <div className="app">
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/sign-in" element={<Login />} /> */}
+          {/* <Route path="/sign-up" element={<Register />} /> */}
+        </Routes>
+      </Router>
     </div>
   );
 }
