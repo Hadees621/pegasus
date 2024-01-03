@@ -27,9 +27,9 @@ const Home = () => {
 
                 </div>
 
-                <div className="flex items-center py-8">
+                <div className="flex items-center py-8 mt-6">
                     <div className="flex-grow border-t border-[#8F9191]"></div>
-                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay">Take a look at our new releases</div>
+                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Take a look at our new releases</div>
                     <div className="flex-grow border-t border-[#8F9191]"></div>
                 </div>
 
@@ -37,12 +37,24 @@ const Home = () => {
                     {bookData.map((book, index) => (
                         <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
                             <img className="320:h-[420px] w-full 1024:h-[300px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
-                            <h3 className="text-lg font-bold">{book.title}</h3>
-                            <p className="text-sm text-gray-600">{book.author}</p>
+                            <div className='w-full text-start'>
+                                <h3 className="text-lg font-bold font-fairplay">{book.title}</h3>
+                                <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
+                <p className="text-center mt-8">
+                    <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
+                </p>
 
+
+                <div className="flex items-center py-8 mt-6">
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">The latest features
+                    </div>
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                </div>
             </div>
 
             {/* <Footer /> */}
