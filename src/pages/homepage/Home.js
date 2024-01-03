@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../../components/Footer'
-import { bookData } from './utils/utils'
+import { articleData, audioBooksData, bookData } from './utils/utils'
 
 
 const Home = () => {
@@ -44,10 +44,10 @@ const Home = () => {
                         </div>
                     ))}
                 </div>
+
                 <p className="text-center mt-8">
                     <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
                 </p>
-
 
                 <div className="flex items-center py-8 mt-6">
                     <div className="flex-grow border-t border-[#8F9191]"></div>
@@ -55,9 +55,63 @@ const Home = () => {
                     </div>
                     <div className="flex-grow border-t border-[#8F9191]"></div>
                 </div>
+
+                <div class="bg-[#EDEFF1] p-8 320:p-0">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/2 p-4">
+                            <img class="w-full h-auto" src="assests\section\flowerss.png" alt="Image" />
+                        </div>
+
+                        <div class="md:w-1/2 p-4 flex flex-col 1024:justify-center">
+                            <p className='text-sm mb-8 2560:text-lg'>Blog category — 00 Month, 2022</p>
+                            <h2 class="text-2xl 320:text-xl font-bold mb-2 2560:text-3xl font-fairplay">Article Title</h2>
+                            <p class="text-sm 320:text-xs 1440:text-base 2560:text-xl text-gray-700 mb-4 font-roboto pr-3 2560:mt-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+                                commodo consequat</p>
+                            <button className="bg-[#031428] text-base text-white px-4 rounded-3xl w-[130px] h-8 font-fairplay 2560:mt-10">Read more</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mt-8'>
+                    {articleData.map((article, index) => (
+                        <div key={index} className="m-4 p-4 text-center">
+                            <div className='flex justify-between py-4'>
+                                <h3 className="text-lg font-fairplay">{article.category}</h3>
+                                <h3 className="text-lg font-fairplay">{article.date}</h3>
+                            </div>
+                            <div className='w-full'>
+                                <img className="w-full object-cover" src={article.imageSrc} alt={`Section ${index + 1} Image`} />
+                            </div>
+                            <div className='w-full text-start'>
+                                <h3 className="text-3xl font-bold font-fairplay pt-4">{article.title}</h3>
+                                <p className="text-sm text-[#5D6162] font-roboto py-4">{article.content}</p>
+                                <a href="#" className="text-[#5D6162] text-lg font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162] mt-3">Read more</a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="flex items-center py-8 mt-6">
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Have a listen to our audio books</div>
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                </div>
+
+                <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
+                    {audioBooksData.map((book, index) => (
+                        <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
+                            <img className="320:h-[300px] w-full 1024:h-[200px] 2560:h-[320px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                            <div className='w-full text-start'>
+                                <h3 className="text-lg font-bold font-fairplay mt-8">{book.title}</h3>
+                                <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
 
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }
