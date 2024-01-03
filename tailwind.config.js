@@ -13,6 +13,10 @@ module.exports = {
 				'2000': '2000px',
 				'2560': '2560px',
 			},
+			fontFamily: {
+				roboto: ['Roboto-Regular', 'sans-serif'],
+				fairplay: ['Fair Play Display', 'serif'],
+			},
 		},
 	},
 	plugins: [],

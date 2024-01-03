@@ -5,7 +5,7 @@ const Footer = () => {
     const renderList = (title, items) => (
         <div>
             {title && (
-                <h2 className="mb-6 text-sm font-semibold text-[#B6B4B9] w-full flex flex-col items-center 1024:items-start">
+                <h2 className="mb-6 text-sm font-semibold font-roboto text-[#B6B4B9] w-full flex flex-col items-center 1024:items-start">
                     {title}
                 </h2>
             )}
@@ -55,21 +55,22 @@ const Footer = () => {
 
                 <div className="mt-10 px-2 1024:flex items-center 1024:w-full 1024:flex-1">
                     <div className="w-full flex flex-col gap-5 320:text-center 1024:items-start">
-                        <p className="text-[#B6B4B9] text-lg">Sheraton House, Castle Park, Cambridge, CB3 0AX, United Kingdom
+                        <p className="text-[#B6B4B9] text-lg font-roboto">Sheraton House, Castle Park, Cambridge, CB3 0AX, United Kingdom
                         </p>
-                        <p className="text-[#B6B4B9] text-lg">T: 01223 370012 | F: 01223 370040 | E: editors@pegasuspublishers.com
+                        <p className="text-[#B6B4B9] text-lg font-roboto">T: 01223 370012 | F: 01223 370040 | E: editors@pegasuspublishers.com
                         </p>
                     </div>
                     <div className="flex flex-col gap-6 py-5 320:items-center 768:flex-row 768:justify-center 1024:items-end 1024:mr-10">
-                        <img src="assests\footer\logo.jpg" alt="First Logo" className="w-40 h-24" />
-                        <img src="assests\footer\logo.jpg" alt="Second Logo" className="w-40 h-24" />
+                        <img src="assests\footer\f1.png" alt="First Logo" className="w-40 h-24" />
+                        <img src="assests\footer\f2.png" alt="Second Logo" className="w-40 h-24" />
                     </div>
                 </div>
-                {/* line */}
-                <hr className="my-9 border-gray-200 lg:my-8" />
 
-                <div className="flex flex-col gap-10 1024:flex-row justify-between  w-full 1024:flex-1">
-                    <div className="text-[15px] text-[#B6B4B9] text-center 1024:text-start 1024:w-max ">
+                {/* line */}
+                <hr className="my-9 border-[#FFFFFF] lg:my-8 border w-full" />
+
+                <div className="flex flex-col gap-10 1024:flex-row justify-between  w-full 1024:flex- 1024:px-3">
+                    <div className="text-[15px] text-[#B6B4B9] text-center 1024:text-start 1024:w-max font-fairplay">
                         © 1999 - 2020 Pegasus Elliot Mackenzie Publishers Ltd
                     </div>
                     <div className="flex 320:flex-col 1024:flex-row gap-5 text-center">
