@@ -1,7 +1,18 @@
 import React from 'react'
 import Footer from '../../components/Footer'
-import { articleData, audioBooksData, bookData } from './utils/utils'
+import { articleData, audioBooksData, bookData, imprintData, provkingNovelData } from './utils/utils'
 
+const ImprintSection = ({ title, content, imageSrc }) => (
+    <div className="m-4 p-10 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
+        <div className="w-full">
+            <img className="h-[100px]" src={imageSrc} alt="Section Image" />
+        </div>
+        <div className="w-full text-start">
+            <h3 className="text-3xl font-bold font-fairplay pt-4 pl-0">{title}</h3>
+            <p className="text-base text-[#2A2E30] font-roboto py-6 tracking-normal leading-6">{content}</p>
+        </div>
+    </div>
+);
 
 const Home = () => {
     return (
@@ -109,6 +120,50 @@ const Home = () => {
                         </div>
                     ))}
                 </div>
+
+                <p className="text-center mt-8">
+                    <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
+                </p>
+
+                <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-4 mt-8'>
+                    <div className="m-4 p-4 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
+                        <div className='w-full text-start mt-10'>
+                            <h3 className="text-3xl font-fairplay pt-4">Our imprints</h3>
+                            <p className="text-sm text-[#5D6162] font-roboto py-4 pr-4 text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">Explore</button>
+                        </div>
+                    </div>
+
+                    {imprintData.map((imprint, index) => (
+                        <ImprintSection key={index} {...imprint} />
+                    ))}
+                </div>
+
+                <div className="flex items-center py-8 mt-6">
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Thought provoking novels
+                    </div>
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                </div>
+
+                <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
+                    {provkingNovelData.map((book, index) => (
+                        <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
+                            <img className="320:h-[420px] w-full 1024:h-[300px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                            <div className='w-full text-start'>
+                                <h3 className="text-lg font-bold font-fairplay">{book.title}</h3>
+                                <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <p className="text-center mt-8">
+                    <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
+                </p>
+
+
+
             </div>
 
             <Footer />

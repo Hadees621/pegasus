@@ -39,3 +39,30 @@ export const audioBooksData = [
     { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/audio1.png" },
     { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/audio1.png" },
 ];
+
+export const provkingNovelData = [
+    { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/provoking1.png" },
+    { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/provoking1.png" },
+    { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/provoking1.png" },
+    { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/provoking1.png" },
+    { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/provoking1.png" },
+    { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/provoking1.png" },
+];
+
+export const imprintData = [
+    {
+        title: "Vanguard Press",
+        content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        imageSrc: "assests/section/flag.png",
+    },
+    {
+        title: "Vanguard Press",
+        content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        imageSrc: "assests/section/flag.png",
+    },
+    {
+        title: "Vanguard Press",
+        content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        imageSrc: "assests/section/flag.png",
+    },
+];
