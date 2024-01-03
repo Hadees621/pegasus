@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../../components/Footer'
-import { articleData, audioBooksData, bookData, imprintData, provkingNovelData } from './utils/utils'
+import { articleData, audioBooksData, bookData, fantasyReadData, imprintData, provkingNovelData } from './utils/utils'
 
 const ImprintSection = ({ title, content, imageSrc }) => (
     <div className="m-4 p-10 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
@@ -162,9 +162,77 @@ const Home = () => {
                     <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
                 </p>
 
+                {/* <div className="flex items-center py-8 mt-6">
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Author interviews
+                    </div>
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                </div> */}
+
+                {/* <div className='flex bg-[#0F1824] h-[730px] justify-center items-center px-10'>
+
+                    <div className='w-1/3 h-[640px]'>
+                        <div className='w-full text-start mt-10 py-8 pr-4'>
+                            <h3 className="text-3xl font-fairplay pt-4 text-[#B79248]">Francis James | Author Interview for
+                                The Mad Hatter's Tea Party
+                            </h3>
+                            <p className="text-lg text-white font-roboto py-4 pr-10 text-start">This is a novel about relationships, fears and feelings as it
+                                traverses the sometimes long road to good mental health. A
+                                must read for everyone interested in mental illness - that is, all
+                                of us!</p>
+                            <button className="mt-6 bg-white text-lg text-black px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay mb-4">View more</button>
+                            <div className='flex gap-8 m-8'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g transform="translate(24 0) scale(-1 1)"><path fill="none" stroke="white" stroke-width="2" d="m7 2l10 10L7 22" /></g></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-width="2" d="m7 2l10 10L7 22" /></svg>
+                                <p className='text-white'>
+                                    01 / 03
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='w-2/3 h-[640px]'>
+                        <img className="object-cover" src="assests/section/youtube.png" alt={`Book Image`} />
+                    </div>
+                </div> */}
 
 
+                <div className="flex items-center py-8 mt-6">
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Fantastic fantasy reads
+                    </div>
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                </div>
+
+                <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
+                    {fantasyReadData.map((book, index) => (
+                        <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
+                            <img className="320:h-[420px] w-full 1024:h-[300px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                            <div className='w-full text-start'>
+                                <h3 className="text-lg font-bold font-fairplay">{book.title}</h3>
+                                <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <p className="text-center mt-8">
+                    <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
+                </p>
+
+                <div class="relative m-4 p-4 bg-cover bg-center h-[580px] mt-20" style={{ backgroundImage: `url('assests/section/section6.png')` }}>
+                    <div class="absolute bottom-8 left-8 p-4 text-white">
+                        <h3 class="text-[48px] font-fairplay text-black">Submit online
+                        </h3>
+                        <p class="text-base text-black">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
+                            .</p>
+                        <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">Explore</button>
+
+                    </div>
+                </div>
             </div>
+
+
 
             <Footer />
         </>

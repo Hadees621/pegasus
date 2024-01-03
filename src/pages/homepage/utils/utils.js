@@ -66,3 +66,12 @@ export const imprintData = [
         imageSrc: "assests/section/flag.png",
     },
 ];
+
+export const fantasyReadData = [
+    { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/section.png" },
+    { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/section.png" },
+    { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/section.png" },
+    { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/section.png" },
+    { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/section.png" },
+    { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/section.png" },
+];
