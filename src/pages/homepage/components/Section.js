@@ -1,5 +1,5 @@
 import React from 'react'
-import { articleData, audioBooksData, bookData, fantasyReadData, imprintData, provkingNovelData } from './../utils/utils'
+import { aboutAuthorData, articleData, audioBooksData, bookData, fantasyReadData, imprintData, provkingNovelData } from './../utils/utils'
 
 const ImprintSection = ({ title, content, imageSrc }) => (
     <div className="m-4 p-10 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
@@ -162,39 +162,59 @@ const Section = () => {
                 </p>
 
                 {/* <div className="flex items-center py-8 mt-6">
-    <div className="flex-grow border-t border-[#8F9191]"></div>
-    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Author interviews
-    </div>
-    <div className="flex-grow border-t border-[#8F9191]"></div>
-</div> */}
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Author interviews
+                    </div>
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                </div>
 
-                {/* <div className='flex bg-[#0F1824] h-[730px] justify-center items-center px-10'>
+                <div className='flex bg-[#0F1824] h-[730px] justify-center items-center px-10'>
 
-    <div className='w-1/3 h-[640px]'>
-        <div className='w-full text-start mt-10 py-8 pr-4'>
-            <h3 className="text-3xl font-fairplay pt-4 text-[#B79248]">Francis James | Author Interview for
-                The Mad Hatter's Tea Party
-            </h3>
-            <p className="text-lg text-white font-roboto py-4 pr-10 text-start">This is a novel about relationships, fears and feelings as it
-                traverses the sometimes long road to good mental health. A
-                must read for everyone interested in mental illness - that is, all
-                of us!</p>
-            <button className="mt-6 bg-white text-lg text-black px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay mb-4">View more</button>
-            <div className='flex gap-8 m-8'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g transform="translate(24 0) scale(-1 1)"><path fill="none" stroke="white" stroke-width="2" d="m7 2l10 10L7 22" /></g></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-width="2" d="m7 2l10 10L7 22" /></svg>
-                <p className='text-white'>
-                    01 / 03
+                    <div className='w-1/3 h-[640px]'>
+                        <div className='w-full text-start mt-10 py-8 pr-4'>
+                            <h3 className="text-3xl font-fairplay pt-4 text-[#B79248]">Francis James | Author Interview for
+                                The Mad Hatter's Tea Party
+                            </h3>
+                            <p className="text-lg text-white font-roboto py-4 pr-10 text-start">This is a novel about relationships, fears and feelings as it
+                                traverses the sometimes long road to good mental health. A
+                                must read for everyone interested in mental illness - that is, all
+                                of us!</p>
+                            <button className="mt-6 bg-white text-lg text-black px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay mb-4">View more</button>
+                            <div className='flex gap-8 m-8'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g transform="translate(24 0) scale(-1 1)"><path fill="none" stroke="white" stroke-width="2" d="m7 2l10 10L7 22" /></g></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-width="2" d="m7 2l10 10L7 22" /></svg>
+                                <p className='text-white'>
+                                    01 / 03
 
-                </p>
-            </div>
-        </div>
-    </div>
-    <div className='w-2/3 h-[640px]'>
-        <img className="object-cover" src="assests/section/youtube.png" alt={`Book Image`} />
-    </div>
-</div> */}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='w-2/3 h-[640px]'>
+                        <img className="object-cover" src="assests/section/youtube.png" alt={`Book Image`} />
+                    </div>
+                </div> */}
 
+                <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mt-8 px-20 320:px-0 border gap-4 768:p-10 1024:p-5'>
+                    {aboutAuthorData.map((author, index) => (
+                        <div
+                            key={index}
+                            className="m-4 320:m-0 320:p-3 768:p-10 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[450px] 1024:h-[550px] 1440:h-[520px] 2560:h-[450px]"
+                        >
+                            <div className="w-full text-start p-10 320:p-0">
+                                <h3 className="text-2xl font-normal font-fairplay text-[#B79248] underline">{author.name}</h3>
+                                <h3 className="text-2xl font-normal font-fairplay pt-1 text-[#B79248] underline">{author.title}</h3>
+                                <p className="text-base text-[#2A2E30] font-fairplay py-6 tracking-normal">{author.message}</p>
+                                <p className="text-base text-[#2A2E30] font-fairplay py-4 tracking-normal">{author.paragraph}</p>
+                                {author.button && (
+                                    <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">
+                                        Read more
+                                    </button>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+                </div>
 
                 <div className="flex items-center py-8 mt-6">
                     <div className="flex-grow border-t border-[#8F9191]"></div>
@@ -226,9 +246,9 @@ const Section = () => {
                         <p class="text-base text-black">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
                             .</p>
                         <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">Explore</button>
-
                     </div>
                 </div>
+
             </div>
         </>
     )

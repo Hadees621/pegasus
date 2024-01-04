@@ -75,3 +75,33 @@ export const fantasyReadData = [
     { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/section.png" },
     { title: "Book Title ", author: "Author Name", imageSrc: "assests/section/section.png" },
 ];
+
+export const aboutAuthorData = [
+    {
+        name: "Author name",
+        title: "Book title",
+        message: "What would you say is the underlying message of the story?",
+        paragraph: `“That you are not defined by others or external factors. That you are free, and have the power to create your own reality at any given moment.And to shine your light as brightly as possible.”`,
+        button: true
+    },
+    {
+        name: "Author name",
+        title: "Book title",
+        message: "What would you say is the underlying message of the story?",
+        paragraph: `I regard Hearts Set Free as a historical novel set in a modern
+        time frame. I think it should appeal to women twenty years
+        and upwards, particularly those who enjoy novels set in the
+        past, especially during the era of Jane Austen.`,
+        button: false
+    },
+    {
+        name: "Author name",
+        title: "Book title",
+        message: "What would you say is the underlying message of the story?",
+        paragraph: `“Ah, a good question!I think the first book of any new genre is
+        the difficult one as there is so much to learn.I find it easier to
+        write non- fiction as I just have to share what I have learnt but
+        it’s far more fun to write fiction!”`,
+        button: false
+    },
+];
