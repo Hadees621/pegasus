@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../../components/Footer'
 import { articleData, audioBooksData, bookData, fantasyReadData, imprintData, provkingNovelData } from './utils/utils'
+import Header from '../../components/Header';
 
 const ImprintSection = ({ title, content, imageSrc }) => (
     <div className="m-4 p-10 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
@@ -17,6 +18,7 @@ const ImprintSection = ({ title, content, imageSrc }) => (
 const Home = () => {
     return (
         <>
+            <Header />
             <div className='w-full justify-center 1024:px-10 320:p-5 1440:px-36 2560:px-96'>
                 <div className='grid 1024:grid-cols-3 320:grid-cols-1 gap-12 1024:gap-4'>
 
