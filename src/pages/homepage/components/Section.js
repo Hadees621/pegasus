@@ -245,9 +245,9 @@ const Section = () => {
 
                 <div class="relative m-4 p-4 bg-cover bg-center h-[580px] mt-20" style={{ backgroundImage: `url('assests/section/section6.png')` }}>
                     <div class="absolute bottom-8 left-8 p-4 text-white">
-                        <h3 class="text-[48px] font-fairplay text-black">Submit online
+                        <h3 class="text-[48px] font-fairplay text-white 1024:text-black">Submit online
                         </h3>
-                        <p class="text-base text-black">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
+                        <p class="text-base text-white 1024:text-black">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
                             .</p>
                         <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">Explore</button>
                     </div>
@@ -262,8 +262,8 @@ const Section = () => {
 
                 <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mb-52 320:mb-16 gap-5'>
                     {Array.from({ length: 3 }, (_, index) => (
-                        <div key={index} className={`relative lg:${index !== 0 ? 'border-[#8F9191] border-l-[2px] pl-5' : ''}`}>
-                            <div className={`1440:m-4 p-4 320:p-0 320:m-0 text-center 1440:px-7`}>
+                        <div key={index} className={`relative ${index !== 0 ? '1024:border-[#8F9191] 1024:border-l-[2px] 1024:pl-5' : ''}`}>
+                            <div className={`1440:m-4 p-4 320:p-0 320:m-0 text-center 1440:px-2`}>
                                 <div className='w-full'>
                                     <img className="w-full object-cover" src="assests/section/events.png" alt={`Section Image`} />
                                 </div>
