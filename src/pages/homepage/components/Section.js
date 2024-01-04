@@ -16,7 +16,9 @@ const ImprintSection = ({ title, content, imageSrc }) => (
 const Section = () => {
     return (
         <>
+            <div className='h-[800px] bg-[#FEDFB9] 1440:mx-16 rounded-sm mb-10'> </div>
             <div className='w-full justify-center 1024:px-10 320:p-5 1440:px-36 2560:px-96'>
+
                 <div className='grid 1024:grid-cols-3 320:grid-cols-1 gap-12 1024:gap-4'>
 
                     <div className="w-full bg-white flex flex-col items-center p-5 1024:p-10  justify-center 1024:items-start">
