@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -78,14 +78,16 @@ const Header = () => {
                                 </g>
                             </svg>
                         </div>
-                        <button className="md:h-[60px] md:w-[200px] 1024:h-[40px] 1024:w-[140px] 1440:h-[50px] 1440:w-[170px] 2560:h-[60px] border 2560:w-[200px] border-[#B79248] rounded-full transition duration-300 ease-in-out hover:bg-[#B79248] ">
-                            <p className="text-[#B79248] hover:text-white text-lg 1024:text-base font-fairplay">Submit Online</p>
+                        <button className="md:h-[60px] md:w-[200px] 1024:h-[40px] 1024:w-[140px] 1440:h-[50px] 1440:w-[170px] 2560:h-[50px] border 2560:w-[200px] border-[#B79248] rounded-full transition duration-300 ease-in-out bg-transparent hover:bg-[#B79248] text-[#B79248] hover:text-white focus:outline-none text-lg 1024:text-base 2560:text-lg">
+                            Submit Online
                         </button>
                     </div>
                 </nav>
 
                 {isMenuOpen && (
-                    <div className="lg:hidden absolute top-[80px] right-0 bg-[#EAEBEE] w-64 p-4 border border-gray-300 mt-16 mr-6 transition-opacity ease-in-out duration-300">
+                    <div className="flex flex-col justify-center lg:hidden absolute top-[80px] right-0 bg-[#EAEBEE] w-64 p-4 border border-gray-300 mt-16 mr-4 transition-opacity ease-in-out duration-300">
+
+
                         <a href="#" className="block text-black mb-2">Books</a>
                         <a href="#" className="block text-black mb-2">Authors</a>
                         <a href="#" className="block text-black mb-2">About us</a>
@@ -123,16 +125,11 @@ const Header = () => {
                                     </g>
                                 </svg>
                             </div>
-                            <button className="md:h-[60px] md:w-[200px] border border-[#B79248] rounded-full transition duration-300 ease-in-out hover:bg-[#B79248] ">
-                                <p className="text-[#B79248] hover:text-white text-lg font-fairplay">Submit Online</p>
-                            </button>
                         </div>
 
-                        <button className="h-16 w-48 border border-[#B79248] rounded-full transition duration-300 ease-in-out bg-transparent hover:bg-[#B79248] text-[#B79248] hover:text-white focus:outline-none">
+                        <button className="mt-6 h-12 w-44 border border-[#B79248] rounded-full transition duration-300 ease-in-out bg-transparent hover:bg-[#B79248] text-[#B79248] hover:text-white focus:outline-none">
                             Submit Online
                         </button>
-
-
 
                     </div>
                 )}

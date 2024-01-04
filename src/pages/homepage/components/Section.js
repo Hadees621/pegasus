@@ -2,13 +2,13 @@ import React from 'react'
 import { aboutAuthorData, articleData, audioBooksData, bookData, fantasyReadData, imprintData, provkingNovelData } from './../utils/utils'
 
 const ImprintSection = ({ title, content, imageSrc }) => (
-    <div className="m-4 p-10 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
+    <div className="1024:m-1 1440:m-4 m-4 p-10 320:p-6 768:p-8 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
         <div className="w-full">
             <img className="h-[100px]" src={imageSrc} alt="Section Image" />
         </div>
         <div className="w-full text-start">
-            <h3 className="text-3xl font-bold font-fairplay pt-4 pl-0">{title}</h3>
-            <p className="text-base text-[#2A2E30] font-roboto py-6 tracking-normal leading-6">{content}</p>
+            <h3 className="1440:text-3xl text-3xl 1024:text-xl font-bold font-fairplay pt-4 pl-0">{title}</h3>
+            <p className="1440:text-base text-base 1024:text-sm text-[#2A2E30] font-roboto py-6 tracking-normal leading-6">{content}</p>
         </div>
     </div>
 );
@@ -125,9 +125,9 @@ const Section = () => {
                 </p>
 
                 <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-4 mt-8'>
-                    <div className="m-4 p-4 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
+                    <div className="1024:m-1 1440:m-4 m-4 p-4 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
                         <div className='w-full text-start mt-10'>
-                            <h3 className="text-3xl font-fairplay pt-4">Our imprints</h3>
+                            <h3 className="text-3xl font-fairplay pt-4 1024:text-2xl">Our imprints</h3>
                             <p className="text-sm text-[#5D6162] font-roboto py-4 pr-4 text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">Explore</button>
                         </div>
@@ -195,7 +195,7 @@ const Section = () => {
                     </div>
                 </div> */}
 
-                <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mt-8 px-20 320:px-0 border gap-4 768:p-10 1024:p-5'>
+                <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mt-8 px-20 320:px-0 gap-4 768:p-10 1024:p-5'>
                     {aboutAuthorData.map((author, index) => (
                         <div
                             key={index}
@@ -215,6 +215,10 @@ const Section = () => {
                         </div>
                     ))}
                 </div>
+
+                <p className="text-center mt-8">
+                    <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Explore </a>
+                </p>
 
                 <div className="flex items-center py-8 mt-6">
                     <div className="flex-grow border-t border-[#8F9191]"></div>
@@ -247,6 +251,41 @@ const Section = () => {
                             .</p>
                         <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">Explore</button>
                     </div>
+                </div>
+
+                <div className="flex items-center py-8 mt-6">
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Upcoming Events
+                    </div>
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                </div>
+
+                <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mb-52 320:mb-16 gap-5'>
+                    {Array.from({ length: 3 }, (_, index) => (
+                        <div key={index} className={`relative lg:${index !== 0 ? 'border-[#8F9191] border-l-[2px] pl-5' : ''}`}>
+                            <div className={`1440:m-4 p-4 320:p-0 320:m-0 text-center 1440:px-7`}>
+                                <div className='w-full'>
+                                    <img className="w-full object-cover" src="assests/section/events.png" alt={`Section Image`} />
+                                </div>
+                                <div className='w-full text-start flex mt-8'>
+                                    <div className='w-[30%] px-8 320:pl-0'>
+                                        <h3 className="1024:text-2xl 1440:text-3xl font-medium font-fairplay pt-4 text-[#B79248] 320:text-xl">Mar </h3>
+                                        <p className="1024:text-[40px] 1440:text-[50px] text-black font-fairplay py-2 font-medium 320:text-4xl">20</p>
+                                    </div>
+                                    <div className=''>
+                                        <h3 className="1024:text-2xl 1440:text-3xl font-medium font-fairplay pt-4 text-[#B79248] 320:text-xl">Event title- Lorem
+                                        </h3>
+                                        <p className="1024:text-base text-black font-roboto py-4 320:text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>
+
+                                        <p className="1024:text-base text-black font-roboto py-6 320:text-sm">Location — 00:00 pm</p>
+
+                                        <a href="#" className="text-black 1024:text-base font-roboto tracking-wide 320:text-sm inline-block pb-1 border-b border-[#5D6162] mt-3">Learn more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    ))}
                 </div>
 
             </div>
