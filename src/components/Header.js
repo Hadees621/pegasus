@@ -13,37 +13,20 @@ const Header = () => {
                 <p className="text-xl 1024:text-lg font-fairplay pr-5 md:pr-16 1024:pr-16 1440:pr-36 2560:pr-96"> Sign up | Log in</p>
             </div>
 
-            <header className="w-full justify-center px-5 md:px-10 xl:px-36 2xl:px-96">
+            <header className="w-full justify-center px-5 md:px-10 xl:px-36 2xl:px-96 border">
                 <nav className="flex justify-between items-center py-5">
                     <div>
+                        <div className="hidden lg:block">
+                            <ul className="flex 1440:space-x-4 2560:space-x-8 1024:space-x-4 font-fairplay 1440:text-xl 1024:text-base font-normal">
+                                <li><a href="#" className="text-black">Books</a></li>
+                                <li><a href="#" className="text-black">Authors</a></li>
+                                <li><a href="#" className="text-black">About us</a></li>
+                                <li><a href="#" className="text-black">Features</a></li>
+                                <li><a href="#" className="text-black">Submissions</a></li>
+                            </ul>
+                        </div>
                         <img className="lg:hidden h-[65px] w-[130px]" src="assests/nav/navlogo.png" alt="Logo" />
                     </div>
-                    <div className="lg:hidden 320:ml-36 425:ml-48 768:ml-[530px]">
-                        <button onClick={toggleMenu}>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                viewBox="0 0 24 24"
-                                className="w-8 h-8"
-                            >
-                                <path d="M4 6h16M4 12h16m-7 6h7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <div className="hidden lg:block">
-                        <ul className="flex 1440:space-x-4 2560:space-x-8 1024:space-x-4 font-fairplay 1440:text-xl 1024:text-base font-normal">
-                            <li><a href="#" className="text-black">Books</a></li>
-                            <li><a href="#" className="text-black">Authors</a></li>
-                            <li><a href="#" className="text-black">About us</a></li>
-                            <li><a href="#" className="text-black">Features</a></li>
-                            <li><a href="#" className="text-black">Submissions</a></li>
-                        </ul>
-                    </div>
-
                     <div>
                         <img className="hidden 1024:flex 1024:h-[70px] 1024:w-[120px] 1440:h-[90px] 1440:w-[160px] 2560:h-[100px] 2560:w-[180px]" src="assests/nav/navlogo.png" alt="Logo" />
                     </div>
@@ -82,11 +65,26 @@ const Header = () => {
                             Submit Online
                         </button>
                     </div>
+                    <div className="lg:hidden 320:ml-36 425:ml-48 768:ml-[530px]">
+                        <button onClick={toggleMenu}>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                viewBox="0 0 24 24"
+                                className="w-8 h-8"
+                            >
+                                <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </nav>
 
                 {isMenuOpen && (
                     <div className="flex flex-col justify-center lg:hidden absolute top-[80px] right-0 bg-[#EAEBEE] w-64 p-4 border border-gray-300 mt-16 mr-4 transition-opacity ease-in-out duration-300">
-
 
                         <a href="#" className="block text-black mb-2">Books</a>
                         <a href="#" className="block text-black mb-2">Authors</a>
@@ -133,7 +131,6 @@ const Header = () => {
 
                     </div>
                 )}
-
             </header>
         </>
     );
