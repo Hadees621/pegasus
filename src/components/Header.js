@@ -4,17 +4,19 @@ import NavIcons from "./comp/NavIcons";
 import MobileMenu from "./comp/MobileMenu";
 
 const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
-    const [isBookActive, setIsBookActive] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isBookActive, setIsBookActive] = useState(false);
     const megaMenuRef = useRef(null);
 
     const handleMobileMenuToggle = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
+        setIsBookActive(false);
     };
 
     const handleBooksClick = () => {
-        setIsMegaMenuOpen(!isMegaMenuOpen);
         setIsBookActive(!isBookActive);
+        setIsMegaMenuOpen(!isMegaMenuOpen);
+        setIsMobileMenuOpen(false);
     };
 
     const handleClickOutside = (event) => {
@@ -25,9 +27,9 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
         ) {
             setIsMegaMenuOpen(false);
             setIsBookActive(false);
+            setIsMobileMenuOpen(false);
         }
     };
-
 
     useEffect(() => {
         document.addEventListener("click", handleClickOutside);
@@ -35,7 +37,8 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
         return () => {
             document.removeEventListener("click", handleClickOutside);
         };
-    }, [isBookActive, isMegaMenuOpen]);
+    }, [isBookActive, isMegaMenuOpen, isMobileMenuOpen]);
+
 
     const navigationLinks = [
         { label: "Books", className: "books-link", onClick: handleBooksClick },
