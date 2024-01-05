@@ -3,7 +3,7 @@ import TitleLi from './TitleLi';
 import SimpleLi from './SimpleLi';
 import LastLi from './LastLi';
 
-const MegaMenu = ({ isMegaMenuOpen }) => {
+const MegaMenuBooks = ({ isMegaMenuOpen }) => {
     const categories = [
         {
             title: "Fiction",
@@ -28,20 +28,23 @@ const MegaMenu = ({ isMegaMenuOpen }) => {
     ];
 
     return (
-        <div id="mega-menu-full-image-dropdown" className={`py-4 ${isMegaMenuOpen ? 'block' : 'hidden'}`}>
-            <div className="grid px-5 md:px-10 xl:px-36 2xl:pr-[650px] 2xl:pl-[365px] py-5 text-sm text-black 768:grid-cols-2 lg:grid-cols-4">
-                {categories.map((category, index) => (
-                    <ul key={index} className="mb-4 space-y-4 md:mb-0">
-                        <TitleLi text={category.title} />
-                        {category.items.map((item, itemIndex) => (
-                            <SimpleLi key={itemIndex} text={item} />
-                        ))}
-                        {category.viewAllText && <LastLi text={category.viewAllText} />}
-                    </ul>
-                ))}
+
+        <>
+            <div id="mega-menu-full-image-dropdown" className={`py-4 ${isMegaMenuOpen ? 'block' : 'hidden'}`}>
+                <div className="grid px-5 md:px-10 xl:px-36 2xl:pr-[650px] 2xl:pl-[365px] py-5 text-sm text-black 768:grid-cols-2 lg:grid-cols-4">
+                    {categories.map((category, index) => (
+                        <ul key={index} className="mb-4 space-y-4 md:mb-0">
+                            <TitleLi text={category.title} />
+                            {category.items.map((item, itemIndex) => (
+                                <SimpleLi key={itemIndex} text={item} />
+                            ))}
+                            {category.viewAllText && <LastLi text={category.viewAllText} />}
+                        </ul>
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
-export default MegaMenu;
+export default MegaMenuBooks;
