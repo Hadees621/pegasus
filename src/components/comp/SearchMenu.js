@@ -13,7 +13,7 @@ const SearchMegaMenu = ({ isSearchMegaMenuOpen }) => {
         <>
             <div className="search-mega-menu flex flex-col items-center py-8">
 
-                <div className="flex tabs w-[35%]">
+                <div className="flex tabs 1024:w-[50%] 2560:w-[35%]">
                     <BooksTab
                         isActive={activeTab === "books"}
                         onClick={(tab) => setActiveTab(tab)}
@@ -26,7 +26,7 @@ const SearchMegaMenu = ({ isSearchMegaMenuOpen }) => {
 
                 {activeTab === "books" && (
                     <>
-                        <div className="pt-4 pb-10 gap-8 grid w-[35%]">
+                        <div className="pt-4 pb-10 gap-8 grid 1024:w-[50%] 2560:w-[35%]">
                             <ul className="grid">
                                 <li>
                                     <div className="hover:bg-[#EDEFF1] py-4 px-2">
@@ -74,7 +74,7 @@ const SearchMegaMenu = ({ isSearchMegaMenuOpen }) => {
 
                 {activeTab === "authors" && (
                     <>
-                        <div className="pt-4 pb-10 gap-8 grid w-[35%]">
+                        <div className="pt-4 pb-10 gap-8 grid 1024:w-[50%] 2560:w-[35%]">
                             <ul>
                                 <li>
                                     <div className="hover:bg-[#EDEFF1] py-4 px-2 marker:none">

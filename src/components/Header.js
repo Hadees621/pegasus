@@ -11,8 +11,6 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
     const [isBookActive, setIsBookActive] = useState(false);
     const megaMenuRef = useRef(null);
 
-
-
     const handleCrossClick = () => {
         setIsSearchMegaMenuOpen(false)
     };
@@ -79,7 +77,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
 
                     {(isSearchMegaMenuOpen) ?
                         (
-                            <div className="bg-[#F3F4F3] h-[50px] p-4 flex items-center w-full mx-[440px] my-6">
+                            <div className="bg-[#F3F4F3] h-[50px] p-4 flex items-center w-full 1024:mx-[210px] 2560:mx-[440px] my-6">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -163,7 +161,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
                                     />
                                 </div>
                                 <div className="hidden 1024:flex items-center 1440:gap-8 2560:gap-12 1024:gap-8">
-                                    <NavIcons handleSearchClick={handleSearchClick} isSearchMegaMenuOpen={isSearchMegaMenuOpen} setIsSearchMegaMenuOpen={setIsSearchMegaMenuOpen} setIsMegaMenuOpen={setIsMegaMenuOpen} setIsBookActive={setIsBookActive} setIsMobileMenuOpen={setIsMobileMenuOpen} />
+                                    <NavIcons handleSearchClick={handleSearchClick} />
                                     <button className="mt-6 lg:mt-0 h-12 w-44 border border-[#B79248] rounded-full transition duration-300 ease-in-out bg-transparent hover:bg-[#B79248] text-[#B79248] hover:text-white focus:outline-none">
                                         Submit Online
                                     </button>
@@ -196,9 +194,11 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
                     handleBooksClick={handleBooksClick}
                     isOpen={OpenMobileMenu}
                     onClose={() => setIsMobileMenuOpen(false)}
+                    handleSearchClick={handleSearchClick}
                 />
                 <MegaMenuBooks isMegaMenuOpen={isMegaMenuOpen} megaMenuRef={megaMenuRef} />
-                <SearchMegaMenu isSearchMegaMenuOpen={isSearchMegaMenuOpen} setIsMegaMenuOpen={setIsMegaMenuOpen} setIsBookActive={setIsBookActive} setIsMobileMenuOpen={setIsMobileMenuOpen} />
+                <SearchMegaMenu isSearchMegaMenuOpen={isSearchMegaMenuOpen} setIsMegaMenuOpen={setIsMegaMenuOpen} setIsBookActive={setIsBookActive} 
+                handleSearchClick={handleSearchClick}/>
 
             </nav >
 
