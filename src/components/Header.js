@@ -7,16 +7,17 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isBookActive, setIsBookActive] = useState(false);
     const megaMenuRef = useRef(null);
+    const [OpenMobileMenu, setOpenMobileMenu] = useState(false);
 
     const handleMobileMenuToggle = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-        setIsBookActive(false);
+        setOpenMobileMenu(!OpenMobileMenu)
+        setIsMegaMenuOpen(false);
     };
 
     const handleBooksClick = () => {
         setIsBookActive(!isBookActive);
         setIsMegaMenuOpen(!isMegaMenuOpen);
-        setIsMobileMenuOpen(false);
+        setIsMobileMenuOpen(true);
     };
 
     const handleClickOutside = (event) => {
@@ -38,7 +39,6 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
             document.removeEventListener("click", handleClickOutside);
         };
     }, [isBookActive, isMegaMenuOpen, isMobileMenuOpen]);
-
 
     const navigationLinks = [
         { label: "Books", className: "books-link", onClick: handleBooksClick },
@@ -134,7 +134,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
                     links={navigationLinks}
                     isBookActive={isBookActive}
                     handleBooksClick={handleBooksClick}
-                    isOpen={isMobileMenuOpen}
+                    isOpen={OpenMobileMenu}
                     onClose={() => setIsMobileMenuOpen(false)}
                 />
                 <MegaMenuBooks isMegaMenuOpen={isMegaMenuOpen} megaMenuRef={megaMenuRef} />
