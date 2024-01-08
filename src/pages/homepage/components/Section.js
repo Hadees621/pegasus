@@ -13,157 +13,165 @@ const ImprintSection = ({ title, content, imageSrc }) => (
     </div>
 );
 
-const Section = () => {
+const Section = ({ isMegaMenuOpen }) => {
+    const styles = {
+        filterBlur: {
+            filter: 'blur(5px)'
+        },
+    };
+
     return (
         <>
-            <div className='h-[800px] bg-[#FEDFB9] 1440:mx-16 rounded-sm mb-10'> </div>
-            <div className='w-full justify-center 1024:px-10 320:p-5 1440:px-36 2560:px-96'>
+            <div style={isMegaMenuOpen ? styles.filterBlur : {}}
+            >
+                <div className='h-[800px] bg-[#FEDFB9] 1440:mx-16 rounded-sm mb-10'> </div>
+                <div className='w-full justify-center 1024:px-10 320:p-5 1440:px-36 2560:px-96'>
 
-                <div className='grid 1024:grid-cols-3 320:grid-cols-1 gap-12 1024:gap-4'>
+                    <div className='grid 1024:grid-cols-3 320:grid-cols-1 gap-12 1024:gap-4'>
 
-                    <div className="w-full bg-white flex flex-col items-center p-5 1024:p-10  justify-center 1024:items-start">
-                        <h2 className="text-2xl 1440:text-3xl font-bold mb-4 font-fairplay">Established since 1999</h2>
-                        <p className='font-roboto 1440:text-xl'>Pegasus Elliot MacKenzie Publishers have been publishing high quality books from exciting
-                            authors for more than 20 years..
-                        </p>
-                        <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">Explore</button>
-                    </div>
-
-                    <div className="flex items-center border-black w-full">
-                        <img className="320:h-[280px] 320:w-full object-cover" src="assests\section\section1.png" alt="Image 1" />
-                    </div>
-
-                    <div className="w-full flex items-center">
-                        <img className="320:h-[280px] 320:w-full object-cover" src="assests\section\section2.png" alt="Image 2" />
-                    </div>
-
-                </div>
-
-                <div className="flex items-center py-8 mt-6">
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
-                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Take a look at our new releases</div>
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
-                </div>
-
-                <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
-                    {bookData.map((book, index) => (
-                        <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
-                            <img className="320:h-[420px] w-full 1024:h-[300px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
-                            <div className='w-full text-start'>
-                                <h3 className="text-lg font-bold font-fairplay">{book.title}</h3>
-                                <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                <p className="text-center mt-8">
-                    <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
-                </p>
-
-                <div className="flex items-center py-8 mt-6">
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
-                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">The latest features
-                    </div>
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
-                </div>
-
-                <div class="bg-[#EDEFF1] p-8 320:p-0">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/2 p-4">
-                            <img class="w-full h-auto" src="assests\section\flowerss.png" alt="Image" />
-                        </div>
-
-                        <div class="md:w-1/2 p-4 flex flex-col 1024:justify-center">
-                            <p className='text-sm mb-8 2560:text-lg'>Blog category — 00 Month, 2022</p>
-                            <h2 class="text-2xl 320:text-xl font-bold mb-2 2560:text-3xl font-fairplay">Article Title</h2>
-                            <p class="text-sm 320:text-xs 1440:text-base 2560:text-xl text-gray-700 mb-4 font-roboto pr-3 2560:mt-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-                                commodo consequat</p>
-                            <button className="bg-[#031428] text-base text-white px-4 rounded-3xl w-[130px] h-8 font-fairplay 2560:mt-10">Read more</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mt-8'>
-                    {articleData.map((article, index) => (
-                        <div key={index} className="m-4 p-4 text-center">
-                            <div className='flex justify-between py-4'>
-                                <h3 className="text-lg font-fairplay">{article.category}</h3>
-                                <h3 className="text-lg font-fairplay">{article.date}</h3>
-                            </div>
-                            <div className='w-full'>
-                                <img className="w-full object-cover" src={article.imageSrc} alt={`Section ${index + 1} Image`} />
-                            </div>
-                            <div className='w-full text-start'>
-                                <h3 className="text-3xl font-bold font-fairplay pt-4">{article.title}</h3>
-                                <p className="text-sm text-[#5D6162] font-roboto py-4">{article.content}</p>
-                                <a href="#" className="text-[#5D6162] text-lg font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162] mt-3">Read more</a>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                <div className="flex items-center py-8 mt-6">
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
-                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Have a listen to our audio books</div>
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
-                </div>
-
-                <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
-                    {audioBooksData.map((book, index) => (
-                        <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
-                            <img className="320:h-[300px] w-full 1024:h-[200px] 2560:h-[320px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
-                            <div className='w-full text-start'>
-                                <h3 className="text-lg font-bold font-fairplay mt-8">{book.title}</h3>
-                                <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                <p className="text-center mt-8">
-                    <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
-                </p>
-
-                <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-4 mt-8'>
-                    <div className="1024:m-1 1440:m-4 m-4 p-4 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
-                        <div className='w-full text-start mt-10'>
-                            <h3 className="text-3xl font-fairplay pt-4 1024:text-2xl">Our imprints</h3>
-                            <p className="text-sm text-[#5D6162] font-roboto py-4 pr-4 text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div className="w-full bg-white flex flex-col items-center p-5 1024:p-10  justify-center 1024:items-start">
+                            <h2 className="text-2xl 1440:text-3xl font-bold mb-4 font-fairplay">Established since 1999</h2>
+                            <p className='font-roboto 1440:text-xl'>Pegasus Elliot MacKenzie Publishers have been publishing high quality books from exciting
+                                authors for more than 20 years..
+                            </p>
                             <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">Explore</button>
                         </div>
+
+                        <div className="flex items-center border-black w-full">
+                            <img className="320:h-[280px] 320:w-full object-cover" src="assests\section\section1.png" alt="Image 1" />
+                        </div>
+
+                        <div className="w-full flex items-center">
+                            <img className="320:h-[280px] 320:w-full object-cover" src="assests\section\section2.png" alt="Image 2" />
+                        </div>
+
                     </div>
 
-                    {imprintData.map((imprint, index) => (
-                        <ImprintSection key={index} {...imprint} />
-                    ))}
-                </div>
-
-                <div className="flex items-center py-8 mt-6">
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
-                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Thought provoking novels
+                    <div className="flex items-center py-8 mt-6">
+                        <div className="flex-grow border-t border-[#8F9191]"></div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Take a look at our new releases</div>
+                        <div className="flex-grow border-t border-[#8F9191]"></div>
                     </div>
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
-                </div>
 
-                <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
-                    {provkingNovelData.map((book, index) => (
-                        <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
-                            <img className="320:h-[420px] w-full 1024:h-[300px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
-                            <div className='w-full text-start'>
-                                <h3 className="text-lg font-bold font-fairplay">{book.title}</h3>
-                                <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
+                    <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
+                        {bookData.map((book, index) => (
+                            <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
+                                <img className="320:h-[420px] w-full 1024:h-[300px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                                <div className='w-full text-start'>
+                                    <h3 className="text-lg font-bold font-fairplay">{book.title}</h3>
+                                    <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <p className="text-center mt-8">
+                        <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
+                    </p>
+
+                    <div className="flex items-center py-8 mt-6">
+                        <div className="flex-grow border-t border-[#8F9191]"></div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">The latest features
+                        </div>
+                        <div className="flex-grow border-t border-[#8F9191]"></div>
+                    </div>
+
+                    <div class="bg-[#EDEFF1] p-8 320:p-0">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/2 p-4">
+                                <img class="w-full h-auto" src="assests\section\flowerss.png" alt="Image" />
+                            </div>
+
+                            <div class="md:w-1/2 p-4 flex flex-col 1024:justify-center">
+                                <p className='text-sm mb-8 2560:text-lg'>Blog category — 00 Month, 2022</p>
+                                <h2 class="text-2xl 320:text-xl font-bold mb-2 2560:text-3xl font-fairplay">Article Title</h2>
+                                <p class="text-sm 320:text-xs 1440:text-base 2560:text-xl text-gray-700 mb-4 font-roboto pr-3 2560:mt-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                    veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+                                    commodo consequat</p>
+                                <button className="bg-[#031428] text-base text-white px-4 rounded-3xl w-[130px] h-8 font-fairplay 2560:mt-10">Read more</button>
                             </div>
                         </div>
-                    ))}
-                </div>
+                    </div>
 
-                <p className="text-center mt-8">
-                    <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
-                </p>
+                    <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mt-8'>
+                        {articleData.map((article, index) => (
+                            <div key={index} className="m-4 p-4 text-center">
+                                <div className='flex justify-between py-4'>
+                                    <h3 className="text-lg font-fairplay">{article.category}</h3>
+                                    <h3 className="text-lg font-fairplay">{article.date}</h3>
+                                </div>
+                                <div className='w-full'>
+                                    <img className="w-full object-cover" src={article.imageSrc} alt={`Section ${index + 1} Image`} />
+                                </div>
+                                <div className='w-full text-start'>
+                                    <h3 className="text-3xl font-bold font-fairplay pt-4">{article.title}</h3>
+                                    <p className="text-sm text-[#5D6162] font-roboto py-4">{article.content}</p>
+                                    <a href="#" className="text-[#5D6162] text-lg font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162] mt-3">Read more</a>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
 
-                {/* <div className="flex items-center py-8 mt-6">
+                    <div className="flex items-center py-8 mt-6">
+                        <div className="flex-grow border-t border-[#8F9191]"></div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Have a listen to our audio books</div>
+                        <div className="flex-grow border-t border-[#8F9191]"></div>
+                    </div>
+
+                    <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
+                        {audioBooksData.map((book, index) => (
+                            <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
+                                <img className="320:h-[300px] w-full 1024:h-[200px] 2560:h-[320px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                                <div className='w-full text-start'>
+                                    <h3 className="text-lg font-bold font-fairplay mt-8">{book.title}</h3>
+                                    <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <p className="text-center mt-8">
+                        <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
+                    </p>
+
+                    <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-4 mt-8'>
+                        <div className="1024:m-1 1440:m-4 m-4 p-4 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
+                            <div className='w-full text-start mt-10'>
+                                <h3 className="text-3xl font-fairplay pt-4 1024:text-2xl">Our imprints</h3>
+                                <p className="text-sm text-[#5D6162] font-roboto py-4 pr-4 text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">Explore</button>
+                            </div>
+                        </div>
+
+                        {imprintData.map((imprint, index) => (
+                            <ImprintSection key={index} {...imprint} />
+                        ))}
+                    </div>
+
+                    <div className="flex items-center py-8 mt-6">
+                        <div className="flex-grow border-t border-[#8F9191]"></div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Thought provoking novels
+                        </div>
+                        <div className="flex-grow border-t border-[#8F9191]"></div>
+                    </div>
+
+                    <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
+                        {provkingNovelData.map((book, index) => (
+                            <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
+                                <img className="320:h-[420px] w-full 1024:h-[300px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                                <div className='w-full text-start'>
+                                    <h3 className="text-lg font-bold font-fairplay">{book.title}</h3>
+                                    <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <p className="text-center mt-8">
+                        <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
+                    </p>
+
+                    {/* <div className="flex items-center py-8 mt-6">
                     <div className="flex-grow border-t border-[#8F9191]"></div>
                     <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Author interviews
                     </div>
@@ -197,100 +205,101 @@ const Section = () => {
                     </div>
                 </div> */}
 
-                <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mt-8 px-20 320:px-0 gap-4 768:p-10 1024:p-5'>
-                    {aboutAuthorData.map((author, index) => (
-                        <div
-                            key={index}
-                            className="m-4 320:m-0 320:p-3 768:p-10 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[450px] 1024:h-[550px] 1440:h-[520px] 2560:h-[450px]"
-                        >
-                            <div className="w-full text-start p-10 320:p-0">
-                                <h3 className="text-2xl font-normal font-fairplay text-[#B79248] underline">{author.name}</h3>
-                                <h3 className="text-2xl font-normal font-fairplay pt-1 text-[#B79248] underline">{author.title}</h3>
-                                <p className="text-base text-[#2A2E30] font-fairplay py-6 tracking-normal">{author.message}</p>
-                                <p className="text-base text-[#2A2E30] font-fairplay py-4 tracking-normal">{author.paragraph}</p>
-                                {author.button && (
-                                    <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">
-                                        Read more
-                                    </button>
-                                )}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                <p className="text-center mt-8">
-                    <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Explore </a>
-                </p>
-
-                <div className="flex items-center py-8 mt-6">
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
-                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Fantastic fantasy reads
-                    </div>
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
-                </div>
-
-                <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
-                    {fantasyReadData.map((book, index) => (
-                        <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
-                            <img className="320:h-[420px] w-full 1024:h-[300px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
-                            <div className='w-full text-start'>
-                                <h3 className="text-lg font-bold font-fairplay">{book.title}</h3>
-                                <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                <p className="text-center mt-8">
-                    <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
-                </p>
-
-                <div class="relative m-4 p-4 bg-cover bg-center h-[580px] mt-20" style={{ backgroundImage: `url('assests/section/section6.png')` }}>
-                    <div class="absolute bottom-8 left-8 p-4 text-white">
-                        <h3 class="text-[48px] font-fairplay text-white 1024:text-black">Submit online
-                        </h3>
-                        <p class="text-base text-white 1024:text-black">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
-                            .</p>
-                        <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">Explore</button>
-                    </div>
-                </div>
-
-                <div className="flex items-center py-8 mt-6">
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
-                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Upcoming Events
-                    </div>
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
-                </div>
-
-                <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mb-52 320:mb-16 gap-5'>
-                    {Array.from({ length: 3 }, (_, index) => (
-                        <div key={index} className={`relative ${index !== 0 ? '1024:border-[#8F9191] 1024:border-l-[2px] 1024:pl-5' : ''}`}>
-                            <div className={`1440:m-4 p-4 320:p-0 320:m-0 text-center 1440:px-2`}>
-                                <div className='w-full'>
-                                    <img className="w-full object-cover" src="assests/section/events.png" alt={`Section Image`} />
-                                </div>
-                                <div className='w-full text-start flex mt-8'>
-                                    <div className='w-[30%] px-8 320:pl-0'>
-                                        <h3 className="1024:text-2xl 1440:text-3xl font-medium font-fairplay pt-4 text-[#B79248] 320:text-xl">Mar </h3>
-                                        <p className="1024:text-[40px] 1440:text-[50px] text-black font-fairplay py-2 font-medium 320:text-4xl">20</p>
-                                    </div>
-                                    <div className=''>
-                                        <h3 className="1024:text-2xl 1440:text-3xl font-medium font-fairplay pt-4 text-[#B79248] 320:text-xl">Event title- Lorem
-                                        </h3>
-                                        <p className="1024:text-base text-black font-roboto py-4 320:text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>
-
-                                        <p className="1024:text-base text-black font-roboto py-6 320:text-sm">Location — 00:00 pm</p>
-
-                                        <a href="#" className="text-black 1024:text-base font-roboto tracking-wide 320:text-sm inline-block pb-1 border-b border-[#5D6162] mt-3">Learn more</a>
-                                    </div>
+                    <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mt-8 px-20 320:px-0 gap-4 768:p-10 1024:p-5'>
+                        {aboutAuthorData.map((author, index) => (
+                            <div
+                                key={index}
+                                className="m-4 320:m-0 320:p-3 768:p-10 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[450px] 1024:h-[550px] 1440:h-[520px] 2560:h-[450px]"
+                            >
+                                <div className="w-full text-start p-10 320:p-0">
+                                    <h3 className="text-2xl font-normal font-fairplay text-[#B79248] underline">{author.name}</h3>
+                                    <h3 className="text-2xl font-normal font-fairplay pt-1 text-[#B79248] underline">{author.title}</h3>
+                                    <p className="text-base text-[#2A2E30] font-fairplay py-6 tracking-normal">{author.message}</p>
+                                    <p className="text-base text-[#2A2E30] font-fairplay py-4 tracking-normal">{author.paragraph}</p>
+                                    {author.button && (
+                                        <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">
+                                            Read more
+                                        </button>
+                                    )}
                                 </div>
                             </div>
+                        ))}
+                    </div>
+
+                    <p className="text-center mt-8">
+                        <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Explore </a>
+                    </p>
+
+                    <div className="flex items-center py-8 mt-6">
+                        <div className="flex-grow border-t border-[#8F9191]"></div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Fantastic fantasy reads
                         </div>
+                        <div className="flex-grow border-t border-[#8F9191]"></div>
+                    </div>
 
-                    ))}
+                    <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
+                        {fantasyReadData.map((book, index) => (
+                            <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
+                                <img className="320:h-[420px] w-full 1024:h-[300px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                                <div className='w-full text-start'>
+                                    <h3 className="text-lg font-bold font-fairplay">{book.title}</h3>
+                                    <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <p className="text-center mt-8">
+                        <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
+                    </p>
+
+                    <div class="relative m-4 p-4 bg-cover bg-center h-[580px] mt-20" style={{ backgroundImage: `url('assests/section/section6.png')` }}>
+                        <div class="absolute bottom-8 left-8 p-4 text-white">
+                            <h3 class="text-[48px] font-fairplay text-white 1024:text-black">Submit online
+                            </h3>
+                            <p class="text-base text-white 1024:text-black">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
+                                .</p>
+                            <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">Explore</button>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center py-8 mt-6">
+                        <div className="flex-grow border-t border-[#8F9191]"></div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Upcoming Events
+                        </div>
+                        <div className="flex-grow border-t border-[#8F9191]"></div>
+                    </div>
+
+                    <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mb-52 320:mb-16 gap-5'>
+                        {Array.from({ length: 3 }, (_, index) => (
+                            <div key={index} className={`relative ${index !== 0 ? '1024:border-[#8F9191] 1024:border-l-[2px] 1024:pl-5' : ''}`}>
+                                <div className={`1440:m-4 p-4 320:p-0 320:m-0 text-center 1440:px-2`}>
+                                    <div className='w-full'>
+                                        <img className="w-full object-cover" src="assests/section/events.png" alt={`Section Image`} />
+                                    </div>
+                                    <div className='w-full text-start flex mt-8'>
+                                        <div className='w-[30%] px-8 320:pl-0'>
+                                            <h3 className="1024:text-2xl 1440:text-3xl font-medium font-fairplay pt-4 text-[#B79248] 320:text-xl">Mar </h3>
+                                            <p className="1024:text-[40px] 1440:text-[50px] text-black font-fairplay py-2 font-medium 320:text-4xl">20</p>
+                                        </div>
+                                        <div className=''>
+                                            <h3 className="1024:text-2xl 1440:text-3xl font-medium font-fairplay pt-4 text-[#B79248] 320:text-xl">Event title- Lorem
+                                            </h3>
+                                            <p className="1024:text-base text-black font-roboto py-4 320:text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>
+
+                                            <p className="1024:text-base text-black font-roboto py-6 320:text-sm">Location — 00:00 pm</p>
+
+                                            <a href="#" className="text-black 1024:text-base font-roboto tracking-wide 320:text-sm inline-block pb-1 border-b border-[#5D6162] mt-3">Learn more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        ))}
+                    </div>
+
                 </div>
-
-            </div>
+            </div >
         </>
     )
 }
