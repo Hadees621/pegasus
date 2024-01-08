@@ -2,12 +2,21 @@ import React, { useState, useEffect, useRef } from "react";
 import MegaMenuBooks from "./comp/MegaMenuBooks";
 import NavIcons from "./comp/NavIcons";
 import MobileMenu from "./comp/MobileMenu";
+import SearchMegaMenu from "./comp/SearchMenu";
 
 const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
+    const [isSearchMegaMenuOpen, setIsSearchMegaMenuOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [OpenMobileMenu, setOpenMobileMenu] = useState(false);
     const [isBookActive, setIsBookActive] = useState(false);
     const megaMenuRef = useRef(null);
-    const [OpenMobileMenu, setOpenMobileMenu] = useState(false);
+
+    const handleSearchClick = () => {
+        setIsSearchMegaMenuOpen(!isSearchMegaMenuOpen);
+        setIsMegaMenuOpen(false);
+        setIsBookActive(false);
+        setIsMobileMenuOpen(false);
+    };
 
     const handleMobileMenuToggle = () => {
         setOpenMobileMenu(!OpenMobileMenu)
@@ -18,6 +27,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
         setIsBookActive(!isBookActive);
         setIsMegaMenuOpen(!isMegaMenuOpen);
         setIsMobileMenuOpen(true);
+        setIsSearchMegaMenuOpen(false)
     };
 
     const handleClickOutside = (event) => {
@@ -46,7 +56,9 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
         { label: "About us", className: "" },
         { label: "Features", className: "" },
         { label: "Submissions", className: "" },
+        { label: "Search", className: "search-link", onClick: handleSearchClick },
     ];
+
     return (
         <>
             <div className="h-[80px] bg-[#EAEBEE] flex items-center justify-end">
@@ -105,7 +117,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
                         />
                     </div>
                     <div className="hidden 1024:flex items-center 1440:gap-8 2560:gap-12 1024:gap-8">
-                        <NavIcons />
+                        <NavIcons handleSearchClick={handleSearchClick} isSearchMegaMenuOpen={isSearchMegaMenuOpen} setIsSearchMegaMenuOpen={setIsSearchMegaMenuOpen} setIsMegaMenuOpen={setIsMegaMenuOpen} setIsBookActive={setIsBookActive} setIsMobileMenuOpen={setIsMobileMenuOpen} />
 
                         <button className="mt-6 lg:mt-0 h-12 w-44 border border-[#B79248] rounded-full transition duration-300 ease-in-out bg-transparent hover:bg-[#B79248] text-[#B79248] hover:text-white focus:outline-none">
                             Submit Online
@@ -128,6 +140,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
                             </svg>
                         </button>
                     </div>
+
                 </div>
 
                 <MobileMenu
@@ -138,6 +151,8 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
                     onClose={() => setIsMobileMenuOpen(false)}
                 />
                 <MegaMenuBooks isMegaMenuOpen={isMegaMenuOpen} megaMenuRef={megaMenuRef} />
+                <SearchMegaMenu isSearchMegaMenuOpen={isSearchMegaMenuOpen} setIsMegaMenuOpen={setIsMegaMenuOpen} setIsBookActive={setIsBookActive} setIsMobileMenuOpen={setIsMobileMenuOpen} />
+
             </nav>
         </>
     );

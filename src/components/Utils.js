@@ -1,3 +1,4 @@
+
 export const usefulLinks = [
     "FAQs",
     "About us",
@@ -52,8 +53,3 @@ export const FoooterSocialMediaLinks = [
 ];
 
 export const belowFooter = ["Shipping & returns", "T & C", "Policies", "Cookies"]
-
-
-
-
-
