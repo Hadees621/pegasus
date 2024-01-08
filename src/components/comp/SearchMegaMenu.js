@@ -4,8 +4,8 @@ import AuthorsTab from "./AuthorsTab";
 
 const SearchMegaMenu = ({ isSearchMegaMenuOpen }) => {
     const [activeTab, setActiveTab] = useState("books");
-
     if (!isSearchMegaMenuOpen) {
+
         return null;
     }
 

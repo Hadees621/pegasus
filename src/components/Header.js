@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import MegaMenuBooks from "./comp/MegaMenuBooks";
 import NavIcons from "./comp/NavIcons";
 import MobileMenu from "./comp/MobileMenu";
-import SearchMegaMenu from "./comp/SearchMenu";
+import SearchMegaMenu from "./comp/SearchMegaMenu";
 
 const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
     const [isSearchMegaMenuOpen, setIsSearchMegaMenuOpen] = useState(false);
@@ -10,6 +10,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
     const [OpenMobileMenu, setOpenMobileMenu] = useState(false);
     const [isBookActive, setIsBookActive] = useState(false);
     const megaMenuRef = useRef(null);
+
 
     const handleCrossClick = () => {
         setIsSearchMegaMenuOpen(false)
@@ -194,11 +195,13 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
                     handleBooksClick={handleBooksClick}
                     isOpen={OpenMobileMenu}
                     onClose={() => setIsMobileMenuOpen(false)}
-                    handleSearchClick={handleSearchClick}
+                    handleMobileMenuToggle={handleMobileMenuToggle}
+                    isSearchMegaMenuOpen={isSearchMegaMenuOpen}
+                    setIsSearchMegaMenuOpen={setIsSearchMegaMenuOpen}
                 />
                 <MegaMenuBooks isMegaMenuOpen={isMegaMenuOpen} megaMenuRef={megaMenuRef} />
-                <SearchMegaMenu isSearchMegaMenuOpen={isSearchMegaMenuOpen} setIsMegaMenuOpen={setIsMegaMenuOpen} setIsBookActive={setIsBookActive} 
-                handleSearchClick={handleSearchClick}/>
+                <SearchMegaMenu isSearchMegaMenuOpen={isSearchMegaMenuOpen} setIsMegaMenuOpen={setIsMegaMenuOpen} setIsBookActive={setIsBookActive}
+                    handleSearchClick={handleSearchClick} />
 
             </nav >
 
