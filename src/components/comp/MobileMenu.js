@@ -13,14 +13,14 @@ const MobileMenu = ({ links, isBookActive, handleBooksClick, isOpen, onClose, ha
 
     const handleCrossClick = () => {
         handleMobileMenuToggle();
-        setIsMobileSearchMegaMenuOpen(false)
+        setIsMobileSearchMegaMenuOpen(!false)
     };
     return (
         <div className={`flex flex-col items-center w-full lg:hidden my-4 gap-6 ${isOpen ? "block" : "hidden"}`}>
             {(isMobileSearchMegaMenuOpen) ?
                 (
                     <>
-                        <div className="bg-[#F3F4F3] h-[50px] p-4 flex items-center border">
+                        <div className="bg-[#F3F4F3] h-[50px] p-4 flex items-center 320:w-[90%] 768:w-[60%] border">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -39,7 +39,7 @@ const MobileMenu = ({ links, isBookActive, handleBooksClick, isOpen, onClose, ha
                                 placeholder="Search"
                                 className="flex-1 bg-transparent focus:outline-none"
                             />
-                            <button onClick={handleCrossClick} className="ml-2 borrer">
+                            <button onClick={handleCrossClick} className="ml-2">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -54,49 +54,53 @@ const MobileMenu = ({ links, isBookActive, handleBooksClick, isOpen, onClose, ha
                                 </svg>
                             </button>
                         </div>
-                        <div className="">
-                            <div className="flex tabs gap-10">
-                                <BooksTab
-                                    isActive={activeTab === "books"}
-                                    onClick={(tab) => setActiveTab(tab)}
-                                />
-                                <AuthorsTab
-                                    isActive={activeTab === "authors"}
-                                    onClick={(tab) => setActiveTab(tab)}
-                                />
-                            </div>
+                        <div className="flex tabs 320:gap-0 gap-10 w-full mx-2">
+                            <BooksTab
+                                isActive={activeTab === "books"}
+                                onClick={(tab) => setActiveTab(tab)}
+                            />
+                            <AuthorsTab
+                                isActive={activeTab === "authors"}
+                                onClick={(tab) => setActiveTab(tab)}
+                            />
                         </div>
                         {activeTab === "books" && (
                             <>
-                                <div className="pt-4 pb-4 gap-4 grid">
-                                    <ul className="grid">
+                                <div className="pt-4 pb-4 gap-4 border w-full">
+                                    <ul className="grid 375:mx-4">
                                         <li>
-                                            <div className="hover:bg-[#EDEFF1] py-2 px-2">
-                                                <span className="font-fairplay text-gray-800 text-lg">Book title Lorem ipsum</span>{" "}
+                                            <div className="hover:bg-[#EDEFF1] py-2 320:px-4 w-full">
+                                                <span className="font-fairplay text-gray-800 text-lg">Book title Lorem ipsum </span>{" "}
                                                 — <span className="font-roboto text-[#B79248] text-base">Author name</span>
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="hover:bg-[#EDEFF1] py-2 px-4">
-                                                <span className="font-fairplay text-gray-800 text-lg">Book title Lorem ipsum</span>{" "}
+                                            <div className="hover:bg-[#EDEFF1] py-2 320:px-4 w-full">
+                                                <span className="font-fairplay text-gray-800 text-lg">Book title Lorem ipsum </span>{" "}
                                                 — <span className="font-roboto text-[#B79248] text-base">Author name</span>
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="hover:bg-[#EDEFF1] py-2 px-4">
-                                                <span className="font-fairplay text-gray-800 text-lg">Book title Lorem ipsum</span>{" "}
+                                            <div className="hover:bg-[#EDEFF1] py-2 320:px-4 w-full">
+                                                <span className="font-fairplay text-gray-800 text-lg">Book title Lorem ipsum </span>{" "}
                                                 — <span className="font-roboto text-[#B79248] text-base">Author name</span>
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="hover:bg-[#EDEFF1] py-2 px-4">
-                                                <span className="font-fairplay text-gray-800 text-lg">Book title Lorem ipsum</span>{" "}
+                                            <div className="hover:bg-[#EDEFF1] py-2 320:px-4 w-full">
+                                                <span className="font-fairplay text-gray-800 text-lg">Book title Lorem ipsum </span>{" "}
                                                 — <span className="font-roboto text-[#B79248] text-base">Author name</span>
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="hover:bg-[#EDEFF1] py-2 px-4">
-                                                <span className="font-fairplay text-gray-800 text-lg">Book title Lorem ipsum</span>{" "}
+                                            <div className="hover:bg-[#EDEFF1] py-2 320:px-4 w-full">
+                                                <span className="font-fairplay text-gray-800 text-lg">Book title Lorem ipsum </span>{" "}
+                                                — <span className="font-roboto text-[#B79248] text-base">Author name</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="hover:bg-[#EDEFF1] py-2 320:px-4 w-full">
+                                                <span className="font-fairplay text-gray-800 text-lg">Book title Lorem ipsum </span>{" "}
                                                 — <span className="font-roboto text-[#B79248] text-base">Author name</span>
                                             </div>
                                         </li>
@@ -117,29 +121,29 @@ const MobileMenu = ({ links, isBookActive, handleBooksClick, isOpen, onClose, ha
                         {activeTab === "authors" && (
                             <>
                                 <div className="pt-4 pb-4 gap-4 grid w-full px-2">
-                                    <ul className="grid">
+                                    <ul className="grid 375:mx-4">
                                         <li>
-                                            <div className="flex justify-start hover:bg-[#EDEFF1] py-4 pl-8 w-full marker:none">
+                                            <div className="flex justify-start hover:bg-[#EDEFF1] p-4 pl-8 w-full marker:none">
                                                 <p className="font-roboto text-[#B79248] text-base">Author name</p>
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="flex justify-start hover:bg-[#EDEFF1] py-4 pl-8 w-full marker:none">
+                                            <div className="flex justify-start hover:bg-[#EDEFF1] p-4 pl-8 w-full marker:none">
                                                 <p className="font-roboto text-[#B79248] text-base">Author name</p>
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="flex justify-start hover:bg-[#EDEFF1] py-4 pl-8 w-full marker:none">
+                                            <div className="flex justify-start hover:bg-[#EDEFF1] p-4 pl-8 w-full marker:none">
                                                 <p className="font-roboto text-[#B79248] text-base">Author name</p>
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="flex justify-start hover:bg-[#EDEFF1] py-4 pl-8 w-full marker:none">
+                                            <div className="flex justify-start hover:bg-[#EDEFF1] p-4 pl-8 w-full marker:none">
                                                 <p className="font-roboto text-[#B79248] text-base">Author name</p>
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="flex justify-start hover:bg-[#EDEFF1] py-4 pl-8 w-full marker:none">
+                                            <div className="flex justify-start hover:bg-[#EDEFF1] p-4 pl-8 w-full marker:none">
                                                 <p className="font-roboto text-[#B79248] text-base">Author name</p>
                                             </div>
                                         </li>
@@ -191,6 +195,7 @@ const MobileMenu = ({ links, isBookActive, handleBooksClick, isOpen, onClose, ha
                         </button>
                     </>
                 )}
+
         </div>
     );
 };
