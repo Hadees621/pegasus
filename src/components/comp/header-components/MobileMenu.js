@@ -20,7 +20,7 @@ const MobileMenu = ({ links, isBookActive, handleBooksClick, isOpen, onClose, ha
             {(isMobileSearchMegaMenuOpen) ?
                 (
                     <>
-                        <div className="bg-[#F3F4F3] h-[50px] p-4 flex items-center 320:w-[90%] 768:w-[60%] border">
+                        <div className="bg-[#F3F4F3] h-[50px] p-4 flex items-center 320:w-[90%] 768:w-[60%]">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -66,7 +66,7 @@ const MobileMenu = ({ links, isBookActive, handleBooksClick, isOpen, onClose, ha
                         </div>
                         {activeTab === "books" && (
                             <>
-                                <div className="pt-4 pb-4 gap-4 border w-full">
+                                <div className="pt-4 pb-4 gap-4 w-full">
                                     <ul className="grid 375:mx-4">
                                         <li>
                                             <div className="hover:bg-[#EDEFF1] py-2 320:px-4 w-full">
