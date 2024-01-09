@@ -37,7 +37,7 @@ const SearchResults = () => {
 
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             <div className="2560:mb-96 md:mb-48 320:mb-20">
                 <div className={`flex flex-col items-center py-8`}>
                     <p className="lg:text-5xl 320:text-3xl font-fairplay py-10 font-normal">Search results</p>
