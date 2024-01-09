@@ -5,11 +5,12 @@ import Section from './components/Section';
 
 const Home = () => {
     const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+    const [applyBlur, setApplyBlur] = useState(false);
 
     return (
         <>
-            <Header setIsMegaMenuOpen={setIsMegaMenuOpen} isMegaMenuOpen={isMegaMenuOpen} />
-            <Section isMegaMenuOpen={isMegaMenuOpen} />
+            <Header setIsMegaMenuOpen={setIsMegaMenuOpen} isMegaMenuOpen={isMegaMenuOpen} setApplyBlur={setApplyBlur} applyBlur={applyBlur} />
+            <Section isMegaMenuOpen={isMegaMenuOpen} applyBlur={applyBlur} />
             <Footer />
         </>
     );

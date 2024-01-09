@@ -13,7 +13,7 @@ const ImprintSection = ({ title, content, imageSrc }) => (
     </div>
 );
 
-const Section = ({ isMegaMenuOpen }) => {
+const Section = ({ isMegaMenuOpen, applyBlur }) => {
     const styles = {
         filterBlur: {
             filter: 'blur(5px)'
@@ -22,7 +22,7 @@ const Section = ({ isMegaMenuOpen }) => {
 
     return (
         <>
-            <div style={isMegaMenuOpen ? styles.filterBlur : {}}
+            <div style={isMegaMenuOpen || applyBlur ? styles.filterBlur : {}}
             >
                 <div className='h-[800px] bg-[#FEDFB9] 1440:mx-16 rounded-sm mb-10'> </div>
                 <div className='w-full justify-center 1024:px-10 320:p-5 1440:px-36 2560:px-96'>
