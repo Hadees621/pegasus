@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import MegaMenuBooks from "./comp/MegaMenuBooks";
-import NavIcons from "./comp/NavIcons";
-import MobileMenu from "./comp/MobileMenu";
-import SearchMegaMenu from "./comp/SearchMegaMenu";
+import NavIcons from "./comp/header-components/NavIcons";
+import MobileMenu from "./comp/header-components/MobileMenu";
+import MegaMenuBooks from "./comp/header-components/MegaMenuBooks";
+import SearchMegaMenu from "./comp/header-components/SearchMegaMenu";
 
 const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
     const [isSearchMegaMenuOpen, setIsSearchMegaMenuOpen] = useState(false);
