@@ -1,17 +1,19 @@
 import React from 'react';
 
-const NavIcons = () => {
-
+const NavIcons = ({ handleSearchClick, handleMobileSearchClick }) => {
+    const isSmallScreen = window.innerWidth <= 1024;
     return (
         <>
             <div className="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 21 21">
-                    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="8.5" cy="8.5" r="5" />
-                        <path d="M17.571 17.5L12 12" />
-                    </g>
-                </svg>
+                <button onClick={isSmallScreen ? handleMobileSearchClick : handleSearchClick}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 21 21">
+                        <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="8.5" cy="8.5" r="5" />
+                            <path d="M17.571 17.5L12 12" />
+                        </g>
+                    </svg>
+                </button>
             </div>
             <div className="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256">
