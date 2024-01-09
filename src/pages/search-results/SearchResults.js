@@ -2,12 +2,37 @@ import React, { useState } from "react";
 import Footer from "../../components/Footer";
 
 const SearchResultsMenu = () => {
-    const [activeTab, setActiveTab] = useState("books");
+    const [activeTab, setActiveTab] = useState("authors");
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
     };
 
+    const renderBooksContent = () => (
+        <div className="grid lg:grid-cols-5 gap-x-5 gap-y-7 1024:px-10 320:p-5 1440:px-36 2560:px-[520px]">
+            {[...Array(4)].map((_, index) => (
+                <div
+                    key={index}
+                    className="flex justify-center items-center h-16 border border-black text-[#8F9191] text-lg transition duration-300 ease-in-out hover:bg-[#EEF1F2] hover:font-extrabold hover:shadow-lg hover:text-black hover:border-none"
+                >
+                    <p className="font-normal font-roboto">Book Name</p>
+                </div>
+            ))}
+        </div>
+    );
+
+    const renderAuthorsContent = () => (
+        <div className="grid lg:grid-cols-5 gap-x-5 gap-y-7 1024:px-10 320:p-5 1440:px-36 2560:px-[520px]">
+            {[...Array(9)].map((_, index) => (
+                <div
+                    key={index}
+                    className="flex justify-center items-center h-16 border border-black text-[#8F9191] text-lg transition duration-300 ease-in-out hover:bg-[#EEF1F2] hover:font-extrabold hover:shadow-lg hover:text-black hover:border-none"
+                >
+                    <p className="font-normal font-roboto">Author Name</p>
+                </div>
+            ))}
+        </div>
+    );
     return (
         <>
             <div className="mb-96">
@@ -38,20 +63,22 @@ const SearchResultsMenu = () => {
                     <div className="flex-grow border-t border-[#8F9191]" />
                     <div
                         onClick={() => handleTabClick("books")}
-                        className={`text-[#5D6162] flex 320:text-lg 1024:text-xl font-roboto pl-4 cursor-pointer py-2 ${activeTab === "books" ? "text-[#B79248] border-b border-[#B79248]" : ""
+                        className={`text-[#5D6162] flex 320:text-lg 1024:text-xl font-roboto px-4  cursor-pointer py-2 ${activeTab === "books" ? "text-[#B79248] border-b border-[#B79248]" : ""
                             }`}
                     >
                         <p className="font-fairplay mr-1 text-xl">4</p> Books
                     </div>
                     <div
                         onClick={() => handleTabClick("authors")}
-                        className={`text-[#5D6162] 320:text-lg 1024:text-xl font-roboto pr-4 cursor-pointer py-2 flex ${activeTab === "authors" ? "text-[#B79248] border-b border-[#B79248]" : ""
+                        className={`text-[#5D6162] 320:text-lg 1024:text-xl font-roboto px-4 cursor-pointer py-2 flex ${activeTab === "authors" ? "text-[#B79248] border-b border-[#B79248]" : ""
                             }`}
                     >
                         <p className="font-fairplay mr-1 text-xl">10</p> Authors
                     </div>
                     <div className="flex-grow border-t border-[#8F9191]" />
                 </div>
+                {activeTab === "books" ? renderBooksContent() : null}
+                {activeTab === "authors" ? renderAuthorsContent() : null}
             </div>
             <Footer />
         </>
