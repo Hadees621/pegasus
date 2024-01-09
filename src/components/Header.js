@@ -9,7 +9,6 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [OpenMobileMenu, setOpenMobileMenu] = useState(false);
     const [isBookActive, setIsBookActive] = useState(false);
-
     const megaMenuRef = useRef(null);
 
     const handleCrossClick = () => {
