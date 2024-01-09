@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../../components/Footer";
 
 const SearchResultsMenu = () => {
+    const [activeTab, setActiveTab] = useState("books");
+
+    const handleTabClick = (tab) => {
+        setActiveTab(tab);
+    };
 
     return (
         <>
@@ -29,14 +34,25 @@ const SearchResultsMenu = () => {
                         />
                     </div>
                 </div>
-                <div className="flex items-center  1024:px-10 320:p-5 1440:px-36 2560:px-96">
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
-                    <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-10">
-                        Fantastic fantasy reads
+                <div className="flex items-center 1024:px-10 320:p-5 1440:px-36 2560:px-96 gap-4">
+                    <div className="flex-grow border-t border-[#8F9191]" />
+                    <div
+                        onClick={() => handleTabClick("books")}
+                        className={`text-[#5D6162] flex 320:text-lg 1024:text-xl font-roboto pl-4 cursor-pointer py-2 ${activeTab === "books" ? "text-[#B79248] border-b border-[#B79248]" : ""
+                            }`}
+                    >
+                        <p className="font-fairplay mr-1 text-xl">4</p> Books
                     </div>
-                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                    <div
+                        onClick={() => handleTabClick("authors")}
+                        className={`text-[#5D6162] 320:text-lg 1024:text-xl font-roboto pr-4 cursor-pointer py-2 flex ${activeTab === "authors" ? "text-[#B79248] border-b border-[#B79248]" : ""
+                            }`}
+                    >
+                        <p className="font-fairplay mr-1 text-xl">10</p> Authors
+                    </div>
+                    <div className="flex-grow border-t border-[#8F9191]" />
                 </div>
-            </div >
+            </div>
             <Footer />
         </>
     );
