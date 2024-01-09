@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../../components/Footer";
 
-const SearchResultsMenu = () => {
+const SearchResults = () => {
     const [activeTab, setActiveTab] = useState("authors");
 
     const handleTabClick = (tab) => {
@@ -9,7 +9,7 @@ const SearchResultsMenu = () => {
     };
 
     const renderBooksContent = () => (
-        <div className="grid lg:grid-cols-5 gap-x-5 gap-y-7 1024:px-10 320:p-5 1440:px-36 2560:px-[520px]">
+        <div className="grid md:grid-cols-3 lg:grid-cols-5 2560:gap-x-5 1024:gap-x-3 gap-y-7 1024:px-20 320:p-5 1440:px-52 2560:px-[520px]">
             {[...Array(4)].map((_, index) => (
                 <div
                     key={index}
@@ -22,7 +22,7 @@ const SearchResultsMenu = () => {
     );
 
     const renderAuthorsContent = () => (
-        <div className="grid lg:grid-cols-5 gap-x-5 gap-y-7 1024:px-10 320:p-5 1440:px-36 2560:px-[520px]">
+        <div className="grid md:grid-cols-3 lg:grid-cols-5 2560:gap-x-5 1024:gap-x-3 gap-y-7 1024:px-20 320:p-5 1440:px-52 2560:px-[520px]">
             {[...Array(9)].map((_, index) => (
                 <div
                     key={index}
@@ -33,12 +33,13 @@ const SearchResultsMenu = () => {
             ))}
         </div>
     );
+
     return (
         <>
-            <div className="mb-96">
+            <div className="2560:mb-96 md:mb-48 320:mb-20">
                 <div className={`flex flex-col items-center py-8`}>
-                    <p className="text-5xl font-fairplay py-10 font-normal">Search results</p>
-                    <div className="bg-[#F3F4F3] h-[55px] p-4 flex items-center w-[35%] my-6">
+                    <p className="lg:text-5xl 320:text-3xl font-fairplay py-10 font-normal">Search results</p>
+                    <div className="bg-[#F3F4F3] h-[55px] p-4 flex items-center 1024:w-[60%] 1440:w-[50%] 2560:w-[35%] 320:w-[85%] my-6">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -85,4 +86,4 @@ const SearchResultsMenu = () => {
     );
 };
 
-export default SearchResultsMenu;
+export default SearchResults;
