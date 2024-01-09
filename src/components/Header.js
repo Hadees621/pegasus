@@ -61,7 +61,6 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen }) => {
         { label: "About us", className: "" },
         { label: "Features", className: "" },
         { label: "Submissions", className: "" },
-        { label: "Search", className: "search-link", onClick: handleSearchClick },
     ];
 
     return (

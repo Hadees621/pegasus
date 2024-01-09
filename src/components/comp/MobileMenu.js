@@ -13,7 +13,7 @@ const MobileMenu = ({ links, isBookActive, handleBooksClick, isOpen, onClose, ha
 
     const handleCrossClick = () => {
         handleMobileMenuToggle();
-        setIsMobileSearchMegaMenuOpen(!false)
+        setIsMobileSearchMegaMenuOpen(false)
     };
     return (
         <div className={`flex flex-col items-center w-full lg:hidden my-4 gap-6 ${isOpen ? "block" : "hidden"}`}>
