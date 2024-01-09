@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import { bookData } from "./utils";
 
 const SearchResults = () => {
     const [activeTab, setActiveTab] = useState("authors");
@@ -10,13 +11,14 @@ const SearchResults = () => {
     };
 
     const renderBooksContent = () => (
-        <div className="grid md:grid-cols-3 lg:grid-cols-5 2560:gap-x-5 1024:gap-x-3 gap-y-7 1024:px-20 320:p-5 1440:px-52 2560:px-[520px]">
-            {[...Array(4)].map((_, index) => (
-                <div
-                    key={index}
-                    className="flex justify-center items-center h-16 border border-black text-[#8F9191] text-lg transition duration-300 ease-in-out hover:bg-[#EEF1F2] hover:font-extrabold hover:shadow-lg hover:text-black hover:border-none"
-                >
-                    <p className="font-normal font-roboto">Book Name</p>
+        <div className="grid md:grid-cols-3 lg:grid-cols-5 w-full justify-center 1024:px-10 320:p-5 1440:px-36 2560:px-96">
+            {bookData.map((book, index) => (
+                <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
+                    <img className="320:h-[420px] w-full 1024:h-[300px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                    <div className='w-full text-start'>
+                        <h3 className="text-lg font-bold font-fairplay">{book.title}</h3>
+                        <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
+                    </div>
                 </div>
             ))}
         </div>
