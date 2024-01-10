@@ -94,46 +94,46 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                     </div>
 
                     {/* blog category */}
-                    <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 1024:gap-6 mt-3'>
+                    <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 1024:gap-6 mt-3 1440:mt-6 2560:mt-10'>
                         {articleData.map((article, index) => (
                             <div key={index} className="m-3 text-center 1024:m-2">
                                 <div className='flex justify-between'>
-                                    <h3 className="text-lg 1024:text-[6px] font-fairplay">{article.category}</h3>
-                                    <h3 className="text-lg 1024:text-[6px] font-fairplay">{article.date}</h3>
+                                    <h3 className="2560:text-lg 1024:text-[6px] 1440:text-[8px]  font-fairplay">{article.category}</h3>
+                                    <h3 className="2560:text-lg 1024:text-[6px] 1440:text-[8px] font-fairplay">{article.date}</h3>
                                 </div>
                                 <div className='w-full'>
                                     <img className="w-full object-cover" src={article.imageSrc} alt={`Section ${index + 1} Image`} />
                                 </div>
                                 <div className='w-full text-start items-end justify-end'>
-                                    <h3 className="text-3xl font-bold font-fairplay 1024:text-[11px]">{article.title}</h3>
-                                    <p className="text-sm text-[#0E172B] font-roboto 1024:text-[6px] leading-[14px]">{article.content}</p>
-                                    <a href="#" className="text-[#0E172B] text-lg 1024:text-[6px] font-roboto tracking-wide underline border-[#5D6162] items-start inline-block ">Read more</a>
+                                    <h3 className="2560:text-3xl 2560:mt-4 font-bold font-fairplay 1024:text-[11px] 1440:text-[18px] 1440:mt-2">{article.title}</h3>
+                                    <p className="2560:text-[20px] 2560:mt-6 2560:leading-[30px] text-[#0E172B] font-roboto 1024:text-[6px] 1440:text-[9px] 1440:mt-2 1440:leading-[17px] leading-[14px]">{article.content}</p>
+                                    <a href="#" className="text-[#0E172B] 2560:text-lg 1024:text-[6px] 1440:text-[10px] font-roboto tracking-wide underline border-[#5D6162] items-start inline-block 1440:mt-6 2560:mt-9">Read more</a>
                                 </div>
                             </div>
                         ))}
                     </div>
 
                     {/* Audio books */}
-                    <div className="flex items-center mt-6">
+                    <div className="flex items-center mt-6 2560:mt-10">
                         <div className="flex-grow border-t border-[#8F9191]"></div>
-                        <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] font-fairplay px-2">Have a listen to our audio books</div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] 1440:text-[15px] 2560:text-[28px] font-fairplay px-2">Have a listen to our audio books</div>
                         <div className="flex-grow border-t border-[#8F9191]"></div>
                     </div>
 
-                    <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
+                    <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center 1440:mt-3 2560:mt-6">
                         {audioBooksData.map((book, index) => (
                             <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
-                                <img className="320:h-[420px] 1024:h-[95px] 1024:w-[200px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                                <img className="320:h-[420px] 1024:h-[110px] 1024:w-[200px]  1440:h-[150px] 2560:h-[240px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
                                 <div className='w-full text-start mt-2'>
-                                    <h3 className="text-[6px] font-medium font-fairplay">{book.title}</h3>
-                                    <p className="text-[5px] text-[#B79248] font-roboto">{book.author}</p>
+                                    <h3 className="1024:text-[8px] 1440:text-[11px] 2560:text-[19px] font-medium font-fairplay">{book.title}</h3>
+                                    <p className="1024:text-[6px] 1440:text-[9px] 2560:text-[17px] text-[#B79248] font-roboto">{book.author}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
 
                     <p className="text-center">
-                        <a href="#" className="text-[#5D6162] text-[6px] font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Browse more</a>
+                        <a href="#" className="text-[#5D6162] 1024:text-[6px] 1440:text-[11px] 2560:text-[21px] 2560:mt-6 font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Browse more</a>
                     </p>
 
                     {/* imprints */}
