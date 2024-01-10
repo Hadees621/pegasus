@@ -2,13 +2,13 @@ import React from 'react'
 import { aboutAuthorData, articleData, audioBooksData, bookData, fantasyReadData, imprintData, provkingNovelData } from './../utils/utils'
 
 const ImprintSection = ({ title, content, imageSrc }) => (
-    <div className="1024:m-1 1440:m-4 m-4 p-10 320:p-6 768:p-8 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
-        <div className="w-full">
-            <img className="h-[100px]" src={imageSrc} alt="Section Image" />
+    <div className="1024:m-0 1024:py-4 1024:px-2 1024:h-[205px] 1440:m-4 m-4 p-10 320:p-6 768:p-8 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
+        <div className="w-full ">
+            <img className="h-[100px] 1024:h-[40px]" src={imageSrc} alt="Section Image" />
         </div>
         <div className="w-full text-start">
-            <h3 className="1440:text-3xl text-3xl 1024:text-xl font-bold font-fairplay pt-4 pl-0">{title}</h3>
-            <p className="1440:text-base text-base 1024:text-sm text-[#2A2E30] font-roboto py-6 tracking-normal leading-6">{content}</p>
+            <h3 className="1440:text-3xl text-3xl 1024:text-[12px] font-bold font-fairplay my-3 1024:pt-0 pl-0">{title}</h3>
+            <p className="1440:text-base text-base 1024:text-[7px] text-[#2A2E30] font-roboto py-6 1024:py-0 tracking-normal leading-4">{content}</p>
         </div>
     </div>
 );
@@ -28,7 +28,7 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                 <div className='w-full justify-center 1024:px-40 320:p-5 1440:px-36 2560:px-96'>
 
                     {/* Established section */}
-                    <div className='flex gap-12 1024:gap-3'>
+                    <div className='flex 320:flex-col lg:flex-row gap-12 1024:gap-3'>
                         <div className="w-full bg-white flex flex-col p-5 1024:p-0 justify-center 1024:items-start 1024:w-[50%]">
                             <h2 className="text-2xl 1440:text-3xl font-bold font-fairplay 1024:text-[11px]">Established since 1999</h2>
                             <p className='font-roboto 1440:text-xl 1024:text-[6px] mb-4 mr-5 text-black'>Pegasus Elliot MacKenzie Publishers have been publishing high quality books from exciting
@@ -76,16 +76,16 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                         <div className="flex-grow border-t border-[#8F9191]"></div>
                     </div>
 
-                    <div class="bg-[#EDEFF1] p-8 320:p-0">
+                    <div class="bg-[#EDEFF1] p- 320:p-0">
                         <div class="flex flex-col md:flex-row">
                             <div class="md:w-[70%] py-4 pl-4">
                                 <img class="w-full h-auto" src="assests\section\flowerss.png" alt="Image" />
                             </div>
 
-                            <div class="md:w-[45%] px-4 border-red border flex flex-col 1024:justify-center">
+                            <div class="md:w-[45%] px-4 flex flex-col 1024:justify-center">
                                 <p className='text-sm pb-6 1024:text-[6px] 2560:text-lg'>Blog category — 00 Month, 2022</p>
                                 <h2 class="text-2xl 320:text-xl font-semibold 1024:text-[22px] 2560:text-3xl font-fairplay">Article Title</h2>
-                                <p class="text-sm 320:text-xs 1024:text-[6px] 1024:leading-[12px] font-medium 1440:text-base 2560:text-xl text-gray-700 mb-4 mt-2 font-roboto pr-3 2560:mt-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                <p class="text-sm 320:text-xs 1024:text-[6px] 1024:leading-[12px] font-medium 1440:text-base 2560:text-xl text-gray-700 mb-8 mt-2 font-roboto pr-3 2560:mt-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
                                     veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
                                     commodo consequat</p>
                                 <button className="bg-[#031428] text-base text-white px-4 rounded-3xl w-[130px] h-8 font-fairplay 1024:w-[61px] 1024:h-[20px] 1024:text-[6.5px] flex justify-center items-center 2560:mt-10">Read more</button>
@@ -93,53 +93,56 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                         </div>
                     </div>
 
-                    <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mt-8'>
+                    {/* blog category */}
+                    <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 1024:gap-6 mt-3'>
                         {articleData.map((article, index) => (
-                            <div key={index} className="m-4 p-4 text-center">
-                                <div className='flex justify-between py-4'>
-                                    <h3 className="text-lg font-fairplay">{article.category}</h3>
-                                    <h3 className="text-lg font-fairplay">{article.date}</h3>
+                            <div key={index} className="m-3 text-center 1024:m-2">
+                                <div className='flex justify-between'>
+                                    <h3 className="text-lg 1024:text-[6px] font-fairplay">{article.category}</h3>
+                                    <h3 className="text-lg 1024:text-[6px] font-fairplay">{article.date}</h3>
                                 </div>
                                 <div className='w-full'>
                                     <img className="w-full object-cover" src={article.imageSrc} alt={`Section ${index + 1} Image`} />
                                 </div>
-                                <div className='w-full text-start'>
-                                    <h3 className="text-3xl font-bold font-fairplay pt-4">{article.title}</h3>
-                                    <p className="text-sm text-[#5D6162] font-roboto py-4">{article.content}</p>
-                                    <a href="#" className="text-[#5D6162] text-lg font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162] mt-3">Read more</a>
+                                <div className='w-full text-start items-end justify-end'>
+                                    <h3 className="text-3xl font-bold font-fairplay 1024:text-[11px]">{article.title}</h3>
+                                    <p className="text-sm text-[#0E172B] font-roboto 1024:text-[6px] leading-[14px]">{article.content}</p>
+                                    <a href="#" className="text-[#0E172B] text-lg 1024:text-[6px] font-roboto tracking-wide underline border-[#5D6162] items-start inline-block ">Read more</a>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    <div className="flex items-center py-8 mt-6">
+                    {/* Audio books */}
+                    <div className="flex items-center mt-6">
                         <div className="flex-grow border-t border-[#8F9191]"></div>
-                        <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Have a listen to our audio books</div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] font-fairplay px-2">Have a listen to our audio books</div>
                         <div className="flex-grow border-t border-[#8F9191]"></div>
                     </div>
 
                     <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
                         {audioBooksData.map((book, index) => (
                             <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
-                                <img className="320:h-[300px] w-full 1024:h-[200px] 2560:h-[320px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
-                                <div className='w-full text-start'>
-                                    <h3 className="text-lg font-bold font-fairplay mt-8">{book.title}</h3>
-                                    <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
+                                <img className="320:h-[420px] 1024:h-[95px] 1024:w-[200px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                                <div className='w-full text-start mt-2'>
+                                    <h3 className="text-[6px] font-medium font-fairplay">{book.title}</h3>
+                                    <p className="text-[5px] text-[#B79248] font-roboto">{book.author}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    <p className="text-center mt-8">
-                        <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
+                    <p className="text-center">
+                        <a href="#" className="text-[#5D6162] text-[6px] font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Browse more</a>
                     </p>
 
-                    <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-4 mt-8'>
-                        <div className="1024:m-1 1440:m-4 m-4 p-4 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px]">
-                            <div className='w-full text-start mt-10'>
-                                <h3 className="text-3xl font-fairplay pt-4 1024:text-2xl">Our imprints</h3>
-                                <p className="text-sm text-[#5D6162] font-roboto py-4 pr-4 text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">Explore</button>
+                    {/* imprints */}
+                    <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-4 mt-8 gap-1'>
+                        <div className="1024:m-1 1440:m-4 m-4 p-4 1024:p-3 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[400px] 1024:h-[205px]">
+                            <div className='w-full text-start mt-10 1024:mt-4'>
+                                <h3 className="text-3xl text-[#5D6162] font-fairplay pt-4 1024:pt-3 1024:text-[12px]">Our imprints</h3>
+                                <p className="text-sm text-[#5D6162] font-roboto py-4 pr-4 text-start 1024:text-[6px] 1024:leading-3 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <button className="mt-6 1024:mt-0 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 1024:w-[70px] 1024:h-[20px] 1024:text-[7px] flex justify-center items-center font-fairplay">Explore</button>
                             </div>
                         </div>
 
