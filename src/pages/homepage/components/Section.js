@@ -53,7 +53,7 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                         <div className="flex-grow border-t border-[#8F9191]"></div>
                     </div>
 
-                    <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
+                    <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center 2560:mt-6">
                         {bookData.map((book, index) => (
                             <div key={index} className="m-4 p-3 text-center 768:m-0 1440:m-1">
                                 <img className="320:h-[420px] 1024:h-[140px] 1024:w-[160px] 1440:h-[210px] 2560:w-[240px] 2560:h-[380px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
@@ -66,29 +66,29 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                     </div>
 
                     <p className="text-center">
-                        <a href="#" className="text-[#5D6162] 1024:text-[6px] 1440:text-[11px] 2560:text-[21px] font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Browse more</a>
+                        <a href="#" className="text-[#5D6162] 1024:text-[6px] 1440:text-[11px] 2560:text-[21px] 2560:mt-6 font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Browse more</a>
                     </p>
 
                     {/* latest features */}
-                    <div className="flex items-center mt-6">
+                    <div className="flex items-center mt-6 2560:mt-10">
                         <div className="flex-grow border-t border-[#8F9191]"></div>
-                        <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] font-fairplay px-2">The latest features</div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] 1440:text-[15px] 2560:text-[28px] font-fairplay px-2">The latest features</div>
                         <div className="flex-grow border-t border-[#8F9191]"></div>
                     </div>
 
-                    <div class="bg-[#EDEFF1] p- 320:p-0">
+                    <div class="bg-[#EDEFF1] p-4 320:p-0 1440:mt-7 2560:mt-12">
                         <div class="flex flex-col md:flex-row">
                             <div class="md:w-[70%] py-4 pl-4">
                                 <img class="w-full h-auto" src="assests\section\flowerss.png" alt="Image" />
                             </div>
 
-                            <div class="md:w-[45%] px-4 flex flex-col 1024:justify-center">
-                                <p className='text-sm pb-6 1024:text-[6px] 2560:text-lg'>Blog category — 00 Month, 2022</p>
-                                <h2 class="text-2xl 320:text-xl font-semibold 1024:text-[22px] 2560:text-3xl font-fairplay">Article Title</h2>
-                                <p class="text-sm 320:text-xs 1024:text-[6px] 1024:leading-[12px] font-medium 1440:text-base 2560:text-xl text-gray-700 mb-8 mt-2 font-roboto pr-3 2560:mt-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                            <div class="md:w-[45%] px-4 2560:px-10 flex flex-col 1024:justify-center">
+                                <p className='text-sm pb-6 1024:text-[6px] 1440:text-[9px] 2560:text-base 2560:pb-14'>Blog category — 00 Month, 2022</p>
+                                <h2 class="text-2xl 320:text-xl font-semibold 1024:text-[22px] 1440:text-[30px] 2560:text-4xl font-fairplay">Article Title</h2>
+                                <p class="text-sm 320:text-xs 1024:text-[6px] 1024:leading-[12px] 1440:text-[9.5px] 1440:leading-[17px] font-medium 1440:text-base 2560:text-[17px] 2560:leading-[32px] text-gray-700 mb-8 mt-2 font-roboto pr-3 2560:mt-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
                                     veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
                                     commodo consequat</p>
-                                <button className="bg-[#031428] text-base text-white px-4 rounded-3xl w-[130px] h-8 font-fairplay 1024:w-[61px] 1024:h-[20px] 1024:text-[6.5px] flex justify-center items-center 2560:mt-10">Read more</button>
+                                <button className="bg-[#031428] text-base text-white px-4 rounded-3xl w-[130px] h-8 font-fairplay 1024:w-[61px] 1024:h-[20px] 1024:text-[6.5px] 1440:w-[81px] 1440:h-[26px] 1440:text-[9px] 2560:w-[150px] 2560:h-[46px] 2560:text-[15px] flex justify-center items-center 2560:mt-10">Read more</button>
                             </div>
                         </div>
                     </div>
