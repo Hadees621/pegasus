@@ -29,9 +29,9 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
 
                     {/* Established section */}
                     <div className='flex 320:flex-col lg:flex-row gap-12 1024:gap-3'>
-                        <div className="w-full bg-white flex border flex-col p-5 1024:p-0 justify-center 1024:items-start 1024:w-[50%] 1440:w-[60%]">
-                            <h2 className="2560:text-3xl border 1440:text-[20px] font-bold font-fairplay 1024:text-[11px]">Established since 1999</h2>
-                            <p className='font-roboto 2560:text-[18px] 1440:text-[12px] 1440:my-4 1024:text-[6px] mb-4 mr-5 text-black'>Pegasus Elliot MacKenzie Publishers have been publishing high quality books from exciting
+                        <div className="w-full bg-white flex flex-col p-5 1024:p-0 justify-center 1024:items-start 1024:w-[50%] 1440:w-[60%]">
+                            <h2 className="2560:text-3xl 1440:text-[20px] font-bold font-fairplay 1024:text-[11px]">Established since 1999</h2>
+                            <p className='font-roboto 2560:text-[18px] 1440:text-[10px] 1440:my-4 1024:text-[6px] mb-4 mr-5 text-black'>Pegasus Elliot MacKenzie Publishers have been publishing high quality books from exciting
                                 authors for more than 20 years..
                             </p>
                             <button className="bg-[#031428] text-lg text-white rounded-3xl w-[150px] h-12 font-fairplay 1024:w-[60px] 1024:h-[18px] 1440:w-[80px] 1440:h-[24px] 1440:text-[10px] 2560:w-[130px] 2560:h-[45px] 2560:text-[15px] 1024:text-[8px] items-center flex justify-center font-extralight">Explore</button>
@@ -49,24 +49,24 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                     {/* new releases */}
                     <div className="flex items-center mt-10">
                         <div className="flex-grow border-t border-[#8F9191]"></div>
-                        <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] font-fairplay px-2">Take a look at our new releases</div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] 1440:text-[15px] 2560:text-[28px] font-fairplay px-2">Take a look at our new releases</div>
                         <div className="flex-grow border-t border-[#8F9191]"></div>
                     </div>
 
                     <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
                         {bookData.map((book, index) => (
                             <div key={index} className="m-4 p-3 text-center 768:m-0 1440:m-1">
-                                <img className="320:h-[420px] 1024:h-[140px] 1024:w-[160px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                                <img className="320:h-[420px] 1024:h-[140px] 1024:w-[160px] 1440:h-[210px] 2560:w-[240px] 2560:h-[380px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
                                 <div className='w-full text-start my-2'>
-                                    <h3 className="text-[8px] font-medium font-fairplay">{book.title}</h3>
-                                    <p className="text-[6px] text-[#B79248] font-roboto">{book.author}</p>
+                                    <h3 className="1024:text-[8px] 1440:text-[11px] 2560:text-[19px] font-medium font-fairplay">{book.title}</h3>
+                                    <p className="1024:text-[6px] 1440:text-[9px] 2560:text-[17px] text-[#B79248] font-roboto">{book.author}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
 
                     <p className="text-center">
-                        <a href="#" className="text-[#5D6162] text-[6px] font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Browse more</a>
+                        <a href="#" className="text-[#5D6162] 1024:text-[6px] 1440:text-[11px] 2560:text-[21px] font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Browse more</a>
                     </p>
 
                     {/* latest features */}
