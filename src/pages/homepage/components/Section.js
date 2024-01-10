@@ -151,28 +151,30 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                         ))}
                     </div>
 
-                    <div className="flex items-center py-8 mt-6">
+
+                    {/* Thoughts provoking  */}
+                    <div className="flex items-center mt-6">
                         <div className="flex-grow border-t border-[#8F9191]"></div>
-                        <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Thought provoking novels
-                        </div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] font-fairplay px-2">Thought provoking novels</div>
                         <div className="flex-grow border-t border-[#8F9191]"></div>
                     </div>
 
                     <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
                         {provkingNovelData.map((book, index) => (
-                            <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
-                                <img className="320:h-[420px] w-full 1024:h-[300px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
-                                <div className='w-full text-start'>
-                                    <h3 className="text-lg font-bold font-fairplay">{book.title}</h3>
-                                    <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
+                            <div key={index} className="m-4 p-3 text-center 768:m-0 1440:m-1">
+                                <img className="320:h-[420px] 1024:h-[140px] 1024:w-[160px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                                <div className='w-full text-start my-2'>
+                                    <h3 className="text-[8px] font-medium font-fairplay">{book.title}</h3>
+                                    <p className="text-[6px] text-[#B79248] font-roboto">{book.author}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    <p className="text-center mt-8">
-                        <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
+                    <p className="text-center">
+                        <a href="#" className="text-[#5D6162] text-[6px] font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Browse more</a>
                     </p>
+
 
                     {/* <div className="flex items-center py-8 mt-6">
                     <div className="flex-grow border-t border-[#8F9191]"></div>
@@ -208,19 +210,20 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                     </div>
                 </div> */}
 
-                    <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mt-8 px-20 320:px-0 gap-4 768:p-10 1024:p-5'>
+                    {/* about author */}
+                    <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 mt-8 px-20 320:px-0 gap-4 768:p-10 1024:p-0 1024:px-0 1024:gap-0'>
                         {aboutAuthorData.map((author, index) => (
                             <div
                                 key={index}
-                                className="m-4 320:m-0 320:p-3 768:p-10 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[450px] 1024:h-[550px] 1440:h-[520px] 2560:h-[450px]"
+                                className="m-4 320:m-0 320:p-3 768:p-10 1024:p-1 text-center group bg-white transition-colors duration-300 ease-in-out hover:bg-[#EDEFF1] h-[450px] 1024:h-[230px] 1440:h-[520px] 2560:h-[450px]"
                             >
-                                <div className="w-full text-start p-10 320:p-0">
-                                    <h3 className="text-2xl font-normal font-fairplay text-[#B79248] underline">{author.name}</h3>
-                                    <h3 className="text-2xl font-normal font-fairplay pt-1 text-[#B79248] underline">{author.title}</h3>
-                                    <p className="text-base text-[#2A2E30] font-fairplay py-6 tracking-normal">{author.message}</p>
-                                    <p className="text-base text-[#2A2E30] font-fairplay py-4 tracking-normal">{author.paragraph}</p>
+                                <div className="w-full text-start p-10 320:p-0 1024:p-3">
+                                    <h3 className="text-2xl font-normal font-fairplay text-[#B79248] 1024:text-[10px] underline">{author.name}</h3>
+                                    <h3 className="text-2xl font-normal font-fairplay pt-1 text-[#B79248] underline 1024:text-[10px] 1024:pt-0">{author.title}</h3>
+                                    <p className="text-base text-[#2A2E30] font-fairplay py-6 tracking-normal 1024:text-[6px] 1024:py-2">{author.message}</p>
+                                    <p className="text-base text-[#2A2E30] font-fairplay py-4 tracking-normal 1024:text-[7px] 1024:leading-3 1024:py-1">{author.paragraph}</p>
                                     {author.button && (
-                                        <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">
+                                        <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay 1024:w-[63px] 1024:h-[20px] 1024:text-[7px] flex justify-center items-center">
                                             Read more
                                         </button>
                                     )}
