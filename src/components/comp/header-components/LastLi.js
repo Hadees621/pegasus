@@ -5,7 +5,7 @@ const LastLi = ({ text }) => {
         <li className="flex items-center">
             <a
                 href="#"
-                className="hover:underline text-[#B79248] text-base font-roboto font-normal underline m-5 mr-1"
+                className="hover:underline text-[#B79248] text-base font-roboto font-normal underline m-5 mr-1 1024:text-[8px] 1024:m-1"
             >
                 {text}
             </a>
