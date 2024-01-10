@@ -25,24 +25,24 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
             <div style={isMegaMenuOpen || applyBlur ? styles.filterBlur : {}}
             >
                 <div className='h-[400px] bg-[#FEDFB9] 1440:mx-16 rounded-sm mb-10 1024:mb-3'> </div>
-                <div className='w-full justify-center 1024:px-40 320:p-5 1440:px-36 2560:px-96'>
+                <div className='w-full justify-center 1024:px-40 320:p-5 xl:px-52 2xl:px-96 border'>
 
                     {/* Established section */}
                     <div className='flex 320:flex-col lg:flex-row gap-12 1024:gap-3'>
-                        <div className="w-full bg-white flex flex-col p-5 1024:p-0 justify-center 1024:items-start 1024:w-[50%]">
-                            <h2 className="text-2xl 1440:text-3xl font-bold font-fairplay 1024:text-[11px]">Established since 1999</h2>
-                            <p className='font-roboto 1440:text-xl 1024:text-[6px] mb-4 mr-5 text-black'>Pegasus Elliot MacKenzie Publishers have been publishing high quality books from exciting
+                        <div className="w-full bg-white flex border flex-col p-5 1024:p-0 justify-center 1024:items-start 1024:w-[50%] 1440:w-[60%]">
+                            <h2 className="2560:text-3xl border 1440:text-[20px] font-bold font-fairplay 1024:text-[11px]">Established since 1999</h2>
+                            <p className='font-roboto 2560:text-[18px] 1440:text-[12px] 1440:my-4 1024:text-[6px] mb-4 mr-5 text-black'>Pegasus Elliot MacKenzie Publishers have been publishing high quality books from exciting
                                 authors for more than 20 years..
                             </p>
-                            <button className="bg-[#031428] text-lg text-white rounded-3xl w-[150px] h-12 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight">Explore</button>
+                            <button className="bg-[#031428] text-lg text-white rounded-3xl w-[150px] h-12 font-fairplay 1024:w-[60px] 1024:h-[18px] 1440:w-[80px] 1440:h-[24px] 1440:text-[10px] 2560:w-[130px] 2560:h-[45px] 2560:text-[15px] 1024:text-[8px] items-center flex justify-center font-extralight">Explore</button>
                         </div>
 
-                        <div className="flex items-center border-black 1024:w-[90%]">
-                            <img className="320:h-[150px] 320:w-full object-cover 1024:h-[130px] 1024:w-[]" src="assests\section\section1.png" alt="Image 1" />
+                        <div className="flex items-center border-black 1024:w-[90%] 1440:w-[95%]">
+                            <img className="320:h-[150px] 320:w-full object-cover 1024:h-[130px] 1440:h-[190px] 2560:h-[300px]" src="assests\section\section1.png" alt="Image 1" />
                         </div>
 
-                        <div className="w-full flex items-center 1024:w-[67%]">
-                            <img className="320:h-[280px] 320:w-full object-cover 1024:h-[130px] 1024:w-[300px]" src="assests\section\section2.png" alt="Image 2" />
+                        <div className="w-full flex items-center 1024:w-[67%] 1440:w-[75%]">
+                            <img className="320:h-[280px] 320:w-full object-cover 1024:h-[130px] 1440:h-[190px] 2560:h-[300px]" src="assests\section\section2.png" alt="Image 2" />
                         </div>
                     </div>
 
