@@ -24,32 +24,31 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
         <>
             <div style={isMegaMenuOpen || applyBlur ? styles.filterBlur : {}}
             >
-                <div className='h-[800px] bg-[#FEDFB9] 1440:mx-16 rounded-sm mb-10'> </div>
-                <div className='w-full justify-center 1024:px-10 320:p-5 1440:px-36 2560:px-96'>
+                <div className='h-[400px] bg-[#FEDFB9] 1440:mx-16 rounded-sm mb-10 1024:mb-3'> </div>
+                <div className='w-full justify-center 1024:px-40 320:p-5 1440:px-36 2560:px-96'>
 
-                    <div className='grid 1024:grid-cols-3 320:grid-cols-1 gap-12 1024:gap-4'>
-
-                        <div className="w-full bg-white flex flex-col items-center p-5 1024:p-10  justify-center 1024:items-start">
-                            <h2 className="text-2xl 1440:text-3xl font-bold mb-4 font-fairplay">Established since 1999</h2>
-                            <p className='font-roboto 1440:text-xl'>Pegasus Elliot MacKenzie Publishers have been publishing high quality books from exciting
+                    {/* Established section */}
+                    <div className='flex gap-12 1024:gap-3'>
+                        <div className="w-full bg-white flex flex-col p-5 1024:p-0 justify-center 1024:items-start 1024:w-[50%]">
+                            <h2 className="text-2xl 1440:text-3xl font-bold font-fairplay 1024:text-[11px]">Established since 1999</h2>
+                            <p className='font-roboto 1440:text-xl 1024:text-[6px] mb-4 mr-5 text-black'>Pegasus Elliot MacKenzie Publishers have been publishing high quality books from exciting
                                 authors for more than 20 years..
                             </p>
-                            <button className="mt-6 bg-[#031428] text-lg text-white px-4 py-2 rounded-3xl w-[150px] h-12 font-fairplay">Explore</button>
+                            <button className="bg-[#031428] text-lg text-white rounded-3xl w-[150px] h-12 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight">Explore</button>
                         </div>
 
-                        <div className="flex items-center border-black w-full">
-                            <img className="320:h-[280px] 320:w-full object-cover" src="assests\section\section1.png" alt="Image 1" />
+                        <div className="flex items-center border-black 1024:w-[90%]">
+                            <img className="320:h-[150px] 320:w-full object-cover 1024:h-[130px] 1024:w-[]" src="assests\section\section1.png" alt="Image 1" />
                         </div>
 
-                        <div className="w-full flex items-center">
-                            <img className="320:h-[280px] 320:w-full object-cover" src="assests\section\section2.png" alt="Image 2" />
+                        <div className="w-full flex items-center 1024:w-[67%]">
+                            <img className="320:h-[280px] 320:w-full object-cover 1024:h-[130px] 1024:w-[300px]" src="assests\section\section2.png" alt="Image 2" />
                         </div>
-
                     </div>
 
                     <div className="flex items-center py-8 mt-6">
                         <div className="flex-grow border-t border-[#8F9191]"></div>
-                        <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">Take a look at our new releases</div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] font-fairplay px-2">Take a look at our new releases</div>
                         <div className="flex-grow border-t border-[#8F9191]"></div>
                     </div>
 
