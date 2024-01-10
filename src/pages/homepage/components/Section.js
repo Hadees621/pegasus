@@ -46,7 +46,8 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                         </div>
                     </div>
 
-                    <div className="flex items-center py-8 mt-6">
+                    {/* new releases */}
+                    <div className="flex items-center mt-10">
                         <div className="flex-grow border-t border-[#8F9191]"></div>
                         <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] font-fairplay px-2">Take a look at our new releases</div>
                         <div className="flex-grow border-t border-[#8F9191]"></div>
@@ -54,40 +55,40 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
 
                     <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center">
                         {bookData.map((book, index) => (
-                            <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
-                                <img className="320:h-[420px] w-full 1024:h-[300px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
-                                <div className='w-full text-start'>
-                                    <h3 className="text-lg font-bold font-fairplay">{book.title}</h3>
-                                    <p className="text-sm text-[#B79248] font-roboto">{book.author}</p>
+                            <div key={index} className="m-4 p-3 text-center 768:m-0 1440:m-1">
+                                <img className="320:h-[420px] 1024:h-[140px] 1024:w-[160px] 2560:h-[440px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                                <div className='w-full text-start my-2'>
+                                    <h3 className="text-[8px] font-medium font-fairplay">{book.title}</h3>
+                                    <p className="text-[6px] text-[#B79248] font-roboto">{book.author}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    <p className="text-center mt-8">
-                        <a href="#" className="text-[#5D6162] text-xl font-roboto tracking-wide inline-block pb-1 border-b border-[#5D6162]">Browse more</a>
+                    <p className="text-center">
+                        <a href="#" className="text-[#5D6162] text-[6px] font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Browse more</a>
                     </p>
 
-                    <div className="flex items-center py-8 mt-6">
+                    {/* latest features */}
+                    <div className="flex items-center mt-6">
                         <div className="flex-grow border-t border-[#8F9191]"></div>
-                        <div className="text-[#5D6162] 320:text-lg 1024:text-2xl font-fairplay px-4">The latest features
-                        </div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] font-fairplay px-2">The latest features</div>
                         <div className="flex-grow border-t border-[#8F9191]"></div>
                     </div>
 
                     <div class="bg-[#EDEFF1] p-8 320:p-0">
                         <div class="flex flex-col md:flex-row">
-                            <div class="md:w-1/2 p-4">
+                            <div class="md:w-[70%] py-4 pl-4">
                                 <img class="w-full h-auto" src="assests\section\flowerss.png" alt="Image" />
                             </div>
 
-                            <div class="md:w-1/2 p-4 flex flex-col 1024:justify-center">
-                                <p className='text-sm mb-8 2560:text-lg'>Blog category — 00 Month, 2022</p>
-                                <h2 class="text-2xl 320:text-xl font-bold mb-2 2560:text-3xl font-fairplay">Article Title</h2>
-                                <p class="text-sm 320:text-xs 1440:text-base 2560:text-xl text-gray-700 mb-4 font-roboto pr-3 2560:mt-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                            <div class="md:w-[45%] px-4 border-red border flex flex-col 1024:justify-center">
+                                <p className='text-sm pb-6 1024:text-[6px] 2560:text-lg'>Blog category — 00 Month, 2022</p>
+                                <h2 class="text-2xl 320:text-xl font-semibold 1024:text-[22px] 2560:text-3xl font-fairplay">Article Title</h2>
+                                <p class="text-sm 320:text-xs 1024:text-[6px] 1024:leading-[12px] font-medium 1440:text-base 2560:text-xl text-gray-700 mb-4 mt-2 font-roboto pr-3 2560:mt-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
                                     veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
                                     commodo consequat</p>
-                                <button className="bg-[#031428] text-base text-white px-4 rounded-3xl w-[130px] h-8 font-fairplay 2560:mt-10">Read more</button>
+                                <button className="bg-[#031428] text-base text-white px-4 rounded-3xl w-[130px] h-8 font-fairplay 1024:w-[61px] 1024:h-[20px] 1024:text-[6.5px] flex justify-center items-center 2560:mt-10">Read more</button>
                             </div>
                         </div>
                     </div>
