@@ -37,7 +37,6 @@ const NavIcons = ({ handleSearchClick, handleMobileSearchClick }) => {
                     </svg>
                 </div>
             </div>
-
         </>
     );
 };

@@ -151,7 +151,6 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                         ))}
                     </div>
 
-
                     {/* Thoughts provoking  */}
                     <div className="flex items-center mt-6">
                         <div className="flex-grow border-t border-[#8F9191]"></div>
@@ -174,7 +173,6 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                     <p className="text-center">
                         <a href="#" className="text-[#5D6162] text-[6px] font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Browse more</a>
                     </p>
-
 
                     {/* <div className="flex items-center py-8 mt-6">
                     <div className="flex-grow border-t border-[#8F9191]"></div>
