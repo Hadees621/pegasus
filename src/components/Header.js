@@ -67,16 +67,16 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
 
     return (
         <>
-            <div className="h-[80px] bg-[#EAEBEE] flex items-center justify-end">
-                <p className="text-xl 1024:text-lg font-fairplay pr-5 md:pr-16 1024:pr-16 1440:pr-36 2560:pr-96">
+            <div className="320:h-[70px] 1024:h-[28px] 1440:h-[50px] 2560:h-[80px] bg-[#EAEBEE] flex items-center justify-end">
+                <p className="text-xl 1024:text-[8px] 1440:text-[12px] 2560:text-[21px] font-fairplay pr-5 md:pr-16 1024:pr-40 1440:pr-52 2560:pr-96">
                     Sign up | Log in
                 </p>
             </div>
 
             <nav className="bg-white border-gray-200">
-                <div className="flex flex-wrap justify-between items-center px-5 md:px-10 xl:px-36 2xl:px-96 p-4">
+                <div className="flex flex-wrap justify-between items-center px-5 md:px-10 1024:px-40 xl:px-52 2xl:px-96 py-[3px]">
                     {isSearchMegaMenuOpen ? (
-                        <div className="bg-[#F3F4F3] h-[50px] p-4 flex items-center w-full 1024:mx-[210px] 2560:mx-[440px] my-6">
+                        <div className="bg-[#F3F4F3] 320:h-[40px] 2560:h-[50px] p-4 flex items-center w-full 1024:h-[20px] 1024:my-2 1024:mx-[210px] 2560:mx-[440px] 2560:my-6">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -85,7 +85,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
                                 strokeLinejoin="round"
                                 strokeWidth="2"
                                 viewBox="0 0 24 24"
-                                className="w-6 h-6 mr-2 text-gray-500"
+                                className="2560:w-6 h-6 mr-2 text-gray-500 1024:w-4"
                             >
                                 <circle cx="11" cy="11" r="8" />
                                 <path d="M21 21l-4.35-4.35" />
@@ -104,7 +104,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
                                     strokeLinejoin="round"
                                     strokeWidth="2"
                                     viewBox="0 0 24 24"
-                                    className="w-6 h-6 text-gray-500 hover:text-gray-700"
+                                    className="2560:w-6 h-6 text-gray-500 hover:text-gray-700 1024:w-4"
                                 >
                                     <path d="M6 18L18 6M6 6l12 12" />
                                 </svg>
@@ -117,7 +117,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
                                     id="mega-menu-full-image"
                                     className={`items-center justify-between hidden w-full md:flex md:w-auto md:order-1`}
                                 >
-                                    <ul className="flex 1440:space-x-4 2560:space-x-8 1024:space-x-4 font-fairplay 1440:text-xl 1024:text-base font-normal 320:hidden lg:flex">
+                                    <ul className="flex 1440:space-x-6 2560:space-x-8 1024:space-x-6 font-fairplay 2560:text-[23px] 1440:text-[12px] 1024:text-[8px] font-normal 320:hidden lg:flex">
                                         <li>
                                             <a
                                                 href="#"
@@ -159,14 +159,15 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
                             </div>
                             <div>
                                 <img
-                                    className="hidden 1024:flex 1024:h-[70px] 1024:w-[120px] 1440:h-[90px] 1440:w-[160px] 2560:h-[100px] 2560:w-[180px]"
+                                    className="hidden 1024:flex 1024:h-[40px] 1024:w-[70px] 1440:h-[60px] 1440:w-[110px] 2560:h-[110px] 2560:w-[190px]"
                                     src="assests/nav/navlogo.png"
                                     alt="Logo"
                                 />
                             </div>
-                            <div className="hidden 1024:flex items-center 1440:gap-8 2560:gap-12 1024:gap-8">
+                            <div className="hidden 1024:flex items-center 1440:gap-10 2560:gap-16 1024:gap-6">
                                 <NavIcons handleSearchClick={handleSearchClick} />
-                                <button className="mt-6 lg:mt-0 h-12 w-44 border border-[#B79248] rounded-full transition duration-300 ease-in-out bg-transparent hover:bg-[#B79248] text-[#B79248] hover:text-white focus:outline-none">
+
+                                <button className="mt-6 lg:mt-0 2560:h-12 2560:w-48 2560:text-[20px] border border-[#B79248] rounded-full transition duration-300 ease-in-out bg-transparent hover:bg-[#B79248] text-[#B79248] hover:text-white focus:outline-none 1024:h-[23px] 1024:w-[90px] 1024:text-[8.5px] 1440:h-[30px] 1440:w-[110px] 1440:text-[10.5px] font-fairplay">
                                     Submit Online
                                 </button>
                             </div>

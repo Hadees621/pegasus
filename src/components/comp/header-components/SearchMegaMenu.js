@@ -11,9 +11,9 @@ const SearchMegaMenu = ({ isSearchMegaMenuOpen }) => {
 
     return (
         <>
-            <div className="search-mega-menu flex flex-col items-center py-8">
+            <div className="search-mega-menu flex flex-col items-center 2560:py-8 1024:py-2">
 
-                <div className="flex tabs 1024:w-[50%] 2560:w-[35%]">
+                <div className="flex tabs 1024:w-[30%] 2560:w-[35%]">
                     <BooksTab
                         isActive={activeTab === "books"}
                         onClick={(tab) => setActiveTab(tab)}
@@ -26,43 +26,49 @@ const SearchMegaMenu = ({ isSearchMegaMenuOpen }) => {
 
                 {activeTab === "books" && (
                     <>
-                        <div className="pt-4 pb-10 gap-8 grid 1024:w-[50%] 2560:w-[35%]">
+                        <div className="pt-4 pb-10 2560:gap-8 grid 1024:w-[30%] 1024:gap-2 1024:text 2560:w-[35%]">
                             <ul className="grid">
                                 <li>
-                                    <div className="hover:bg-[#EDEFF1] py-4 px-2">
-                                        <span className="font-fairplay text-gray-800 text-xl">Book title Lorem ipsum</span>{" "}
-                                        — <span className="font-roboto text-[#B79248] text-lg">Author name</span>
+                                    <div className="hover:bg-[#EDEFF1] 2560:py-4 px-2 1024:py-1">
+                                        <span className="font-fairplay text-gray-800 2560:text-xl 1024:text-[12px]">Book title Lorem ipsum</span>{" "}
+                                        — <span className="font-roboto text-[#B79248] 2560:text-lg 1024:text-[12px]">Author name</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <div className="hover:bg-[#EDEFF1] py-4 px-2">
-                                        <span className="font-fairplay text-gray-800 text-xl">Book title Lorem ipsum</span>{" "}
-                                        — <span className="font-roboto text-[#B79248] text-lg">Author name</span>
+                                    <div className="hover:bg-[#EDEFF1] 2560:py-4 px-2 1024:py-1">
+                                        <span className="font-fairplay text-gray-800 2560:text-xl 1024:text-[12px]">Book title Lorem ipsum</span>{" "}
+                                        — <span className="font-roboto text-[#B79248] 2560:text-lg 1024:text-[12px]">Author name</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <div className="hover:bg-[#EDEFF1] py-4 px-2">
-                                        <span className="font-fairplay text-gray-800 text-xl">Book title Lorem ipsum</span>{" "}
-                                        — <span className="font-roboto text-[#B79248] text-lg">Author name</span>
+                                    <div className="hover:bg-[#EDEFF1] 2560:py-4 px-2 1024:py-1">
+                                        <span className="font-fairplay text-gray-800 2560:text-xl 1024:text-[12px]">Book title Lorem ipsum</span>{" "}
+                                        — <span className="font-roboto text-[#B79248] 2560:text-lg 1024:text-[12px]">Author name</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <div className="hover:bg-[#EDEFF1] py-4 px-2">
-                                        <span className="font-fairplay text-gray-800 text-xl">Book title Lorem ipsum</span>{" "}
-                                        — <span className="font-roboto text-[#B79248] text-lg">Author name</span>
+                                    <div className="hover:bg-[#EDEFF1] 2560:py-4 px-2 1024:py-1">
+                                        <span className="font-fairplay text-gray-800 2560:text-xl 1024:text-[12px]">Book title Lorem ipsum</span>{" "}
+                                        — <span className="font-roboto text-[#B79248] 2560:text-lg 1024:text-[12px]">Author name</span>
                                     </div>
                                 </li>
                                 <li>
-                                    <div className="hover:bg-[#EDEFF1] py-4 px-2">
-                                        <span className="font-fairplay text-gray-800 text-xl">Book title Lorem ipsum</span>{" "}
-                                        — <span className="font-roboto text-[#B79248] text-lg">Author name</span>
+                                    <div className="hover:bg-[#EDEFF1] 2560:py-4 px-2 1024:py-1">
+                                        <span className="font-fairplay text-gray-800 2560:text-xl 1024:text-[12px]">Book title Lorem ipsum</span>{" "}
+                                        — <span className="font-roboto text-[#B79248] 2560:text-lg 1024:text-[12px]">Author name</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="hover:bg-[#EDEFF1] 2560:py-4 px-2 1024:py-1">
+                                        <span className="font-fairplay text-gray-800 2560:text-xl 1024:text-[12px]">Book title Lorem ipsum</span>{" "}
+                                        — <span className="font-roboto text-[#B79248] 2560:text-lg 1024:text-[12px]">Author name</span>
                                     </div>
                                 </li>
                             </ul>
                             <div className="flex items-center">
                                 <a
                                     href="#"
-                                    className="text-black text-lg font-fairplay border-b border-black m-5 mr-1"
+                                    className="text-black 2560:text-lg 1024:text-[12px] 1024:m-2 font-fairplay border-b border-black 2560:m-5 mr-1"
                                 >
                                     See Results
                                 </a>
@@ -74,38 +80,44 @@ const SearchMegaMenu = ({ isSearchMegaMenuOpen }) => {
 
                 {activeTab === "authors" && (
                     <>
-                        <div className="pt-4 pb-10 gap-8 grid 1024:w-[50%] 2560:w-[35%]">
+                        <div className="pt-4 pb-10 gap-8 grid 1024:w-[30%] 1024:gap-2  2560:w-[35%]">
                             <ul>
                                 <li>
-                                    <div className="hover:bg-[#EDEFF1] py-4 px-2 marker:none">
-                                        <p className="font-roboto text-[#B79248] text-lg">Author name</p>
+                                    <div className="hover:bg-[#EDEFF1] 2560:py-4 px-2 1024:py-1 marker:none">
+                                        <p className="font-roboto text-[#B79248] 2560:text-lg 1024:text-[12px]">Author name</p>
                                     </div>
                                 </li>
                                 <li>
-                                    <div className="hover:bg-[#EDEFF1] py-4 px-2 marker:none">
-                                        <p className="font-roboto text-[#B79248] text-lg">Author name</p>
+                                    <div className="hover:bg-[#EDEFF1] 2560:py-4 px-2 1024:py-1 marker:none">
+                                        <p className="font-roboto text-[#B79248] 2560:text-lg 1024:text-[12px]">Author name</p>
                                     </div>
                                 </li>
                                 <li>
-                                    <div className="hover:bg-[#EDEFF1] py-4 px-2 marker:none">
-                                        <p className="font-roboto text-[#B79248] text-lg">Author name</p>
+                                    <div className="hover:bg-[#EDEFF1] 2560:py-4 px-2 1024:py-1 marker:none">
+                                        <p className="font-roboto text-[#B79248] 2560:text-lg 1024:text-[12px]">Author name</p>
                                     </div>
                                 </li>
                                 <li>
-                                    <div className="hover:bg-[#EDEFF1] py-4 px-2 marker:none">
-                                        <p className="font-roboto text-[#B79248] text-lg">Author name</p>
+                                    <div className="hover:bg-[#EDEFF1] 2560:py-4 px-2 1024:py-1 marker:none">
+                                        <p className="font-roboto text-[#B79248] 2560:text-lg 1024:text-[12px]">Author name</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div className="hover:bg-[#EDEFF1] 2560:py-4 px-2 1024:py-1 marker:none">
+                                        <p className="font-roboto text-[#B79248] 2560:text-lg 1024:text-[12px]">Author name</p>
                                     </div>
                                 </li>
                                 <li>
-                                    <div className="hover:bg-[#EDEFF1] py-4 px-2 marker:none">
-                                        <p className="font-roboto text-[#B79248] text-lg">Author name</p>
+                                    <div className="hover:bg-[#EDEFF1] 2560:py-4 px-2 1024:py-1 marker:none">
+                                        <p className="font-roboto text-[#B79248] 2560:text-lg 1024:text-[12px]">Author name</p>
                                     </div>
                                 </li>
                             </ul>
                             <div className="flex items-center">
                                 <a
                                     href="#"
-                                    className="text-black text-lg font-fairplay border-b border-black m-5 mr-1"
+                                    className="text-black 2560:text-lg 1024:text-[12px] 1024:m-2 font-fairplay border-b border-black 2560:m-5 mr-1"
                                 >
                                     See Results
                                 </a>
