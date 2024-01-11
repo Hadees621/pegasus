@@ -25,7 +25,7 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
             <div style={isMegaMenuOpen || applyBlur ? styles.filterBlur : {}}
             >
                 <div className='h-[400px] bg-[#FEDFB9] 1440:mx-16 rounded-sm mb-10 1024:mb-3'> </div>
-                <div className='w-full justify-center 1024:px-40 320:p-5 xl:px-52 2xl:px-96 border'>
+                <div className='w-full justify-center 1024:px-40 320:p-5 xl:px-52 2xl:px-96'>
 
                     {/* Established section */}
                     <div className='flex 320:flex-col lg:flex-row gap-12 1024:gap-3 320:gap-3'>
