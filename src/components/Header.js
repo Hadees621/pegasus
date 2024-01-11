@@ -5,7 +5,7 @@ import MegaMenuBooks from "./comp/header-components/MegaMenuBooks";
 import SearchMegaMenu from "./comp/header-components/SearchMegaMenu";
 
 const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
-    const [isSearchMegaMenuOpen, setIsSearchMegaMenuOpen] = useState(true);
+    const [isSearchMegaMenuOpen, setIsSearchMegaMenuOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [OpenMobileMenu, setOpenMobileMenu] = useState(false);
     const [isBookActive, setIsBookActive] = useState(false);
@@ -67,7 +67,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
 
     return (
         <>
-            <div className="1024:h-[28px] 1440:h-[50px] 2560:h-[80px] bg-[#EAEBEE] flex items-center justify-end">
+            <div className="320:h-[70px] 1024:h-[28px] 1440:h-[50px] 2560:h-[80px] bg-[#EAEBEE] flex items-center justify-end">
                 <p className="text-xl 1024:text-[8px] 1440:text-[12px] 2560:text-[21px] font-fairplay pr-5 md:pr-16 1024:pr-40 1440:pr-52 2560:pr-96">
                     Sign up | Log in
                 </p>
@@ -76,7 +76,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
             <nav className="bg-white border-gray-200">
                 <div className="flex flex-wrap justify-between items-center px-5 md:px-10 1024:px-40 xl:px-52 2xl:px-96 py-[3px]">
                     {isSearchMegaMenuOpen ? (
-                        <div className="bg-[#F3F4F3] 2560:h-[50px] p-4 flex items-center w-full 1024:h-[20px] 1024:my-2 1024:mx-[210px] 2560:mx-[440px] 2560:my-6">
+                        <div className="bg-[#F3F4F3] 320:h-[40px] 2560:h-[50px] p-4 flex items-center w-full 1024:h-[20px] 1024:my-2 1024:mx-[210px] 2560:mx-[440px] 2560:my-6">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
