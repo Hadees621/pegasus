@@ -83,11 +83,10 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                             </div>
 
                             <div class="md:w-[45%] px-4 2560:px-10 flex flex-col 1024:justify-center">
-                                <p className='text-sm pb-6 1024:text-[6px] 1440:text-[9px] 2560:text-base 2560:pb-14'>Blog category — 00 Month, 2022</p>
+                                <p className='text-sm pb-6 1024:text-[6px] 1440:text-[10px] 2560:text-base 2560:pb-14'>Blog category — 00 Month, 2022</p>
                                 <h2 class="text-2xl 320:text-xl font-semibold 1024:text-[22px] 1440:text-[30px] 2560:text-4xl font-fairplay">Article Title</h2>
-                                <p class="text-sm 320:text-xs 1024:text-[6px] 1024:leading-[12px] 1440:text-[9.5px] 1440:leading-[17px] font-medium 1440:text-base 2560:text-[17px] 2560:leading-[32px] text-gray-700 mb-8 mt-2 font-roboto pr-3 2560:mt-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                                    veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-                                    commodo consequat</p>
+                                <p class="text-sm 320:text-xs 1024:text-[6px] 1024:leading-[12px] 1440:text-[9px] 1440:leading-[20px] font-medium 1440:text-base 2560:text-[17px] 2560:leading-[32px] text-gray-700 mb-8 mt-2 font-fairplay pr-3 2560:mt-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                </p>
                                 <button className="bg-[#031428] text-base text-white px-4 rounded-3xl w-[130px] h-8 font-fairplay 1024:w-[61px] 1024:h-[20px] 1024:text-[6.5px] 1440:w-[81px] 1440:h-[26px] 1440:text-[9px] 2560:w-[150px] 2560:h-[46px] 2560:text-[15px] flex justify-center items-center 2560:mt-10">Read more</button>
                             </div>
                         </div>
@@ -231,7 +230,7 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                     </div>
 
                     <p className="text-center">
-                        <a href="#" className="text-[#5D6162] text-[9px] font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Explore</a>
+                        <a href="#" className="text-[#5D6162] 1024:text-[6px] 1440:text-[11px] 2560:text-[21px] 2560:mt-6 font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Explore</a>
                     </p>
 
 
@@ -260,21 +259,19 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
 
                     {/* Submit online */}
                     <div class="relative m-4 p-4 bg-cover bg-center 2560:h-[580px] 1024:h-[180px] 1440:h-[330px] mt-10" style={{ backgroundImage: `url('assests/section/section6.png')` }}>
-                        <div class="absolute bottom-8 left-8 p-4 text-white 1024:p-1 1024:bottom-2 1024:left-4 gap-0">
-                            <h3 class="text-[48px] font-fairplay text-white 1024:text-black 1024:text-[18px] 1440:text-[24px] -mb-2">Submit online
+                        <div class="absolute bottom-8 left-8 p-4 text-white 1024:p-1 1024:bottom-2 1024:left-4 1440:p-5 1440:bottom-2 2560:p-9 gap-0">
+                            <h3 class="text-[48px] font-fairplay text-white 1024:text-black 1024:text-[18px] 1440:text-[28px] 2560:text-[60px] -mb-2">Submit online
                             </h3>
-                            <p class="text-base text-white 1024:text-black 1024:text-[8px] 1440:text-[12px]">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
+                            <p class="text-base text-white 1024:text-black 1024:text-[8px] 1440:text-[10px] 2560:text-[16px]">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
                                 .</p>
-                            <button className="bg-[#031428] text-lg text-white rounded-3xl 1440:w-[100px] 1440:h-6 2560:w-[150px] 2560:h-12 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2">Explore</button>
+                            <button className="bg-[#031428] text-lg text-white rounded-3xl 1440:w-[100px] 1440:h-7 1440:text-[11px] 2560:text-[15px] 2560:w-[150px] 2560:h-11 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2 1440:mt-3 2560:mt-7">Explore</button>
                         </div>
                     </div>
 
                     {/* Upcoming events */}
-
                     <div className="flex items-center mt-10">
                         <div className="flex-grow border-t border-[#8F9191]"></div>
-                        <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] font-fairplay px-2">Upcoming Events
-                        </div>
+                        <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] 1440:text-[15px] 2560:text-[28px] font-fairplay px-2">Upcoming Events</div>
                         <div className="flex-grow border-t border-[#8F9191]"></div>
                     </div>
 
@@ -286,18 +283,18 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                                         <img className="w-full object-cover" src="assests/section/events.png" alt={`Section Image`} />
                                     </div>
                                     <div className='w-full text-start flex mt-8 1024:mt-5'>
-                                        <div className='w-[30%] px-8 320:pl-0 1024:pr-5'>
-                                            <h3 className="1024:text-[12px] 1440:text-3xl font-medium font-fairplay pt-4 text-[#B79248] 320:text-xl 1024:pt-0 1024:-mb-4">Mar </h3>
-                                            <p className="1024:text-[20px] 1440:text-[50px] text-black font-fairplay py-2 font-medium 320:text-4xl 1024:py-0 ">20</p>
+                                        <div className='w-[30%] px-8 320:pl-0 1024:pr-5 1440:pr-7'>
+                                            <h3 className="1024:text-[12px] 1440:text-xl 2560:text-3xl font-medium font-fairplay pt-4 text-[#B79248] 320:text-xl 1024:pt-0 1024:-mb-4">Mar </h3>
+                                            <p className="1024:text-[20px] 1440:text-[28px] 2560:text-[40px] 2560:py-5 1440:py-2 text-black font-fairplay py-2 font-medium 320:text-4xl 1024:py-0 ">20</p>
                                         </div>
                                         <div className=''>
-                                            <h3 className="1024:text-[12px] 1440:text-3xl font-medium font-fairplay pt-4 text-[#B79248] 320:text-xl 1024:pt-0 1024:-mb-1">Event title- Lorem
+                                            <h3 className="1024:text-[12px] 1440:text-xl 2560:text-3xl  font-medium font-fairplay pt-4 text-[#B79248] 320:text-xl 1024:pt-0 1024:-mb-1">Event title- Lorem
                                             </h3>
-                                            <p className="1024:text-[6px] text-black font-roboto py-4 320:text-sm 1024:py-0 1024:leading-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>
+                                            <p className="1024:text-[6px] 1440:text-[8px] 2560:text-[16px] 2560:leading-6 1440:pt-1 2560:py-3 1440:leading-4 text-black font-roboto py-4 320:text-sm 1024:py-0 1024:leading-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>
 
-                                            <p className="text-black font-roboto py-6 320:text-sm 1024:text-[6px] 1024:py-0">Location — 00:00 pm</p>
+                                            <p className="text-black font-roboto py-6 320:text-sm 1024:text-[6px] 1440:text-[8px] 2560:text-[15px] 2560:py-8 1440:py-2 1024:py-0">Location — 00:00 pm</p>
 
-                                            <a href="#" className="text-black font-roboto tracking-wide 320:text-sm 1024:text-[6px] 1024:py-0 inline-block pb-1 border-b border-[#5D6162] mt-3">Learn more</a>
+                                            <a href="#" className="text-black font-roboto tracking-wide 320:text-sm 1024:text-[6px] 1440:text-[8px] 2560:text-[17px] 1024:py-0 inline-block pb-1 border-b border-[#5D6162] mt-3">Learn more</a>
                                         </div>
                                     </div>
                                 </div>
