@@ -24,17 +24,17 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
         <>
             <div style={isMegaMenuOpen || applyBlur ? styles.filterBlur : {}}
             >
-                <div className='h-[950px] relative bg-cover bg-center rounded-sm mb-10 mx-40 flex items-center justify-center' style={{ backgroundImage: 'url("assests/section/top.jpg")' }}>
-                    <div className='absolute bottom-[85px] bg-[#FEF8EF] bg-opacity-90 text-black h-[220px] w-[80%] flex items-center justify-center'>
+                <div className='h-[950px] 320:h-[800px] 1024:h-[400px] relative bg-cover bg-center rounded-sm my-10 768:mx-10  mx-40 flex items-center justify-center' style={{ backgroundImage: 'url("assests/section/top.jpg")' }}>
+                    <div className='absolute bottom-[84px] bg-[#FEF8EF] bg-opacity-90 text-black 768:mx-10 1024:mx-40 h-[220px] 1024:h-[100px] 1024:bottom-[30px] 1024:w-[75%] w-[80%] flex items-center justify-center 320:flex-col 320:h-[440px] 1024:flex-row'>
 
-                        <div className='w-[65%] h-[220px] text-[85px] font-fairplay flex flex-col items-start justify-center pl-16 tracking-wide leading-[80px]'>
+                        <div className='1024:w-[65%] 320:h-[400px] 768:h-[300px] 768:text-[55px] 768:leading-[65px] 1024:h-[100px] 1024:text-[35px] 1024:leading-[35px] 1024:tracking-wider 1024:items-start h-[220px] 320:text-[35px] 320:tracking-normal 320:leading-[45px] 320:items-center 320:px-3 text-[85px] font-fairplay flex flex-col items-start justify-center 1024:pl-6 tracking-wider leading-[85px] font-light text-black'>
                             <p> Title - Lorem ipsum dolor</p>
                             <p>sit amet elit </p>
                         </div>
-                        <div className='w-[35%] h-[220px] flex flex-col items-center justify-center px-10 gap-5'>
+                        <div className='320:w-full border 320:gap-6 320:px-4 425:px-6 768:px-12 320:h-[400px] 768:h-[300px] 768:text-[22px] 1024:h-[100px] 1024:text-[7px] h-[220px] 1024:w-[35%] 1024:px-3 1024:gap-3 flex flex-col items-center justify-center px-10 gap-5 text-black'>
                             <p className=''> orem ipsum dolor Lorem ipsum dolor orem ipsum dolor orem ipsum dolor orem orem ipsum dolor ipsum dolororem ipsum dolororem ipsum dolor</p>
                             <div className='flex w-full items-center justify-between'>
-                                <button className="bg-[#031428] text-lg text-white rounded-3xl w-[150px] h-12 font-fairplay 1024:w-[60px] 1024:h-[18px] 1440:w-[80px] 1440:h-[24px] 1440:text-[10px] 2560:w-[130px] 2560:h-[45px] 2560:text-[15px] 1024:text-[8px] items-center flex justify-center font-extralight">Explore</button>
+                                <button className="bg-[#031428] text-lg text-white rounded-3xl w-[150px] h-12 font-fairplay 320:w-[100px] 320:h-[40px] 320:text-base 1024:w-[60px] 1024:h-[20px] 1024:text-[8px] flex items-center justify-center">Explore</button>
                                 <p>01/03</p>
                             </div>
                         </div>
