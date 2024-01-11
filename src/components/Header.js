@@ -117,7 +117,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
                                     id="mega-menu-full-image"
                                     className={`items-center justify-between hidden w-full md:flex md:w-auto md:order-1`}
                                 >
-                                    <ul className="flex 1440:space-x-6 2560:space-x-8 1024:space-x-6 font-fairplay 2560:text-[23px] 1440:text-[12px] 1024:text-[8px] font-normal 320:hidden lg:flex">
+                                    <ul className="flex 1440:space-x-6 2560:space-x-9 1024:space-x-6 font-fairplay 2560:text-[23px] 1440:text-[12px] 1024:text-[8px] font-normal 320:hidden lg:flex">
                                         <li>
                                             <a
                                                 href="#"
@@ -152,14 +152,14 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
                                     </ul>
                                 </div>
                                 <img
-                                    className="lg:hidden h-[65px] w-[130px]"
+                                    className="lg:hidden h-[65px] w-[130px] my-2"
                                     src="assests/nav/navlogo.png"
                                     alt="Logo"
                                 />
                             </div>
                             <div>
                                 <img
-                                    className="hidden 1024:flex 1024:h-[40px] 1024:w-[70px] 1440:h-[60px] 1440:w-[110px] 2560:h-[110px] 2560:w-[190px]"
+                                    className="hidden 1024:flex 1024:h-[40px] 1024:w-[70px] 1440:h-[60px] 1440:w-[110px] 2560:h-[110px] 2560:w-[190px] my-2"
                                     src="assests/nav/navlogo.png"
                                     alt="Logo"
                                 />
