@@ -24,7 +24,26 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
         <>
             <div style={isMegaMenuOpen || applyBlur ? styles.filterBlur : {}}
             >
-                <div className='h-[400px] bg-[#FEDFB9] 1440:mx-16 rounded-sm mb-10 1024:mb-3'> </div>
+                <div className='h-[950px] relative bg-cover bg-center rounded-sm mb-10 mx-40 flex items-center justify-center' style={{ backgroundImage: 'url("assests/section/top.jpg")' }}>
+                    <div className='absolute bottom-[85px] bg-[#FEF8EF] bg-opacity-90 text-black h-[220px] w-[80%] flex items-center justify-center'>
+
+                        <div className='w-[65%] h-[220px] text-[85px] font-fairplay flex flex-col items-start justify-center pl-16 tracking-wide leading-[80px]'>
+                            <p> Title - Lorem ipsum dolor</p>
+                            <p>sit amet elit </p>
+                        </div>
+                        <div className='w-[35%] h-[220px] flex flex-col items-center justify-center px-10 gap-5'>
+                            <p className=''> orem ipsum dolor Lorem ipsum dolor orem ipsum dolor orem ipsum dolor orem orem ipsum dolor ipsum dolororem ipsum dolororem ipsum dolor</p>
+                            <div className='flex w-full items-center justify-between'>
+                                <button className="bg-[#031428] text-lg text-white rounded-3xl w-[150px] h-12 font-fairplay 1024:w-[60px] 1024:h-[18px] 1440:w-[80px] 1440:h-[24px] 1440:text-[10px] 2560:w-[130px] 2560:h-[45px] 2560:text-[15px] 1024:text-[8px] items-center flex justify-center font-extralight">Explore</button>
+                                <p>01/03</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
                 <div className='w-full justify-center 1024:px-40 320:p-5 xl:px-52 2xl:px-96'>
 
                     {/* Established section */}
@@ -265,7 +284,7 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                                 .</p>
                             <button className="bg-[#031428] text-lg text-white rounded-3xl 1440:w-[100px] 1440:h-7 1440:text-[11px] 2560:text-[15px] 2560:w-[150px] 2560:h-11 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2 1440:mt-3 2560:mt-7 320:w-[100px] 320:text-[13px]">Explore</button>
                         </div>
-                    </div> 
+                    </div>
 
                     {/* Upcoming events */}
                     <div className="flex items-center mt-10">
