@@ -24,8 +24,25 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
         <>
             <div style={isMegaMenuOpen || applyBlur ? styles.filterBlur : {}}
             >
-                <div className='h-[400px] bg-[#FEDFB9] 1440:mx-16 rounded-sm mb-10 1024:mb-3'> </div>
-                <div className='w-full justify-center 1024:px-40 320:p-5 xl:px-52 2xl:px-96 border'>
+                <div className='2560:h-[950px] 320:h-[800px] 1024:h-[400px] 1440:h-[550px] relative bg-cover bg-center rounded-sm 320:my-4 1024:my-6 768:mx-10 2560:mx-40 flex items-center justify-center' style={{ backgroundImage: 'url("assests/section/top.jpg")' }}>
+                    <div className='absolute 2560:bottom-[84px] bg-[#FEF8EF] bg-opacity-90 text-black 768:mx-10 1024:mx-40 xl:mx-52 h-[220px] 1024:h-[100px] 1440:h-[130px] 1024:bottom-[30px] 1024:w-[75%] 2560:w-[80%] 1440:bottom-[50px] flex items-center justify-center 320:flex-col 320:h-[440px] 1024:flex-row 2560:h-[220px]'>
+
+                        <div className='1024:w-[65%] 320:h-[400px] 768:h-[300px] 768:text-[55px] 768:leading-[65px] 1024:h-[100px] 1024:text-[35px] 1024:leading-[35px] 1024:tracking-wider 1024:items-start 1440:h-[130px] 1440:text-[50px] 1440:leading-[45px] 1440:tracking-wider 2560:h-[220px] 320:text-[35px] 320:tracking-normal 320:leading-[45px] 320:items-center 320:px-3 2560:text-[85px] font-fairplay flex flex-col items-start justify-center 1024:pl-6 1440:pl-10 2560:tracking-wider 2560:leading-[85px] font-light text-black'>
+                            <p> Title - Lorem ipsum dolor</p>
+                            <p>sit amet elit </p>
+                        </div>
+                        <div className='320:w-full 320:gap-6 320:px-4 425:px-6 768:px-12 320:h-[400px] 768:h-[300px] 768:text-[22px] 1024:h-[100px] 1024:text-[7px] 1440:text-[10px] 1440:h-[130px] 1024:w-[35%] 1024:px-3 1440:px-4 1024:gap-3 flex flex-col items-center justify-center 2560:px-10 2560:gap-5 text-black 2560:h-[220px] 2560:text-[17px]'>
+                            <p className=''> orem ipsum dolor Lorem ipsum dolor orem ipsum dolor orem ipsum dolor orem orem ipsum dolor ipsum dolororem ipsum dolororem ipsum dolor</p>
+                            <div className='flex w-full items-center justify-between'>
+                                <button className="bg-[#031428] 2560:text-lg text-white rounded-3xl 2560:w-[150px] 2560:h-12 font-fairplay 320:w-[100px] 320:h-[40px] 320:text-base 1024:w-[60px] 1024:h-[20px] 1024:text-[8px] 1440:w-[75px] 1440:h-[25px] 1440:text-[10px] flex items-center justify-center">Explore</button>
+                                <p>01/03</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div className='w-full justify-center 1024:px-40 320:p-5 xl:px-52 2xl:px-96'>
 
                     {/* Established section */}
                     <div className='flex 320:flex-col lg:flex-row gap-12 1024:gap-3 320:gap-3'>
@@ -265,7 +282,7 @@ const Section = ({ isMegaMenuOpen, applyBlur }) => {
                                 .</p>
                             <button className="bg-[#031428] text-lg text-white rounded-3xl 1440:w-[100px] 1440:h-7 1440:text-[11px] 2560:text-[15px] 2560:w-[150px] 2560:h-11 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2 1440:mt-3 2560:mt-7 320:w-[100px] 320:text-[13px]">Explore</button>
                         </div>
-                    </div> 
+                    </div>
 
                     {/* Upcoming events */}
                     <div className="flex items-center mt-10">
