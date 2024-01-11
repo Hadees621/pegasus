@@ -30,10 +30,10 @@ const MegaMenuBooks = ({ isMegaMenuOpen }) => {
     return (
 
         <>
-            <div id="mega-menu-full-image-dropdown" className={`py-4 1024:py-2 ${isMegaMenuOpen ? 'block' : 'hidden'}`}>
-                <div className="grid px-5 1024:px-40 1024:mr-40 md:px-10 xl:px-36 2xl:pr-[650px] 2xl:pl-[365px] py-5 1024:py-0 text-sm text-black 768:grid-cols-2 lg:grid-cols-4">
+            <div id="mega-menu-full-image-dropdown" className={`py-s 1024:py-2 1440:py-7 2560:py-9 ${isMegaMenuOpen ? 'block' : 'hidden'}`}>
+                <div className="grid px-5 1024:px-40 1024:mr-40 md:px-10 xl:px-52 xl:pr-[300px] 2xl:px-96 2xl:pr-[760px] 2xl:pl-[385px] py-5 1024:py-0 text-sm text-black 768:grid-cols-2 lg:grid-cols-4">
                     {categories.map((category, index) => (
-                        <ul key={index} className="mb-4 space-y-4 md:mb-0 1024:-space-y-1.5 1024:gap-0">
+                        <ul key={index} className="mb-4 space-y-4 md:mb-0 1024:-space-y-1.5 1440:space-y-1 2560:space-y-2.5">
                             <TitleLi text={category.title} />
                             {category.items.map((item, itemIndex) => (
                                 <SimpleLi key={itemIndex} text={item} />
