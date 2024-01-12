@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import { useMediaQuery } from '@react-hook/media-query';
+import React, { useEffect, useState } from 'react';
 
 const Sidebar = () => {
     const [categoriesOpen, setCategoriesOpen] = useState(true);
     const [imprintsOpen, setImprintsOpen] = useState(true);
     const [formatsOpen, setFormatsOpen] = useState(true);
+
+    const isMediumScreen = useMediaQuery('(max-width: 768px)');
 
     const toggleCategories = () => {
         setCategoriesOpen(!categoriesOpen);
@@ -84,12 +87,18 @@ const Sidebar = () => {
         },
     ];
 
+    useEffect(() => {
+        setCategoriesOpen(!isMediumScreen);
+        setImprintsOpen(!isMediumScreen);
+        setFormatsOpen(!isMediumScreen);
+    }, [isMediumScreen]);
+
     return (
         <>
             <div className='mb-6 px-2'>
                 <div className='mt-'>
                     {/* Categories */}
-                    <div className='flex my-1 justify-between cursor-pointer' onClick={toggleCategories}>
+                    <div className={`flex my-1 justify-between cursor-pointer`} onClick={toggleCategories}>
                         <p className="text-[21px] font-fairplay text-black">{categoriesData[0].mainTitle}</p>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
@@ -99,8 +108,7 @@ const Sidebar = () => {
                             </svg>
                         </div>
                     </div>
-                    <div className={`block ${categoriesOpen ? '' : 'hidden'}`}>
-                        {/* Categories Content */}
+                    <div className={`block ${categoriesOpen && isMediumScreen ? '' : 'hidden'}`}>
                         {categoriesData[0].items.map((category, index) => (
                             <div key={index}>
                                 <p className='mb-3 mt-5 text-black font-medium'>{category.title}</p>

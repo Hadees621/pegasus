@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Sidebar from "./components/SideBar";
-import { bookData } from "../homepage/utils/utils";
+import { bookData } from "./utils";
 
 const Fiction = () => {
     const categories = [
@@ -75,99 +75,157 @@ const Fiction = () => {
     return (
         <>
             <Header />
-            <div className="bg-[#F1F1F3] justify-center 1024:mx-10 320:m-5 1440:mx-36 2560:mx-96 h-96 border">
-                <p className="text-sm font-roboto m-10">Books — Fiction</p>
-                <div className="flex w-full justify-center">
-                    <p className="text-7xl flex justify-center font-fairplay my-24 border-b-2 border-black shadow-sm w-max">Fiction</p>
+            <>
+                <div className="bg-[#F1F1F3] justify-center 320:m-5 1024:mx-48 2560:mx-96 2560:h-96 1024:h-52 1440:h-72 border 1440:flex-row xl:mx-80 ">
+                    <p className="text-sm font-roboto m-10 2560:m-10 1024:text-[8px] 1024:m-4 1440:text-[16px] 1440:m-6">Books — Fiction</p>
+                    <div className="flex w-full justify-center">
+                        <p className="2560:text-7xl 320:text-4xl 768:text-5xl 1024:text-[30px] flex justify-center font-fairplay my-24 1024:my-10 border-b-2 border-black shadow-sm w-max">Fiction</p>
+                    </div>
                 </div>
-            </div>
-            <div className="flex 1024:mx-10 320:mx-5 1440:mx-36 2560:mx-96 mt-12 gap-4">
-                <div className="h-16 w-[15%] border-black  flex items-center justify-start gap-2 ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 5a1 1 0 1 0 0 2a1 1 0 0 0 0-2M6.17 5a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 0 1 0-2zM15 11a1 1 0 1 0 0 2a1 1 0 0 0 0-2m-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 0 1 0-2zM9 17a1 1 0 1 0 0 2a1 1 0 0 0 0-2m-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2z" /></svg>
-                    <p className="text-xl font-fairplay">Filter by</p>
-                </div>
-                <div className="flex items-center justify-start h-16 w-[85%] border-black gap-4 px-8">
-                    <button className="flex items-center justify-center gap-2 border w-max px-5 py-2.5 rounded-full border-[#D4D4D8]">
-                        <p className="text-[17px] font-fairplay">Explore</p>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            viewBox="0 0 24 24"
-                            className="flex items-center justify-center gap-2 w-6 h-6 text-gray-500 hover:text-gray-700 "
-                        >
-                            <path d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    <button className="flex items-center justify-center gap-2 border w-max px-5 py-2.5 rounded-full border-[#D4D4D8]">
-                        <p className="text-[17px] font-fairplay">Vanguard press</p>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            viewBox="0 0 24 24"
-                            className="flex items-center justify-center gap-2 w-6 h-6 text-gray-500 hover:text-gray-700 "
-                        >
-                            <path d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    <button className="flex items-center justify-center gap-2 border w-max px-5 py-2.5 rounded-full border-[#D4D4D8]">
-                        <p className="text-[17px] font-fairplay">Under £15</p>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            viewBox="0 0 24 24"
-                            className="flex items-center justify-center gap-2 w-6 h-6 text-gray-500 hover:text-gray-700 "
-                        >
-                            <path d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="flex relative group">
-                    <div className="">
-                        <button className="flex items-center justify-center gap-2 w-max px-5 py-3 rounded-full border-[#D4D4D8]">
-                            <p className="text-[20px] font-fairplay">Sort by</p>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><g transform="rotate(180 12 12)"><path fill="currentColor" d="m16.854 13.647l-4.5-4.5a.5.5 0 0 0-.707 0l-4.5 4.5a.5.5 0 0 0 .707.707L12 10.207l4.146 4.147a.498.498 0 0 0 .707 0a.5.5 0 0 0 0-.707" /></g></svg>
-                                <div />
-                            </div>
+
+                <div className="flex 320:flex-col 320:items-center 320:gap-10 1024:flex-row 1440:flex-row border 320:mx-5 2560:mx-96 1024:mt-0 1024:gap-2 1024:mx-48 1440:mt-0 mt-12 1440:gap-4  1440:mx-48 xl:mx-80">
+
+                    <div className="h-16 w-[15%] 320:w-full 320:justify-center 1440:w-[25%] border-black flex items-center 1440:justify-start gap-2 border">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 5a1 1 0 1 0 0 2a1 1 0 0 0 0-2M6.17 5a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 0 1 0-2zM15 11a1 1 0 1 0 0 2a1 1 0 0 0 0-2m-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 0 1 0-2zM9 17a1 1 0 1 0 0 2a1 1 0 0 0 0-2m-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2z" /></svg>
+                        <p className="text-xl 1440:text-sm font-fairplay">Filter by</p>
+                    </div>
+
+                    {/* rounds */}
+                    <div className="flex 320:flex-col 1440:flex-row 1440:w-[75%] items-center justify-start h-16 w-[85%] border-black gap-4 px-8 1440:gap-1 1440:px-2 border">
+                        <button className="flex items-center justify-center gap-2 border w-max px-5 py-2.5  1440:px-3 1440:py-1 rounded-full border-[#D4D4D8]">
+                            <p className="text-[17px] 1440:text-[12px] font-fairplay">Explore</p>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                viewBox="0 0 24 24"
+                                className="flex items-center justify-center gap-2 w-6 h-6 1440:w-4 text-gray-500 hover:text-gray-700 "
+                            >
+                                <path d="M6 18L18 6M6 6l12 12" />
+                            </svg>
                         </button>
-                        <div class="hidden absolute w-max p-4 group-hover:block">
-                            <p>Hello World!</p>
+                        <button className="flex items-center justify-center gap-2 border w-max px-5 py-2.5  1440:px-3 1440:py-1 rounded-full border-[#D4D4D8]">
+                            <p className="text-[17px] 1440:text-[12px] font-fairplay">Vanguard press</p>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                viewBox="0 0 24 24"
+                                className="flex items-center justify-center gap-2 w-6 h-6 text-gray-500 hover:text-gray-700 "
+                            >
+                                <path d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        <button className="flex items-center justify-center gap-2 border w-max px-5 py-2.5  1440:px-3 1440:py-1 rounded-full border-[#D4D4D8]">
+                            <p className="text-[17px] 1440:text-[12px] font-fairplay">Under £15</p>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                viewBox="0 0 24 24"
+                                className="flex items-center justify-center gap-2 w-6 h-6 text-gray-500 hover:text-gray-700 "
+                            >
+                                <path d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="flex relative group 320:mt-32 320:mb-5 1440:mt-0 1440:mb-0 border" >
+                        <div className="">
+                            <button className="flex items-center justify-center gap-2 w-max px-5 py-3 rounded-full border-[#D4D4D8]">
+                                <p className="text-[20px] font-fairplay">Sort by</p>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><g transform="rotate(180 12 12)"><path fill="currentColor" d="m16.854 13.647l-4.5-4.5a.5.5 0 0 0-.707 0l-4.5 4.5a.5.5 0 0 0 .707.707L12 10.207l4.146 4.147a.498.498 0 0 0 .707 0a.5.5 0 0 0 0-.707" /></g></svg>
+                                    <div />
+                                </div>
+                            </button>
+                            <div class="hidden absolute w-max p-4 group-hover:block">
+                                <p>1223</p>
+                                <p>1223</p>
+                                <p>1223</p>
+                                <p>1223</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr className="border-1 border-black mb-2 mt-10" />
+
+
+                <div className="flex 320:flex-col 320:items-center 1024:mx-10 320:mx-5 1440:mx-36 2560:mx-96 gap-4">
+                    <div className="w-[15%] 320:w-full 320:my-6 border-black 320:px-6">
+                        <Sidebar categories={categories} />
+                    </div>
+                    <div className="w-[85%] 320:w-full border-black ">
+                        <div className="grid 768:grid-cols-3 1024:grid-cols-5 justify-center">
+                            {bookData.map((book, index) => (
+                                <div key={index} className="m-4 p-3 text-center 768:m-0 1440:m-1">
+                                    <img className="320:h-[420px] 1024:h-[140px] 1024:w-[160px] 1440:h-[210px] 2560:w-[240px] 2560:h-[380px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                                    <div className='w-full text-start my-2'>
+                                        <h3 className="1024:text-[8px] 1440:text-[11px] 2560:text-[19px] font-medium font-fairplay">{book.title}</h3>
+                                        <p className="1024:text-[6px] 1440:text-[9px] 2560:text-[17px] text-[#B79248] font-roboto">{book.author}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
-            </div>
-            <hr className="border-1 border-black mb-2 mt-10"/>
 
-            <div className="flex 1024:mx-10 320:mx-5 1440:mx-36 2560:mx-96 gap-4">
-                <div className="w-[15%] border-black">
-                    <Sidebar categories={categories} />
-                </div>
-                <div className="w-[85%] border-black ">
-                    <div className="grid 768:grid-cols-3 1024:grid-cols-5 justify-center">
-                        {bookData.map((book, index) => (
-                            <div key={index} className="m-4 p-3 text-center 768:m-0 1440:m-1">
-                                <img className="320:h-[420px] 1024:h-[140px] 1024:w-[160px] 1440:h-[210px] 2560:w-[240px] 2560:h-[380px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
-                                <div className='w-full text-start my-2'>
-                                    <h3 className="1024:text-[8px] 1440:text-[11px] 2560:text-[19px] font-medium font-fairplay">{book.title}</h3>
-                                    <p className="1024:text-[6px] 1440:text-[9px] 2560:text-[17px] text-[#B79248] font-roboto">{book.author}</p>
-                                </div>
-                            </div>
-                        ))}
+                {/* <div className="flex items-end justify-end w-full border" >
+
+                    <div className="flex justify-between items-center h-12 border my-10 w-[60%]">
+                        <nav aria-label="Page navigation example">
+                            <ul class="flex items-center -space-x-px h-8 text-sm">
+                                <li>
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white ">
+                                        <span class="sr-only">Previous</span>
+                                        <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight ">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight ">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight ">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight ">4</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight ">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500">
+                                        <span class="sr-only">Next</span>
+                                        <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <p className="border flex justify-end mt-2 mr-[520px]">
+                            <a href="#" className="text-[20px] text-[#5D6162] font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Next</a>
+                        </p>
                     </div>
-                </div>
-            </div>
+                </div> */}
+            </>
             <Footer />
         </>
     );
