@@ -3,6 +3,7 @@ import React from "react";
 import Home from "./pages/homepage/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SearchResults from "./pages/search-results/SearchResults";
+import Fiction from "./pages/books/Fiction";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<SearchResults />} />
-          {/* <Route path="/sign-up" element={<Register />} /> */}
+          <Route path="/fiction" element={<Fiction />} />
         </Routes>
       </Router>
     </div>

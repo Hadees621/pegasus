@@ -2,3 +2,20 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/* src/index.css or src/App.css */
+
+@font-face {
+    font-family: 'fairplay';
+    src: url('../public/fonts/PlayfairDisplay-Regular.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* @font-face {
+    font-family: 'YourFontBold';
+    src: url('../fonts/your-font-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+   */
