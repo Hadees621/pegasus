@@ -1,23 +1,91 @@
-import React, { useState } from "react";
+import React from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Sidebar from "./components/SideBar";
 import { bookData } from "../homepage/utils/utils";
 
 const Fiction = () => {
+    const categories = [
+        {
+            mainTitle: 'Categories',
+            subTitle: 'Subcategories',
+            items: [
+                {
+                    title: 'Fiction',
+                    items: [
+                        'Action & adventure',
+                        'Classics',
+                        'Crime',
+                        'Thrillers & mysteries',
+                        'General fiction',
+                        'Romance & Erotica',
+                        'Poetry',
+                        'Horror',
+                        'Short stories',
+                        'Fantasy & Science fiction',
+                        'Historical fiction'
+                    ],
+                },
+                {
+                    title: 'Non-fiction',
+                    items: [
+                        'Art',
+                        'Biographies',
+                        'Food & drink',
+                        'Health & lifestyle',
+                        'History',
+                        'Politics & philosophy',
+                        'Science & nature',
+                        'Sports',
+                        'Religion & spirituality',
+                        'Self help'
+                    ],
+                },
+                {
+                    title: "Children's",
+                    items: [
+                        'Young children (0)',
+                        'Young Adult fiction (0)',
+                        'General fiction (0)',
+                        'Non-fiction (0)'
+                    ],
+                },
+            ],
+        },
+        {
+            mainTitle: 'Imprints',
+            items: [
+                'Vanguard Press',
+                'Nightingale Books',
+                'Chimera',
+            ],
+            viewAllText: 'View all Fiction'
+        },
+        {
+            mainTitle: 'Format',
+            items: [
+                'Paperback',
+                'Hardback',
+                'eBook',
+                'Audiobooks'
+            ],
+        },
+    ];
+
     return (
         <>
             <Header />
             <div className="bg-[#F1F1F3] justify-center 1024:mx-10 320:m-5 1440:mx-36 2560:mx-96 h-96 border">
-                <p className="text-sm font-roboto m-8">Books — Fiction</p>
-                <p className="text-7xl flex justify-center font-fairplay my-24">Fiction</p>
+                <p className="text-sm font-roboto m-10">Books — Fiction</p>
+                <div className="flex w-full justify-center">
+                    <p className="text-7xl flex justify-center font-fairplay my-24 border-b-2 border-black shadow-sm w-max">Fiction</p>
+                </div>
             </div>
-            <div className="flex 1024:mx-10 320:mx-5 1440:mx-36 2560:mx-96 mt-12 ">
+            <div className="flex 1024:mx-10 320:mx-5 1440:mx-36 2560:mx-96 mt-12 gap-4">
                 <div className="h-16 w-[15%] border-black  flex items-center justify-start gap-2 ">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 5a1 1 0 1 0 0 2a1 1 0 0 0 0-2M6.17 5a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 0 1 0-2zM15 11a1 1 0 1 0 0 2a1 1 0 0 0 0-2m-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 0 1 0-2zM9 17a1 1 0 1 0 0 2a1 1 0 0 0 0-2m-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2z" /></svg>
                     <p className="text-xl font-fairplay">Filter by</p>
                 </div>
-
                 <div className="flex items-center justify-start h-16 w-[85%] border-black gap-4 px-8">
                     <button className="flex items-center justify-center gap-2 border w-max px-5 py-2.5 rounded-full border-[#D4D4D8]">
                         <p className="text-[17px] font-fairplay">Explore</p>
@@ -80,12 +148,14 @@ const Fiction = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex 1024:mx-10 320:mx-5 1440:mx-36 2560:mx-96 mt-10">
-                <div className="h-96 w-[15%] border-black ">
-                    {/* <Sidebar /> */}
+            <hr className="border-1 border-black mb-2 mt-10"/>
+
+            <div className="flex 1024:mx-10 320:mx-5 1440:mx-36 2560:mx-96 gap-4">
+                <div className="w-[15%] border-black">
+                    <Sidebar categories={categories} />
                 </div>
                 <div className="w-[85%] border-black ">
-                    <div className="grid 768:grid-cols-3 1024:grid-cols-5 justify-center 2560:mt-6">
+                    <div className="grid 768:grid-cols-3 1024:grid-cols-5 justify-center">
                         {bookData.map((book, index) => (
                             <div key={index} className="m-4 p-3 text-center 768:m-0 1440:m-1">
                                 <img className="320:h-[420px] 1024:h-[140px] 1024:w-[160px] 1440:h-[210px] 2560:w-[240px] 2560:h-[380px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
@@ -98,7 +168,7 @@ const Fiction = () => {
                     </div>
                 </div>
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 };
