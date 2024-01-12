@@ -186,50 +186,47 @@ const Fiction = () => {
                     </div>
                 </div>
 
-                {/* <div className="flex items-end justify-end w-full border" >
+                <div className="flex flex-col gap-4 768:gap-8 justify-center items-center h-20 my-10 lg:flex-row lg:justify-between 1024:mx-44 xl:mx-52 2xl:mx-96">
+                    <nav className="lg:mx-auto">
+                        <ul class="flex items-center h-8 text-sm space-x-4">
+                            <li>
+                                <a href="#" class="flex items-center justify-center h-8 ms-0 leading-tight text-gray-500 bg-white ">
+                                    <span class="sr-only">Previous</span>
+                                    <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center justify-center h-8 leading-tight ">1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center justify-center h-8 leading-tight ">2</a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center justify-center h-8 leading-tight ">3</a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center justify-center h-8 leading-tight ">4</a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center justify-center h-8 leading-tight ">5</a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center justify-center h-8 leading-tight text-gray-500">
+                                    <span class="sr-only">Next</span>
+                                    <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
 
-                    <div className="flex justify-between items-center h-12 border my-10 w-[60%]">
-                        <nav aria-label="Page navigation example">
-                            <ul class="flex items-center -space-x-px h-8 text-sm">
-                                <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white ">
-                                        <span class="sr-only">Previous</span>
-                                        <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight ">1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight ">2</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight ">3</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight ">4</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight ">5</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500">
-                                        <span class="sr-only">Next</span>
-                                        <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-
-                        <p className="border flex justify-end mt-2 mr-[520px]">
-                            <a href="#" className="text-[20px] text-[#5D6162] font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Next</a>
-                        </p>
-                    </div>
-                </div> */}
+                    <p className="flex lg:justify-end">
+                        <a href="#" className="text-[20px] text-[#5D6162] font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Next</a>
+                    </p>
+                </div>
             </>
             <Footer />
         </>
