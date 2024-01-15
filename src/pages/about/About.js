@@ -6,10 +6,10 @@ const About = () => {
     return (
         <>
             <Header />
-            <div className="bg-[#F1F1F3]  justify-center 320:m-5 1024:h-44 1440:h-60 2560:h-[360px] 1440:flex-row 1024:mx-40 xl:mx-52 2xl:mx-96 border border-[#F1F1F3]">
+            <div className="bg-[#F1F1F3]  justify-center 320:m-5 1024:h-44 1440:h-60 2560:h-[370px] 1440:flex-row 1024:mx-40 xl:mx-52 2xl:mx-96 border border-[#F1F1F3]">
                 <p className="320:text-[12px] 320:m-5 2560:text-sm font-roboto m-10 2560:m-10 1024:text-[8px] 1024:m-4 1440:text-[9px] 1440:m-5">Books — About us</p>
                 <div className="flex w-full justify-center">
-                    <p className="320:text-4xl 768:text-5xl 1024:text-[25px] 1440:text-[45px] 2560:text-[70px] flex justify-center font-fairplay my-24 border-b-2 border-black shadow-sm w-max 320:mt-16 320:mb-6 1024:mt-12 1024:mb-0 1440:mb-1 2560:mb-3">About us</p>
+                    <p className="320:text-4xl 768:text-5xl 1024:text-[25px] 1440:text-[45px] 2560:text-[70px] flex justify-center font-fairplay my-24 border-b-2 border-black shadow-sm w-max 320:mt-16 320:mb-6 1024:mt-12 1024:mb-0 1440:mb-1 2560:mb-3 pb-3">About us</p>
                 </div>
                 <div className="flex w-full justify-center items-center 1024:px-32 1440:px-52 2560:px-[430px]">
                     <p className="320:text-[12px] 768:text-[14px] 1024:text-[6.5px] 1024:leading-4 1440:text-[10.5px] 1440:leading-6 2xl:text-[16px] 2xl:leading-10 320:p-5 w-full 320:items-center flex justify-center text-center py-2">
@@ -49,10 +49,18 @@ const About = () => {
 
                 </div>
 
+
+                <div class="bg-cover bg-center 2560:h-[480px] my-10">
+                    <img className="w-full h-[650px]" src='assests/about/49.jpg' alt={``} />
+
+                    {/* <div class="absolute 320:bottom-1 320:left-1 bottom-8 left-8 p-4 text-white 1024:p-1 1024:bottom-2 1024:left-4 1440:p-5 1440:bottom-2 2560:p-9 gap-0">
+                        
+                    </div> */}
+                </div>
             </div>
 
 
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 };
