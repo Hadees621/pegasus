@@ -3,6 +3,7 @@ import NavIcons from "./comp/header-components/NavIcons";
 import MobileMenu from "./comp/header-components/MobileMenu";
 import MegaMenuBooks from "./comp/header-components/MegaMenuBooks";
 import SearchMegaMenu from "./comp/header-components/SearchMegaMenu";
+import { Link } from "react-router-dom";
 
 const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
     const [isSearchMegaMenuOpen, setIsSearchMegaMenuOpen] = useState(false);
@@ -60,7 +61,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
     const navigationLinks = [
         { label: "Books", className: "books-link", onClick: handleBooksClick },
         { label: "Authors", className: "" },
-        { label: "About us", className: "" },
+        { label: "About us", to: "/about", className: "" },
         { label: "Features", className: "" },
         { label: "Submissions", className: "" },
     ];
@@ -118,38 +119,19 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
                                     className={`items-center justify-between hidden w-full md:flex md:w-auto md:order-1`}
                                 >
                                     <ul className="flex 1440:space-x-6 2560:space-x-9 1024:space-x-6 font-fairplay 2560:text-[23px] 1440:text-[12px] 1024:text-[8px] font-normal 320:hidden lg:flex">
-                                        <li>
-                                            <a
-                                                href="#"
-                                                className={`text-black books-link ${isBookActive ? "text-[#B79248]" : ""
-                                                    } hover:text-[#B79248]`}
-                                                onClick={handleBooksClick}
-                                            >
-                                                Books
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#" className="text-black hover:text-[#B79248]">
-                                                Authors
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="text-black hover:text-[#B79248]">
-                                                About us
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="text-black hover:text-[#B79248]">
-                                                Features
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="text-black hover:text-[#B79248]">
-                                                Submissions
-                                            </a>
-                                        </li>
+                                        {navigationLinks.map((link) => (
+                                            <li key={link.label}>
+                                                <Link
+                                                    to={link.to}
+                                                    className={`text-black ${link.className} ${isBookActive ? "text-[#B79248]" : ""} hover:text-[#B79248]`}
+                                                    onClick={link.onClick}
+                                                >
+                                                    {link.label}
+                                                </Link>
+                                            </li>
+                                        ))}
                                     </ul>
+
                                 </div>
                                 <img
                                     className="lg:hidden h-[65px] w-[130px] my-2"
