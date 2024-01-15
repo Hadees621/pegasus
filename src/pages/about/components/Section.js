@@ -1,4 +1,5 @@
 import React from "react";
+import { audioBooksData } from "../../homepage/utils/utils";
 
 const Section = () => {
     return (
@@ -24,6 +25,7 @@ const Section = () => {
 
             {/* padded section 1 */}
             <div className="w-full justify-center 320:px-6 768:px-12 1024:px-52 1440:px-[290px] 2xl:px-[550px]">
+
                 {/* goals */}
                 <div className="flex 320:flex-col 320:gap-9 1024:gap-0 1024:flex-row 2xl:space-x-10 2560:my-10">
                     <div className="px-1 320:space-y-3 1024:space-y-1 1024:px-2 2xl:space-y-3">
@@ -176,6 +178,47 @@ const Section = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+
+            <div className="w-full justify-center 320:px-6 768:px-12 1024:px-52 1440:px-[290px] 2xl:px-[550px]">
+
+                {/* Audio books */}
+                <div className="flex items-center 1024:mt-6 320:py-8 1024:py-4">
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                    <div className="text-[#5D6162] 320:text-lg 1024:text-[11px] 1440:text-[15px] 2560:text-[28px] font-fairplay px-2">What we’re listening to</div>
+                    <div className="flex-grow border-t border-[#8F9191]"></div>
+                </div>
+
+                <div className="grid 768:grid-cols-3 1024:grid-cols-6 justify-center 1440:mt-3 2560:mt-6">
+                    {audioBooksData.map((book, index) => (
+                        <div key={index} className="m-4 p-4 text-center 768:m-0 1440:m-1">
+                            <img className="320:w-[260px] 320:h-[320px] 768:w-[200px] 768:h-[280px] 1024:h-[90px] 1024:w-[190px] 1440:h-[120px] 2560:h-[210px]" src={book.imageSrc} alt={`Book Image ${index + 1}`} />
+                            <div className='w-full text-start mt-4'>
+                                <h3 className="1024:text-[6px] 1440:text-[9px] 2560:text-[17px] font-medium font-fairplay">{book.title}</h3>
+                                <p className="1024:text-[6px] 1440:text-[9px] 2560:text-[17px] text-[#B79248] font-roboto">{book.author}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <p className="text-center">
+                    <a href="#" className="text-[#5D6162] 1024:text-[6px] 1440:text-[11px] 2560:text-[21px] 2560:mt-6 font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Browse more</a>
+                </p>
+
+                {/* Submit online */}
+                <div class="relative m-4 p-4 bg-cover bg-center 320:h-[380px] 1024:h-[200px] 1440:h-[270px] 2560:h-[400px] mt-10" style={{ backgroundImage: `url('assests/section/section6.png')` }}>
+                    <div class="absolute 320:bottom-1 320:left-1 bottom-8 left-8 p-4 text-white 1024:p-1 1024:bottom-2 1024:left-4 1440:p-5 1440:bottom-2 2560:p-9 gap-0">
+                        <h3 class="320:text-[32px] text-[48px] font-fairplay text-white 1024:text-black 1024:text-[18px] 1440:text-[28px] 2560:text-[60px] -mb-2">Submit online
+                        </h3>
+                        <p class="320:text-[13px] text-base text-white 1024:text-black 1024:text-[8px] 1440:text-[10px] 2560:text-[16px]">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
+                            .</p>
+                        <button className="bg-[#031428] text-lg text-white rounded-3xl 1440:w-[100px] 1440:h-7 1440:text-[11px] 2560:text-[15px] 2560:w-[150px] 2560:h-11 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2 1440:mt-3 2560:mt-7 320:w-[100px] 320:text-[13px]">Explore</button>
+                    </div>
+                </div>
+
+
+
             </div>
         </>
     );
