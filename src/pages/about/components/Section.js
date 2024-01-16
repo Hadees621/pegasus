@@ -180,9 +180,107 @@ const Section = () => {
                 </div>
             </div>
 
+            {/* believe */}
+            <div className="w-full justify-center 320:px-6 768:px-12 1024:px-52 1440:px-[290px] 2xl:px-[700px]">
+
+                <div className="flex items-center 1024:mt-6 320:py-8 1024:py-4 2560:py-12">
+                    <div className="flex-grow border-t border-[#757C97]"></div>
+                    <div className="text-[#757C97] 320:text-lg 1024:text-[11px] 1440:text-[15px] 2560:text-[20px] font-fairplay px-2">What we believe
+                    </div>
+                    <div className="flex-grow border-t border-[#757C97]"></div>
+                </div>
+
+                <div className="flex">
+
+                    <div className="w-[27%] space-y-6 pr-10">
+
+                        <h1 className="1024:text-[6px] 1440:text-[9px] 2560:text-[20px] text-[#B79248] font-fairplay">Our Authors and Readers</h1>
+                        <p className="text-[#62676D] 2560:text-[20px] font-fairplay">Sustainable way of working</p>
+                        <p className="text-[#62676D] 2560:text-[20px] font-fairplay">A diverse workforce</p>
+                        <p className="text-[#62676D] 2560:text-[20px] font-fairplay">Rewardable and memorable
+                            publishing journey
+                        </p>
+
+                    </div>
+                    <div class="w-[73%]">
+
+                        <h1 className="1024:text-[16px] 1440:text-[9px] 2560:text-[28px] text-[#B79248] font-fairplay"> Our Authors and Readers </h1>
+                        <p className="mt-6 leading-8 text-[16px] font-roboto">
+                            Every author and every reader is equally important in our eyes. We go out of our way on a daily basis to ensure our
+                            audience and readers are fulfilled. This includes showcasing our latest releases, creating innovative book trailers, regular
+                            editorial Q&As and booking in as many author signings and launches as we can. We make sure to answer every
+                            message sent to us and listen to every review we receive. Without readers there would be no books… but that being said,
+                            without authors the books wouldn’t even be written. Our authors to put it simply, are the life and soul of our company. No
+                            two authors are the same. And we are so incredibly proud of our published writers – not just for their wonderful talents
+                            but for the joy they have bought so many. We have regular daily communication with our authors, we make sure we are
+                            always there for every single person and we continue to put all our attention into creating, publishing and promoting
+                            each author.
+                        </p>
+
+                        {/* image */}
+                        <div
+                            className="relative bg-cover bg-center 1024:h-[255px] 1440:h-[300px] 2560:h-[270px] my-10 w-full"
+                            style={{ backgroundImage: `url('assests/about/reading.jpg')` }}
+                        >
+                            <div className="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center text-[#F8F4EB] w-full">
+                                <p className="text-[30px] font-fairplay mb-7">Author experience</p>
+                                <p className="font-roboto my-2 text-[15px]">Our authors continue to inspire us.</p>
+                                <p className="font-roboto my-2 text-[15px]">Read what our ever-expanding family of successful authors have to say.</p>
+                                <p className="text-center 320:mt-6 1024:mt-0">
+                                    <a href="#" className="text-[#ECEAE7] 1024:text-[6px] 1440:text-[11px] 2560:text-[18px] 2560:mt-6 font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#ECEAE7]">Explore</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            {/* History */}
+            <div className="w-full bg-[#F8F5EF] py-32 1024:py-16 2560:py-48">
+
+                <div className="320:mx-6 768:mx-12 1024:mx-52 1440:mx-[290px] 2xl:mx-[720px]">
+                    <h1 className="flex justify-center text-black font-fairplay text-[24px] leading-7 tracking-tight 1024:text-start 320:text-[28px] 1024:text-[23px] 1440:text-[32px] 1440:leading-9 2560:text-[55px] 2560:leading-[60px]">
+                        Established since 1999
+                    </h1>
+                    <p className="320:text-[12px] 768:text-[14px] 1024:text-[6.5px] 1024:leading-4 1440:text-[10.5px] 1440:leading-6 2xl:text-[16px] 2xl:leading-10 320:p-5 2560:py-2 w-full 320:items-center flex justify-center text-center">
+                        Pegasus Elliot MacKenzie Publishers have been publishing high quality books from exciting authors for more than 20 years.
+                    </p>
+
+                    <div className="flex flex-col 1024:flex-row mt-8 gap-8 1024:gap-2 2560:gap-6 1024:mt-2 1440:mt-7 2560:mt-20">
+
+                        <div className="flex flex-col w-full px-20 py-12 group hover:bg-black hover:shadow-xl hover:shadow-[#F8E8EE] hover:text-white transition-all border border-black rounded-md">
+                            <h2 className="text-black group-hover:text-white text-[20px] 768:text-[22px] 1024:text-[10px] 1440:text-[16px] 2560:text-[32px] mb-2 font-fairplay font-bold">
+                                History of Pegasus
+                            </h2>
+                            <p className="text-gray-700 group-hover:text-white text-center 1024:text-start mt-5">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
+                            </p>
+                            <p className="text-start 320:mt-6 1024:mt-6">
+                                <a href="#" className="text-black group-hover:text-white 1024:text-[6px] 1440:text-[11px] 2560:text-[18px] 2560:mt-6 font-fairplay tracking-wide inline-block pb-[2px] border-b border-black group-hover:border-white">Explore</a>
+                            </p>
+                        </div>
+
+                        <div className="flex flex-col w-full px-20 py-12 group hover:bg-black hover:shadow-xl hover:shadow-[#F8E8EE] hover:text-white transition-all border border-black rounded-md">
+                            <h2 className="text-black group-hover:text-white text-[20px] 768:text-[22px] 1024:text-[10px] 1440:text-[16px] 2560:text-[32px] mb-2 font-fairplay font-bold">
+                                History of Pegasus
+                            </h2>
+                            <p className="text-gray-700 group-hover:text-white text-center 1024:text-start mt-5">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
+                            </p>
+                            <p className="text-start 320:mt-6 1024:mt-6">
+                                <a href="#" className="text-black group-hover:text-white 1024:text-[6px] 1440:text-[11px] 2560:text-[18px] 2560:mt-6 font-fairplay tracking-wide inline-block pb-[2px] border-b border-black group-hover:border-white">Explore</a>
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
 
             <div className="w-full justify-center 320:px-6 768:px-12 1024:px-52 1440:px-[290px] 2xl:px-[550px]">
-
+               
                 {/* Audio books */}
                 <div className="flex items-center 1024:mt-6 320:py-8 1024:py-4">
                     <div className="flex-grow border-t border-[#8F9191]"></div>
@@ -206,8 +304,18 @@ const Section = () => {
                     <a href="#" className="text-[#5D6162] 1024:text-[6px] 1440:text-[11px] 2560:text-[21px] 2560:mt-6 font-fairplay tracking-wide inline-block pb-[2px] border-b border-[#5D6162]">Browse more</a>
                 </p>
 
+                {/* publishing process */}
+                <div class="relative m-4 p-4 bg-cover bg-center 320:h-[380px] 1024:h-[200px] 1440:h-[270px] 2560:h-[500px] my-20" style={{ backgroundImage: `url('assests/about/books.jpg')` }}>
+                    <div class="absolute 320:bottom-1 320:left-1 bottom-8 left-8 p-4 text-white 1024:p-1 1024:bottom-2 1024:left-4 1440:p-5 1440:bottom-2 2560:p-9 gap-0">
+                        <h3 class="320:text-[32px] text-[48px] font-fairplay 1024:text-white text-black 1024:text-[18px] 1440:text-[28px] 2560:text-[60px] -mb-2">Publishing Process</h3>
+                        <p class="320:text-[13px] text-base 1024:text-white text-black 1024:text-[8px] 1440:text-[10px] 2560:text-[16px]">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
+                            .</p>
+                        <button className="bg-white text-lg text-white 1024:text-black rounded-3xl 1440:w-[100px] 1440:h-7 1440:text-[11px] 2560:text-[15px] 2560:w-[150px] 2560:h-11 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2 1440:mt-3 2560:mt-7 320:w-[100px] 320:text-[13px]">View all</button>
+                    </div>
+                </div>
+
                 {/* Submit online */}
-                <div class="relative m-4 p-4 bg-cover bg-center 320:h-[380px] 1024:h-[200px] 1440:h-[270px] 2560:h-[400px] mt-10" style={{ backgroundImage: `url('assests/section/section6.png')` }}>
+                <div class="relative m-4 p-4 bg-cover bg-center 320:h-[380px] 1024:h-[200px] 1440:h-[270px] 2560:h-[450px] my-20" style={{ backgroundImage: `url('assests/section/section6.png')` }}>
                     <div class="absolute 320:bottom-1 320:left-1 bottom-8 left-8 p-4 text-white 1024:p-1 1024:bottom-2 1024:left-4 1440:p-5 1440:bottom-2 2560:p-9 gap-0">
                         <h3 class="320:text-[32px] text-[48px] font-fairplay text-white 1024:text-black 1024:text-[18px] 1440:text-[28px] 2560:text-[60px] -mb-2">Submit online
                         </h3>
@@ -216,8 +324,6 @@ const Section = () => {
                         <button className="bg-[#031428] text-lg text-white rounded-3xl 1440:w-[100px] 1440:h-7 1440:text-[11px] 2560:text-[15px] 2560:w-[150px] 2560:h-11 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2 1440:mt-3 2560:mt-7 320:w-[100px] 320:text-[13px]">Explore</button>
                     </div>
                 </div>
-
-
 
             </div>
         </>
