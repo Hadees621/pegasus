@@ -30,7 +30,7 @@ const Believe = () => {
             of us carpool and cycle or use public transport to get to work to cut down on car fumes. We bring attention to
             environmental awareness days with blog posts and specially created videos. Quite a few of our published works shine a
             light on what can.`,
-            img: "assests/about/reading.jpg",
+            img: "assests/about/4.2.png",
         },
         {
             heading: 'A diverse workforce',
@@ -46,7 +46,7 @@ const Believe = () => {
             publishing when it comes to diversity, but we like to think we are paving the way for the future with our forward thinking
             and equal mindedness. And we’re not finished! Every year we make new positive changes and continuously think about
             what we can do. Here’s to now and the future.`,
-            img: "assests/about/reading.jpg",
+            img: "assests/about/4.3.png",
         },
         {
             heading: 'Rewardable and memorable publishing journey',
@@ -56,7 +56,7 @@ const Believe = () => {
             publicity to guide them through the world of publishing – helping to book in book signings/launches, interviews, articles
             and sending the book out to be reviewed. We make sure to be available to our authors at all times. Publishing can be a
             difficult and confusing journey alone, that is why we’re here, to make the ride all the more comfortable and exciting!`,
-            img: "assests/about/reading.jpg",
+            img: "assests/about/4.4.png",
         },
 
     ];
