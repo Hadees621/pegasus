@@ -7,8 +7,8 @@ const Authors = () => {
     return (
         <>
             <Header />
-            {/* <Section /> */}
-            <Footer />
+            <Section />
+            {/* <Footer /> */}
         </>
     );
 };

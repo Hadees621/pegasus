@@ -60,7 +60,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
 
     const navigationLinks = [
         { label: "Books", className: "books-link", onClick: handleBooksClick },
-        { label: "Authors", className: "" },
+        { label: "Authors", to: "/authors", className: "" },
         { label: "About us", to: "/about", className: "" },
         { label: "Features", className: "" },
         { label: "Submissions", className: "" },
