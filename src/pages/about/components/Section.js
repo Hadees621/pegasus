@@ -181,7 +181,7 @@ const Section = () => {
             </div>
 
             {/* believe */}
-            <div className="w-full justify-center 320:px-6 768:px-12 1024:px-52 1440:px-[290px] 1535:px-[381px] 2000:px-[700px]">
+            <div className="w-full justify-center 320:px-6 768:px-12 1024:px-52 1440:px-[340px] 1535:px-[381px] 2000:px-[700px]">
 
                 <div className="flex items-center 1024:mt-6 320:py-8 1024:py-4 2000:py-12">
                     <div className="flex-grow border-t border-[#757C97]"></div>
@@ -240,7 +240,7 @@ const Section = () => {
             {/* History */}
             <div className="w-full bg-[#F8F5EF] py-32 mt-20 1024:mt-6 1024:py-10 2000:py-48">
 
-                <div className="320:mx- 768:mx-12 1024:mx-64 1440:mx-[290px] 1535:mx-[381px] 2000:mx-[720px]">
+                <div className="320:mx- 768:mx-12 1024:mx-64 1440:mx-[340px] 1535:mx-[381px] 2000:mx-[720px]">
                     <h1 className="flex justify-center text-black font-fairplay text-[24px] leading-7 tracking-tight 1024:text-start 320:text-[28px] 1024:text-[23px] 1440:text-[32px] 1440:leading-9 2000:text-[55px] 2000:leading-[60px]">
                         Established since 1999
                     </h1>
@@ -248,13 +248,13 @@ const Section = () => {
                         Pegasus Elliot MacKenzie Publishers have been publishing high quality books from exciting authors for more than 20 years.
                     </p>
 
-                    <div className="flex flex-col 1024:flex-row mt-8 gap-8 p-3 1024:gap-4 2000:gap-6 1024:mt-2 1440:mt-7 2000:mt-20">
+                    <div className="flex flex-col 1024:flex-row mt-8 gap-8 p-3 1024:gap-4 2000:gap-6 1024:mt-2 1440:mt-7 2000:mt-20 1440:px-20">
 
-                        <div className="flex flex-col w-full px-10 py-20 1024:px-3 1024:py-3 2000:px-20 2000:py-12 group hover:bg-black hover:shadow-xl hover:shadow-[#F8E8EE] hover:text-white transition-all border border-black rounded-md items-center">
+                        <div className="flex flex-col w-full px-10 py-20 1024:px-3 1024:py-3 1440:px-4 1440:py-6 2000:px-10 2000:py-10 group hover:bg-black hover:shadow-xl hover:shadow-[#F8E8EE] hover:text-white transition-all border border-black rounded-md items-center 1024:items-start">
                             <h2 className="text-black group-hover:text-white text-[20px] 768:text-[22px] 1024:text-[12px] 1024:text-start 1440:text-[16px] 2000:text-[32px] mb-2 font-fairplay font-bold">
                                 History of Pegasus
                             </h2>
-                            <p className="text-gray-700 group-hover:text-white text-center 1024:text-start 1024:text-[10px] mt-5 1024:mt-2">
+                            <p className="text-gray-700 group-hover:text-white text-center 1024:text-start 1024:text-[10px] 1440:text-[12px] 2000:text-[15px] mt-5 1024:mt-2">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
                             </p>
                             <p className="text-start 320:mt-6 1024:mt-2">
@@ -262,11 +262,11 @@ const Section = () => {
                             </p>
                         </div>
 
-                        <div className="flex flex-col w-full px-10 py-20 1024:px-3 1024:py-3 2000:px-20 2000:py-12 group hover:bg-black hover:shadow-xl hover:shadow-[#F8E8EE] hover:text-white transition-all border border-black rounded-md items-center">
-                            <h2 className="text-black group-hover:text-white text-[20px] 768:text-[22px] 1024:text-[12px] 1024:text-start 1440:text-[16px] 2000:text-[32px] mb-2 font-fairplay font-bold">
+                        <div className="flex flex-col w-full px-10 py-20 1024:px-3 1024:py-3 1440:px-4 1440:py-6 2000:px-10 2000:py-10 group hover:bg-black hover:shadow-xl hover:shadow-[#F8E8EE] hover:text-white transition-all border border-black rounded-md items-center 1024:items-start">
+                            <h2 className="text-black group-hover:text-white text-[20px] 768:text-[22px] 1024:text-[12px] 1024:text-start 1440:text-[16px] 2000:text-[38px] mb-2 font-fairplay font-bold">
                                 Our team
                             </h2>
-                            <p className="text-gray-700 group-hover:text-white text-center 1024:text-start 1024:text-[10px] mt-5 1024:mt-2">
+                            <p className="text-gray-700 group-hover:text-white text-center 1024:text-start 1024:text-[10px] 1440:text-[12px] 2000:text-[15px] mt-5 1024:mt-2">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing
                                 elit, sed diam nonummy nibh euismod tincidunt ut
                                 laoreet dolore magna aliquam.
@@ -310,10 +310,10 @@ const Section = () => {
                 {/* publishing process */}
                 <div class="relative m-4 p-4 bg-cover bg-center 320:h-[380px] 1024:h-[200px] 1440:h-[270px] 2000:h-[500px] my-20" style={{ backgroundImage: `url('assests/about/books.jpg')` }}>
                     <div class="absolute 320:bottom-1 320:left-1 bottom-8 left-8 p-4 text-white 1024:p-1 1024:bottom-2 1024:left-4 1440:p-5 1440:bottom-2 2000:p-9 gap-0">
-                        <h3 class="320:text-[32px] text-[48px] font-fairplay text-white 1024:text-black 1024:text-[18px] 1440:text-[28px] 2000:text-[60px] -mb-0 leading-10">Publishing Process</h3>
-                        <p class="320:text-[13px] text-base text-white 1024:text-black 1024:text-[8px] 1440:text-[10px] 2000:text-[16px]">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
+                        <h3 class="320:text-[32px] text-[48px] font-fairplay text-[#F8F5EF] 1024:text-[18px] 1440:text-[28px] 2000:text-[60px] -mb-0 leading-10 2000:mb-2">Publishing Process</h3>
+                        <p class="320:text-[13px] text-base text-[#F8F5EF] 1024:text-[8px] 1440:text-[10px] 2000:text-[16px]">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
                             .</p>
-                        <button className="bg-white text-lg text-black rounded-3xl 1440:w-[100px] 1440:h-7 1440:text-[11px] 2000:text-[15px] 2000:w-[150px] 2000:h-11 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2 1440:mt-3 2000:mt-7 320:w-[100px] 320:text-[13px]">View all</button>
+                        <button className="bg-[#F8F5EF] text-lg text-black rounded-3xl 1440:w-[100px] 1440:h-7 1440:text-[11px] 2000:text-[15px] 2000:w-[150px] 2000:h-11 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2 1440:mt-3 2000:mt-7 320:w-[100px] 320:text-[13px]">View all</button>
                     </div>
                 </div>
 
