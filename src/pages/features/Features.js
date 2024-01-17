@@ -109,7 +109,7 @@ const Features = () => {
                                                                 </div>
                                                                 <div className='w-full text-start items-end justify-end 320:space-y-8 1024:space-y-1 2000:space-y-3'>
                                                                     <h3 className="768:text-[20px] 2000:text-3xl 2000:mt-4 font-bold font-fairplay 1024:text-[11px] 1440:text-[18px] 1440:mt-2 text-[#0F1824]">{article.title}</h3>
-                                                                    <p className="768:text-[17px] 768:leading-[20px] 1024:leading-[12px] 2000:text-[17.5px] 2000:mt-6 2000:leading-[30px] text-[#0F1824] font-roboto 320:text-[12px] 1024:text-[6px] 1440:text-[9px] 1440:mt-2 1440:leading-[17px] leading-[14px]">{article.content}</p>
+                                                                    <p className="768:text-[17px] 768:leading-[20px] 1024:leading-[12px] 2000:text-[16px] 2000:mt-6 2000:leading-[30px] text-[#0F1824] font-roboto 320:text-[12px] 1024:text-[6px] 1440:text-[9px] 1440:mt-2 1440:leading-[17px] leading-[14px] 2000:mr-4">{article.content}</p>
 
                                                                 </div>
                                                             </div>
@@ -119,8 +119,7 @@ const Features = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    {/* Render hr element after every 3 articles */}
-                                    {(chunkIndex + 1 < chunkedArticles.length) && <hr className="border-1 border-[#9FA2A3] my-10" />}
+                                    {(chunkIndex + 1 < chunkedArticles.length) && <hr className="border-1 border-[#9FA2A3] mt-14 mb-10" />}
                                 </React.Fragment>
                             ))}
 
