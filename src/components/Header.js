@@ -62,7 +62,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
         { label: "Books", className: "books-link", onClick: handleBooksClick },
         { label: "Authors", to: "/authors", className: "" },
         { label: "About us", to: "/about", className: "" },
-        { label: "Features", className: "" },
+        { label: "Features",to: "/features", className: "" },
         { label: "Submissions", className: "" },
     ];
 
