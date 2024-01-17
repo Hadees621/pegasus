@@ -1,11 +1,14 @@
 import React from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { articleData } from "../homepage/utils/utils";
 import Sidebar from "./components/SideBar";
+import { articleData } from "./utils";
 
 const Features = () => {
-
+    const chunkedArticles = Array.from(
+        { length: Math.ceil(articleData.length / 3) },
+        (_, index) => articleData.slice(index * 3, (index + 1) * 3)
+    );
     return (
         <>
             <Header />
@@ -23,7 +26,7 @@ const Features = () => {
 
                     <div class="bg-[#EDEFF1] 320:mt-5 320:p-0 1440:mt-7 2000:mt-12">
                         <div class="flex flex-col md:flex-row">
-                            <div class="md:w-[70%] 2000:my-10 1024:pl-10 p-2 768:p-5 1440:py-6 1440:pl-6">
+                            <div class="md:w-[70%] 2000:my-10 1024:pl-10 p-2 768:p-5 1440:py-6 1440:pl-6 2000:pl-12">
                                 <img class="w-full 2000:h-[600px]" src="assests/features/article.png" alt="Image" />
                             </div>
 
@@ -82,78 +85,51 @@ const Features = () => {
                     <div className="w-[15%] 320:w-full 320:my-6 border-black 320:px-6 1024:px-0 1024:my-0 1024:w-[17%] 1440:w-[17%] 2000:w-[18%] 1440:mt-4 2000:mt-6">
                         <Sidebar />
                     </div>
-                    <div className="w-[85%] 320:w-full border-black 1024:w-[90%] 1440:w-[90%] 2000:w-[95%]">
+                    <div className="w-full 320:w-full border-black 1024:w-[90%] 1440:w-[90%] 2000:w-[95%]">
                         <div className="grid justify-center">
 
                             {/* blog category */}
-                            <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 320:gap-4 1024:gap-6 mt-8 1024:mt-0 1440:mt-4 2000:mt-10'>
-                                {articleData.map((article, index) => (
-                                    <div key={index} className="m-3 text-center 1024:m-2 320:space-y-5 1024:space-y-2 2000:space-y-7">
-                                        <div className='flex justify-between'>
-                                            <h3 className="2000:text-lg 1024:text-[6px] 1440:text-[8px] font-fairplay text-[#45484A]">{article.category}</h3>
-                                            <h3 className="2000:text-lg 1024:text-[6px] 1440:text-[8px] font-fairplay text-[#45484A]">{article.date}</h3>
-                                        </div>
-                                        <div className='w-full'>
-                                            <img className="w-full object-cover" src="assests/features/art.png" alt={`Section ${index + 1} Image`} />
-                                        </div>
-                                        <div className='w-full text-start items-end justify-end 320:space-y-8 1024:space-y-1 2000:space-y-3'>
-                                            <h3 className="768:text-[20px] 2000:text-3xl 2000:mt-4 font-bold font-fairplay 1024:text-[11px] 1440:text-[18px] 1440:mt-2 text-[#0F1824]">{article.title}</h3>
-                                            <p className="768:text-[17px] 768:leading-[20px] 1024:leading-[12px] 2000:text-[17.5px] 2000:mt-6 2000:leading-[30px] text-[#0F1824] font-roboto 320:text-[12px] 1024:text-[6px] 1440:text-[9px] 1440:mt-2 1440:leading-[17px] leading-[14px]">{article.content}</p>
+                            {chunkedArticles.map((chunk, chunkIndex) => (
+                                <React.Fragment key={chunkIndex}>
+                                    <div className="w-[85%] 320:w-full border-black">
+                                        <div className="grid justify-center">
+                                            {/* blog category */}
+                                            <div className="w-[85%] 320:w-full border-black">
+                                                <div className="grid justify-center">
+                                                    {/* blog category */}
+                                                    <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 320:gap-4 1024:gap-6 mt-8 1024:mt-0 1440:mt-4 2000:mt-10'>
+                                                        {chunk.map((article, index) => (
+                                                            <div key={index} className="m-3 text-center 1024:m-2 320:space-y-5 1024:space-y-2 2000:space-y-7">
+                                                                <div className='flex justify-between'>
+                                                                    <h3 className="2000:text-lg 1024:text-[6px] 1440:text-[8px] font-fairplay text-[#45484A]">{article.category}</h3>
+                                                                    <h3 className="2000:text-lg 1024:text-[6px] 1440:text-[8px] font-fairplay text-[#45484A]">{article.date}</h3>
+                                                                </div>
+                                                                <div className='w-full'>
+                                                                    <img className="w-full object-cover" src="assests/features/art.png" alt={`Section ${index + 1} Image`} />
+                                                                </div>
+                                                                <div className='w-full text-start items-end justify-end 320:space-y-8 1024:space-y-1 2000:space-y-3'>
+                                                                    <h3 className="768:text-[20px] 2000:text-3xl 2000:mt-4 font-bold font-fairplay 1024:text-[11px] 1440:text-[18px] 1440:mt-2 text-[#0F1824]">{article.title}</h3>
+                                                                    <p className="768:text-[17px] 768:leading-[20px] 1024:leading-[12px] 2000:text-[17.5px] 2000:mt-6 2000:leading-[30px] text-[#0F1824] font-roboto 320:text-[12px] 1024:text-[6px] 1440:text-[9px] 1440:mt-2 1440:leading-[17px] leading-[14px]">{article.content}</p>
 
+                                                                </div>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="grid justify-center">
+                                    {/* Render hr element after every 3 articles */}
+                                    {(chunkIndex + 1 < chunkedArticles.length) && <hr className="border-1 border-[#9FA2A3] my-10" />}
+                                </React.Fragment>
+                            ))}
 
-                            {/* blog category */}
-                            <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 320:gap-4 1024:gap-6 mt-8 1024:mt-0 1440:mt-4 2000:mt-10'>
-                                {articleData.map((article, index) => (
-                                    <div key={index} className="m-3 text-center 1024:m-2 320:space-y-5 1024:space-y-2 2000:space-y-7">
-                                        <div className='flex justify-between'>
-                                            <h3 className="2000:text-lg 1024:text-[6px] 1440:text-[8px] font-fairplay text-[#45484A]">{article.category}</h3>
-                                            <h3 className="2000:text-lg 1024:text-[6px] 1440:text-[8px] font-fairplay text-[#45484A]">{article.date}</h3>
-                                        </div>
-                                        <div className='w-full'>
-                                            <img className="w-full object-cover" src="assests/features/art.png" alt={`Section ${index + 1} Image`} />
-                                        </div>
-                                        <div className='w-full text-start items-end justify-end 320:space-y-8 1024:space-y-1 2000:space-y-3'>
-                                            <h3 className="768:text-[20px] 2000:text-3xl 2000:mt-4 font-bold font-fairplay 1024:text-[11px] 1440:text-[18px] 1440:mt-2 text-[#0F1824]">{article.title}</h3>
-                                            <p className="768:text-[17px] 768:leading-[20px] 1024:leading-[12px] 2000:text-[17.5px] 2000:mt-6 2000:leading-[30px] text-[#0F1824] font-roboto 320:text-[12px] 1024:text-[6px] 1440:text-[9px] 1440:mt-2 1440:leading-[17px] leading-[14px]">{article.content}</p>
-
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="grid justify-center">
-
-                            {/* blog category */}
-                            <div className='grid grid-cols-3 320:grid-cols-1 1024:grid-cols-3 320:gap-4 1024:gap-6 mt-8 1024:mt-0 1440:mt-4 2000:mt-10'>
-                                {articleData.map((article, index) => (
-                                    <div key={index} className="m-3 text-center 1024:m-2 320:space-y-5 1024:space-y-2 2000:space-y-7">
-                                        <div className='flex justify-between'>
-                                            <h3 className="2000:text-lg 1024:text-[6px] 1440:text-[8px] font-fairplay text-[#45484A]">{article.category}</h3>
-                                            <h3 className="2000:text-lg 1024:text-[6px] 1440:text-[8px] font-fairplay text-[#45484A]">{article.date}</h3>
-                                        </div>
-                                        <div className='w-full'>
-                                            <img className="w-full object-cover" src="assests/features/art.png" alt={`Section ${index + 1} Image`} />
-                                        </div>
-                                        <div className='w-full text-start items-end justify-end 320:space-y-8 1024:space-y-1 2000:space-y-3'>
-                                            <h3 className="768:text-[20px] 2000:text-3xl 2000:mt-4 font-bold font-fairplay 1024:text-[11px] 1440:text-[18px] 1440:mt-2 text-[#0F1824]">{article.title}</h3>
-                                            <p className="768:text-[17px] 768:leading-[20px] 1024:leading-[12px] 2000:text-[17.5px] 2000:mt-6 2000:leading-[30px] text-[#0F1824] font-roboto 320:text-[12px] 1024:text-[6px] 1440:text-[9px] 1440:mt-2 1440:leading-[17px] leading-[14px]">{article.content}</p>
-
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
                         </div>
                     </div>
                 </div>
 
                 {/* pagination */}
-                <div className="flex flex-col gap-4 768:gap-8 justify-center items-center h-20 my-10 lg:flex-row lg:justify-between 1024:mx-44 xl:mx-52 2xl:mx-96">
+                <div className="flex flex-col gap-4 768:gap-8 justify-center items-center h-20 my-10 2000:my-28 lg:flex-row lg:justify-between 1024:mx-44 xl:mx-52 2xl:mx-96">
                     <nav className="lg:mx-auto">
                         <ul class="flex items-center h-8 space-x-4 1024:text-[8px] 2000:text-[22px] 1024:space-x-1.5 1440:text-[10px] 1440:space-x-2 2000:space-x-4">
                             <li>
