@@ -17,12 +17,12 @@ const Section = () => {
                 </div>
             </div>
 
-            {/* <TextSection /> */}
+            <TextSection />
 
             {/* History */}
 
             <div className=" bg-[#F8F5EF] py-28 1024:py-10 1440:py-12">
-                <div className="flex flex-col w-full justify-center 768:px-12 1024:px-52 1440:px-[340px] 1535:px-[381px] 2000:px-[700px] gap-8 2000:gap-20">
+                <div className="flex flex-col 1024:flex-row w-full justify-center 768:px-12 1024:px-52 1440:px-[340px] 1535:px-[381px] 2000:px-[700px] gap-8 2000:gap-20">
                     <div className="w-full 1024:w-[20%]">
                         <p className="text-[25px] text-center 2000:text-[50px] font-fairplay"> Frequently Asked Questions </p>
                     </div>
