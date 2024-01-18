@@ -16,37 +16,39 @@ const FaqItem = ({ faq, defaultAllExpanded }) => {
     const { q, a } = faq;
 
     return (
-        <div className="py-6 border-t border-t-gray-200">
+        <div className="">
             <div
-                className="flex justify-between items-center cursor-pointer select-none"
+                className={`flex justify-between items-center cursor-pointer select-none border-t border-[#999B9A] ${!isItemOpen && "border-b border-[#999B9A]"}`}
                 onClick={handleClick}
                 title={!isItemOpen ? "Show" : "Hide"}
             >
-                <div className="font-semibold text-gray-800">{q}</div>
+                {/* sawaal */}
+                <div className={`${!isItemOpen ? `text-black py-6` : `text-[#B79248] pt-6`} font-fairplay text-[22px]`}>{q}</div>
                 <button
-                    className="text-gray-600 rounded-full p-2 w-8 h-8 flex justify-center items-center text-2xl hover:bg-gray-200 transition"
-                    title={!isItemOpen ? "Show" : "Hide"}
+                    className={`rounded-full w-10 h-10 flex justify-center text-3xl transition bg-[#DDC7A2] m-2`}
+                    title={!isItemOpen ? 'Show' : 'Hide'}
                 >
-                    {isItemOpen ? "-" : "+"}
+                    {isItemOpen ? '-' : '+'}
                 </button>
+
             </div>
 
+            {/* jawab */}
             <div
-                className={`text-gray-500 font-medium overflow-hidden transition-[height]`}
+                className={`text-black overflow-hidden transition-[height] border-b border-[#999B9A] ${!isItemOpen ? `border-none` : `pb-10`}`}
                 style={{ height: isItemOpen ? height : 0 }}
             >
-                <div ref={ansRef} className="pt-2">
+                <div ref={ansRef} className={`py-[44px]`}>
                     {a}
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
 const Faq = ({ faqs = [], defaultAllExpanded = false }) => {
     return (
-        <div className="w-[95%] sm:w-[90%] md:w-[75%] mx-auto">
-            <div className="mb-4 text-gray-800 text-lg font-semibold">Frequently Asked Questions</div>
+        <div className="w-full space-y-10">
             {faqs.map((faq, idx) => (
                 <FaqItem key={idx} faq={faq} defaultAllExpanded={defaultAllExpanded} />
             ))}
