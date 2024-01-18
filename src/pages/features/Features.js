@@ -14,7 +14,7 @@ const Features = () => {
             <Header />
             <>
                 {/* banner */}
-                <div className="bg-[#F1F1F3] justify-center 320:m-5 1024:h-52 1440:h-72 2000:h-[420px] 1440:flex-row 1024:mx-40 xl:mx-52 2xl:mx-96 border border-[#F1F1F3]">
+                <div className="bg-[#F1F1F3] justify-center 320:m-5 1024:h-52 1440:h-72 2000:h-[420px] 1440:flex-row 1024:mx-40 xl:mx-52 2560:mx-96 border border-[#F1F1F3]">
                     <p className="2000:text-sm font-roboto m-10 2000:m-10 1024:text-[8px] 1024:m-4 1440:text-[9px] 1440:m-5">Home — Features</p>
                     <div className="flex w-full justify-center">
                         <p className=" 320:text-4xl 768:text-5xl 1024:text-[30px] 1440:text-[45px] 2000:text-7xl flex justify-center font-fairplay my-24 1024:my-10 border-b-2 border-black shadow-sm w-max">Features</p>
@@ -22,7 +22,7 @@ const Features = () => {
                 </div>
 
                 {/* article */}
-                <div className="flex 320:flex-col 320:items-center 320:gap-10 1024:flex-row 1440:flex-row 320:mx-5 1024:mt-0 1024:gap-2 1440:mt-0 my-16 1024:mx-40 xl:mx-52 2xl:mx-96">
+                <div className="flex 320:flex-col 320:items-center 320:gap-10 1024:flex-row 1440:flex-row 320:mx-5 1024:mt-0 1024:gap-2 1440:mt-0 my-16 1024:mx-40 xl:mx-52 2560:mx-96">
 
                     <div class="bg-[#EDEFF1] 320:mt-5 320:p-0 1440:mt-7 2000:mt-12">
                         <div class="flex flex-col md:flex-row">
@@ -47,7 +47,7 @@ const Features = () => {
                 </div>
 
                 {/* filter  */}
-                <div className="flex 320:flex-col 320:items-center 320:gap- 1024:flex-row 1440:flex-row 320:mx-5 1024:mt-0 1024:gap-2 1440:mt-0 mt-12 1024:mx-40 xl:mx-52 2xl:mx-96 justify-between 2000:py-1">
+                <div className="flex 320:flex-col 320:items-center 320:gap- 1024:flex-row 1440:flex-row 320:mx-5 1024:mt-0 1024:gap-2 1440:mt-0 mt-12 1024:mx-40 xl:mx-52 2560:mx-96 justify-between 2000:py-1">
 
                     <div className="2000:h-16 2000:w-[15%] 320:w-full 320:justify-center 1024:w-[25%] 1440:w-[30%] border-black flex items-center 1024:justify-start gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="1024:w-2 2000:w-6">
@@ -81,7 +81,7 @@ const Features = () => {
                 </div>
 
                 {/* blogs */}
-                <div className="flex 320:flex-col 320:items-center 320:mx-5 gap-4 1024:flex-row 1024:items-start 1024:mx-40 1024:gap-2 xl:mx-52 2xl:mx-96">
+                <div className="flex 320:flex-col 320:items-center 320:mx-5 gap-4 1024:flex-row 1024:items-start 1024:mx-40 1024:gap-2 xl:mx-52 2560:mx-96">
                     <div className="w-[15%] 320:w-full 320:my-6 border-black 320:px-6 1024:px-0 1024:my-0 1024:w-[17%] 1440:w-[17%] 2000:w-[18%] 1440:mt-4 2000:mt-6">
                         <Sidebar />
                     </div>
@@ -128,7 +128,7 @@ const Features = () => {
                 </div>
 
                 {/* pagination */}
-                <div className="flex flex-col gap-4 768:gap-8 justify-center items-center h-20 my-10 2000:my-28 lg:flex-row lg:justify-between 1024:mx-44 xl:mx-52 2xl:mx-96">
+                <div className="flex flex-col gap-4 768:gap-8 justify-center items-center h-20 my-10 2000:my-28 lg:flex-row lg:justify-between 1024:mx-44 xl:mx-52 2560:mx-96">
                     <nav className="lg:mx-auto">
                         <ul class="flex items-center h-8 space-x-4 1024:text-[8px] 2000:text-[22px] 1024:space-x-1.5 1440:text-[10px] 1440:space-x-2 2000:space-x-4">
                             <li>

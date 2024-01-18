@@ -25,7 +25,7 @@ const Footer = () => {
     return (
         <footer className="bg-[#0F1824]">
             {/* 1024:max-w-screen-768 */}
-            <div className="mx-auto w-full 1024:px-40 320:p-5 xl:px-52 2xl:px-96 320:py-10 1024:py-10 1440:py-20 2560:py-44 1024:text-center justify-center items-center flex flex-col">
+            <div className="mx-auto w-full 1024:px-40 320:p-5 xl:px-52 2560:px-96 320:py-10 1024:py-10 1440:py-20 2560:py-44 1024:text-center justify-center items-center flex flex-col">
 
                 <div className="1024:grid 1024:grid-cols-2 1024:w-full">
 

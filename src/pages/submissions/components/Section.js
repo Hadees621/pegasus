@@ -1,5 +1,7 @@
 import React from "react";
 import { audioBooksData } from "../../homepage/utils/utils";
+import Faq from "./Faq";
+import FaqDemo from "./FaqDemo";
 
 const Section = () => {
     return (
@@ -16,45 +18,66 @@ const Section = () => {
             </div>
 
             {/* padded section 1 */}
-            <div className="w-full justify-center 320:px-6 768:px-12 1024:px-52 1440:px-[290px] 1535:px-[360px] 2000:px-[360px] ">
+            <div className="w-full justify-center items-center 320:px-3 425:px-4 768:px-10 1024:px-[240px] 1440:px-[400px] 1535:px-[430px] 2000:px-[500px] 2560:px-[700px] py-28 1024:py-10 1440:py-12">
 
-                {/* goals */}
-                <div className="flex 320:flex-col 320:gap-9 1024:gap-0 1024:flex-row 2000:space-x-10 2000:my-10">
-                    <div className="px-1 320:space-y-3 1024:space-y-1 1024:px-2 2000:space-y-3">
-                        <h1 className="font-bold text-[#77797B] font-fairplay 320:text-[20px] 768:text-[22px] 1024:text-[10px] 1440:text-[16px] 2000:text-[28px] text-center 1024:text-start 1024:my-1.5 1440:my-2.5 2000:my-5">
-                            The Leading Independant Trade Publishers
+                <div className="flex flex-col 425:flex-row 425:gap-3 1024:gap-4 1440:gap-14 space-y-5 425:space-y-0">
+
+                    <div className="w-full 425:w-[25%] 1440:w-[20%] space-y-6 425:space-y-5 1024:space-y-3 1440:space-y-4 2000:space-y-6 2560:pr-20">
+                        <h1 className="text-center 425:text-start text-[#B79248] 425:text-[15px] 768:text-[18px] 1024:text-[10px] 1440:text-[14px] 2000:text-[20px] tracking-wide  font-fairplay">
+                            Ways to submit
                         </h1>
-                        <p className="flex leading-8 font-roboto 320:text-[13px] 320:leading-5 768:text-[16px] 768:leading-6 1024:text-[6px] 1024:leading-[13px] 1440:text-[9.5px] 1440:leading-[19px] 2000:text-[16px] 2000:leading-8 text-center 1024:text-start">
-                            Pegasus Elliot Mackenzie has been one of the UK’s foremost
-                            independent publishing groups collectively publishing for almost
-                            twenty years. We are determined advocates for authors and aspiring
-                            writers, we strive to create excellence and most importantly we
-                            have made it our mission to create a global platform for our
-                            published authors. We have published over 2,000 titles and sold
-                            our books in 33 countries around the world. We also regularly work
-                            with charities and support causes which are close to our authors
-                            and us.
+                        <h1 className="text-center 425:text-start text-[#5D6162] 425:text-[13px] 768:text-[18px] 1024:text-[11px] 1440:text-[13px] 2000:text-[21px] font-fairplay 2000:my-8">
+                            What our editors are looking for
+                        </h1>
+                        <h1 className="text-center 425:text-start text-[#5D6162] 425:text-[13px] 768:text-[18px] 1024:text-[11px] 1440:text-[13px] 2000:text-[21px] font-fairplay">
+                            What authors can do
+                        </h1>
+                    </div>
+
+                    <div className="w-full 425:w-[80%] 1440:w-[80%] space-y-6 1024:space-y-3">
+                        <h1 className="text-center 425:text-start text-[24px] 425:text-[16px] 1024:text-[14px] 1440:text-[16px] 2000:text-[28px] text-[#B79248] font-fairplay">
+                            Electronic submission
+                        </h1>
+                        <p className=" 425:text-[12px] 425:text-start text-[14px] 1024:text-[7px] 1024:leading-4 1440:text-[9px] 1440:leading-6 2000:text-[15px] 2000:leading-8 2000:my-8 leading-6 font-roboto text-black">
+                            Electronic versions of your manuscript should be in one file and not separate files for each chapter or section. Use
+                            Microsoft Word format and 12pt Times New Roman font.
+                        </p>
+                        <p className=" 425:text-start text-[14px] 425:text-[12px] 1024:text-[7px] 1024:leading-4 1440:text-[9px] 1440:leading-6 2000:text-[15px] 2000:leading-8 2000:my-9 leading-6 font-roboto">
+                            Please send a synopsis and complete manuscript via email to: <b>submissions@pegasuspublishers.com</b>
+                        </p>
+
+                        <p className="425:text-start text-[14px] 425:text-[12px] 1024:text-[7px] 1024:leading-4 1440:text-[9px] 1440:leading-6 2000:text-[15px] 2000:leading-8 2000:my-8 leading-6 font-roboto">
+                            Manuscript guidelines:
+                            <ul className="ml-3 list-disc">
+                                <li className="list-item">A synopsis and complete manuscript</li>
+                                <li className="list-item">Word count (of complete manuscript)</li>
+                                <li className="list-item">Genre and target audience</li>
+                                <li className="list-item">Your name and contact details</li>
+                                <li className="list-item">Any relevant information about the author should also be included</li>
+                                <li className="list-item">Please send all material for review as a single Word document or PDF file format.</li>
+                            </ul>
+                        </p>
+
+                        <p className="425:text-start text-[14px] 425:text-[12px] 1024:text-[7px] 1024:leading-4 1440:text-[9px] 1440:leading-6 2000:text-[15px] 2000:leading-8 2000:my-9 leading-6 font-roboto">
+                            To send by post, printed copies should be on plain white A4 paper with a large margin all round (at least 4 cm) using
+                            12pt Times New Roman font. It should be double spaced and printed on one side of the paper.
+                        </p>
+
+                        <p className="425:text-start text-[14px] 425:text-[12px] 1024:text-[7px] 1024:leading-4 1440:text-[9px] 1440:leading-6 2000:text-[15px] 2000:leading-8 2000:mt-9 leading-6 font-roboto">
+                            Please send your manuscript to:
+                            <p className="leading-6 font-roboto 425:text-start 1024:pr-[260px] 2000:pr-[500px] 425:text-[12px] 1024:text-[7px] 1024:leading-4 1440:text-[9px] 1440:leading-6 2000:text-[15px] 2000:leading-8">
+                                Pegasus Elliot Mackenzie Publishers Ltd.
+                                Sheraton House, Castle Park ,Cambridge,
+                                CB3 0AX, United Kingdom
+                            </p>
                         </p>
                     </div>
-                    <div className="px-1 320:space-y-3 1024:space-y-1 1024:px-4 2000:space-y-3">
-                        <h1 className="font-bold text-[#77797B] font-fairplay 320:text-[20px] 768:text-[22px] 1024:text-[10px] 1440:text-[16px] 2000:text-[28px] text-center 1024:text-start 1024:my-1.5 1440:my-2.5 2000:my-5">
-                            We strive for excellence
-                        </h1>
-                        <p className="flex leading-8 font-roboto 320:text-[13px] 320:leading-5 768:text-[16px] 768:leading-6 1024:text-[6px] 1024:leading-[13px] 1440:text-[9.5px] 1440:leading-[19px] 2000:text-[16px] 2000:leading-8 text-center 1024:text-start">
-                            Making sure to incorporate new innovative ideas, expand our use of
-                            technology and explore every available avenue. We are with our
-                            authors every step of the way, from being accepted by our
-                            editorial team to creating their stand-out cover…right the way
-                            into distribution and publicity! In 25 years we have grown from
-                            one publishing house releasing a few wonderful books a year, to
-                            two fully developed and thriving publishing houses, with over 700
-                            titles in marketing, Pegasus is considered one of the fastest
-                            growing independent publishing houses in the UK.
-                        </p>
-                    </div>
+
                 </div>
 
             </div>
+
+            {/* <FaqDemo /> */}
 
         </>
     );
