@@ -7,6 +7,7 @@ import Fiction from "./pages/books/Fiction";
 import About from "./pages/about/About";
 import Authors from "./pages/authors/Authors";
 import Features from "./pages/features/Features";
+import Submissions from "./pages/submissions/Submissions";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/authors" element={<Authors />} />
           <Route path="/features" element={<Features />} />
+          <Route path="/submissions" element={<Submissions />} />
           
         </Routes>
       </Router>
