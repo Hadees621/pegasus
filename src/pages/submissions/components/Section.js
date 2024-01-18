@@ -22,7 +22,7 @@ const Section = () => {
 
                 <div className="flex flex-col 425:flex-row 425:gap-3 1024:gap-4 1440:gap-14 space-y-5 425:space-y-0">
 
-                    <div className="w-full 425:w-[25%] 1440:w-[20%] space-y-6 425:space-y-5 1024:space-y-3 1440:space-y-4 2000:space-y-6 2560:pr-20">
+                    <div className="w-full 425:w-[25%] 1440:w-[20%] space-y-6 425:space-y-5 1024:space-y-3 1440:space-y-4 2000:space-y-6 ">
                         <h1 className="text-center 425:text-start text-[#B79248] 425:text-[15px] 768:text-[18px] 1024:text-[10px] 1440:text-[14px] 2000:text-[20px] tracking-wide  font-fairplay">
                             Ways to submit
                         </h1>
