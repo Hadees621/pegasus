@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import Section from "./components/Section";
+import Header from "../../components/header/Header";
 
 const About = () => {
     return (
         <>
-            <Header />
+            <Header  />
             <Section />
             <Footer />
         </>
