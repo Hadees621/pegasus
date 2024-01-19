@@ -46,18 +46,18 @@ const Section = () => {
                         of our imprints
                     </p>
 
-                    <button className="bg-[#031428] text-lg text-white rounded-3xl w-[150px] h-12 font-fairplay 1024:w-[50px] 1024:h-[18px] 1440:w-[80px] 1440:h-[24px] 1440:text-[10px] 2560:w-[130px] 2560:h-[45px] 2560:text-[17px] 1024:text-[7px] items-center flex justify-center font-extralight">
+                    <button className="bg-[#031428] text-lg text-white rounded-3xl w-[150px] h-12 font-fairplay 1024:w-[50px] 1024:h-[18px] 1440:w-[80px] 1440:h-[24px] 1440:text-[10px] 2560:w-[130px] 2560:h-[45px] 2560:text-[17px] 1024:text-[7px] items-center flex justify-center font-extralight 2560:mb-3">
                         Read more
                     </button>
 
-                    <div className="flex gap-6 1024:gap-2 items-center py-8 1024:py-3">
+                    <div className="flex gap-6 1024:gap-2 items-center py-8 1024:py-3 ">
                         <a href="#" className="flex items-center justify-center h-12 w-12 1024:h-5 1024:w-5 2560:h-12 2560:w-12 rounded-full bg-white border border-black 2560:p-3">
                             <svg xmlns="http://www.w3.org/2000/svg" className="1024:h-3 2560:h-20" width="32" height="32" viewBox="0 0 32 32"><g transform="rotate(-90 16 16)"><path fill="currentColor" d="m16 6.594l-.72.687l-12.5 12.5l1.44 1.44L16 9.437l11.78 11.78l1.44-1.437l-12.5-12.5z" /></g></svg>
                         </a>
                         <a href="#" className="flex items-center justify-center h-12 w-12 1024:h-5 1024:w-5 2560:h-12 2560:w-12 rounded-full bg-white border border-black 2560:p-3">
                             <svg xmlns="http://www.w3.org/2000/svg" className="1024:h-3 2560:h-20" width="32" height="32" viewBox="0 0 32 32"><g transform="rotate(90 16 16)"><path fill="currentColor" d="m16 6.594l-.72.687l-12.5 12.5l1.44 1.44L16 9.437l11.78 11.78l1.44-1.437l-12.5-12.5z" /></g></svg>
                         </a>
-                        <p className="1024:text-[9px] 2560:text-[20px]" > 01 / 02</p>
+                        <p className="1024:text-[9px] 2560:text-[20px] 2560:ml-8" > 01 / 02</p>
                     </div>
                 </div>
 
