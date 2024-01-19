@@ -2,19 +2,27 @@ import React, { useState } from "react";
 import NavIcons from "./NavIcons";
 import BooksTab from "./BooksTab";
 import AuthorsTab from "./AuthorsTab";
+import { Link } from "react-router-dom";
 
-const MobileMenu = ({ links, isBookActive, handleBooksClick, isOpen, onClose, handleMobileMenuToggle }) => {
-    const [isMobileSearchMegaMenuOpen, setIsMobileSearchMegaMenuOpen] = useState(false);
+const MobileMenu = ({
+    links,
+    isBookActive,
+    isOpen,
+    handleMobileMenuToggle,
+}) => {
+    const [isMobileSearchMegaMenuOpen, setIsMobileSearchMegaMenuOpen] = useState(
+        false
+    );
     const [activeTab, setActiveTab] = useState("books");
-
     const handleMobileSearchClick = () => {
         setIsMobileSearchMegaMenuOpen(!isMobileSearchMegaMenuOpen);
-    }
+    };
 
     const handleCrossClick = () => {
         handleMobileMenuToggle();
-        setIsMobileSearchMegaMenuOpen(false)
+        setIsMobileSearchMegaMenuOpen(false);
     };
+
     return (
         <div className={`flex flex-col items-center w-full lg:hidden my-4 gap-6 ${isOpen ? "block" : "hidden"}`}>
             {(isMobileSearchMegaMenuOpen) ?
@@ -164,28 +172,18 @@ const MobileMenu = ({ links, isBookActive, handleBooksClick, isOpen, onClose, ha
                 ) : (
                     <>
                         <ul className="flex flex-col space-y-4 font-fairplay text-lg 768:text-2xl font-medium mt-3 items-center justify-center w-full">
-                            {links.map((link, index) => (
-                                <li key={index}>
-                                    <a
-                                        href={link.href}
-                                        className={`text-black ${link.className} ${isBookActive ? "text-[#B79248]" : ""
-                                            } hover:text-[#B79248]`}
-                                        onClick={(event) => {
-                                            if (link.label === "Books") {
-                                                handleBooksClick();
-                                                onClose();
-                                            } else {
-                                                link.onClick && link.onClick(event);
-                                                onClose();
-                                            }
-                                        }}
+                            {links.map((link) => (
+                                <li key={link.label}>
+                                    <Link
+                                        to={link.to}
+                                        className={`text-black ${link.className} ${isBookActive ? "text-[#B79248]" : ""} hover:text-[#B79248]`}
+                                        onClick={link.onClick}
                                     >
                                         {link.label}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
-
                         <div className="flex gap-8">
                             <NavIcons handleMobileSearchClick={handleMobileSearchClick} />
                         </div>
