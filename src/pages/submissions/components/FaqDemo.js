@@ -31,7 +31,7 @@ const FaqDemo = () => {
     ];
 
     return (
-        <div className="gap-10">
+        <div className="">
             <Faq faqs={faqs} defaultAllExpanded={false} />
         </div>
     );
