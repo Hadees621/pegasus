@@ -32,6 +32,7 @@ const Section = () => {
                 </div>
             </div>
 
+            {/* process */}
             <div className="flex flex-col 1024:flex-row w-full justify-center 1024:px-40 xl:px-52 2560:px-96 py-12 2560:py-32 2560:gap-10 1024:gap-4">
 
                 <div className="flex flex-col items justify-center text-center group bg-white w-full 2560:pr-7 px-6 1024:px-2 2560:py-10 gap-10 1024:gap-2 768:w-[80%] 768:mx-20 1024:w-full 1024:mx-0 1024:py-4">
@@ -79,19 +80,6 @@ const Section = () => {
                         Offer of publication
                     </p>
                 </div>
-
-                {/* <div className="flex flex-col items-center justify-center text-center group bg-white w-full border shadow-xl p-10 768:w-[80%] 768:mx-20 1024:w-full 1024:mx-0">
-                    <img className="flex items-center justify-center w-full" src="assests/submissions/Asset2.png" alt="Section Image" />
-                    <p className="text-center mt-8 425:text-start text-[24px] 768:text-[26px] 1024:text-[14px] 1440:text-[16px] 2000:text-[28px] text-[#B79248] font-fairplay">
-                        Submission and editorial
-                    </p>
-                </div>
-                <div className="flex flex-col items-center justify-center text-center group bg-white w-full border shadow-xl p-10 768:w-[80%] 768:mx-20 1024:w-full 1024:mx-0 ">
-                    <img className="flex items-center justify-center w-full pt-10" src="assests/submissions/Asset3.png" alt="Section Image" />
-                    <p className="text-center mt-8 425:text-start text-[24px] 768:text-[26px] 1024:text-[14px] 1440:text-[16px] 2000:text-[28px] text-[#B79248] font-fairplay">
-                   
-                    </p>
-                </div> */}
 
             </div>
 
