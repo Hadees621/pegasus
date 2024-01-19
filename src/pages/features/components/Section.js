@@ -3,7 +3,7 @@ import { articleData } from "../utils";
 import Banner from "../../../components/Banner";
 import Sidebar from "../components/SideBar"
 
-const Features = () => {
+const Section = () => {
     const chunkedArticles = Array.from(
         { length: Math.ceil(articleData.length / 3) },
         (_, index) => articleData.slice(index * 3, (index + 1) * 3)
@@ -164,7 +164,7 @@ const Features = () => {
     );
 };
 
-export default Features;
+export default Section;
 
 
 
