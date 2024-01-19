@@ -60,10 +60,10 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
 
     const navigationLinks = [
         { label: "Books", className: "books-link", onClick: handleBooksClick },
-        { label: "Authors", to: "/authors", className: "" },
-        { label: "About us", to: "/about", className: "" },
-        { label: "Features",to: "/features", className: "" },
-        { label: "Submissions", className: "" },
+        { label: "Authors", to: "/authors" },
+        { label: "About us", to: "/about" },
+        { label: "Features", to: "/features" },
+        { label: "Submissions", to: "/submissions" },
     ];
 
     return (
@@ -75,7 +75,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
             </div>
 
             <nav className="bg-white border-gray-200">
-                <div className="flex flex-wrap justify-between items-center px-5 md:px-10 1024:px-40 xl:px-52 2xl:px-96 py-[3px]">
+                <div className="flex flex-wrap justify-between items-center px-5 md:px-10 1024:px-40 xl:px-52 2560:px-96 py-[3px]">
                     {isSearchMegaMenuOpen ? (
                         <div className="bg-[#F3F4F3] 320:h-[40px] 2560:h-[50px] p-4 flex items-center w-full 1024:h-[20px] 1024:my-2 1024:mx-[210px] 2560:mx-[440px] 2560:my-6">
                             <svg
