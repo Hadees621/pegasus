@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import NavIcons from "./comp/header-components/NavIcons";
-import MobileMenu from "./comp/header-components/MobileMenu";
-import MegaMenuBooks from "./comp/header-components/MegaMenuBooks";
-import SearchMegaMenu from "./comp/header-components/SearchMegaMenu";
+import NavIcons from "./header-components/NavIcons";
+import MobileMenu from "./header-components/MobileMenu";
+import MegaMenuBooks from "./header-components/MegaMenuBooks";
+import SearchMegaMenu from "./header-components/SearchMegaMenu";
 import { Link } from "react-router-dom";
 
 const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {

@@ -1,28 +1,17 @@
 import React from "react";
 import { audioBooksData } from "../../homepage/utils/utils";
 import Believe from "./Believe";
-
+import Banner from "../../../components/Banner"
+import SubmitBanner from "../../../components/SubmitBanner";
 const Section = () => {
     return (
         <>
-            <div className="bg-[#F1F1F3]  justify-center 320:m-5 1024:h-48 1440:h-60 1535:h-[270px] 2000:h-[370px] 1440:flex-row 1024:mx-40 xl:mx-52 1535:mx-[350px] border border-[#F1F1F3]">
-                <p className="320:text-[12px] 320:m-5 2000:text-sm font-roboto m-10 2000:m-10 1024:text-[8px] 1024:m-4 1440:text-[9px] 1440:m-5">
-                    Books — About us
-                </p>
-                <div className="flex w-full justify-center">
-                    <p className="320:text-4xl 768:text-5xl 1024:text-[25px] 1440:text-[45px] 2000:text-[70px] flex justify-center font-fairplay my-24 border-b-2 border-black shadow-sm w-max 320:mt-16 320:mb-6 1024:mt-12 1024:mb-0 1440:mb-1 2000:mb-3 pb-3">
-                        About us
-                    </p>
-                </div>
-                <div className="flex w-full justify-center items-center 1024:px-32 1440:px-52 1535:px-[100px] 2000:px-[430px]">
-                    <p className="320:text-[12px] 768:text-[14px] 1024:text-[6.5px] 1024:leading-4 1440:text-[10.5px] 1440:leading-6 2000:text-[16px] 2000:leading-10 320:p-5 w-full 320:items-center flex justify-center text-center py-2">
-                        Pegasus Elliot MacKenzie are at the forefront of the ever-changing
+
+            <Banner title="About us" subtitle="Home — About us" para="Pegasus Elliot MacKenzie are at the forefront of the ever-changing
                         publishing industry. Possessing the experience and integrity that a
                         great publisher requires, we have been successfully publishing high
-                        quality books for over 20 years.
-                    </p>
-                </div>
-            </div>
+                        quality books for over 20 years." />
+
 
             {/* padded section 1 */}
             <div className="w-full justify-center 320:px-6 768:px-12 1024:px-52 1440:px-[290px] 1535:px-[360px] 2000:px-[360px] ">
@@ -264,16 +253,13 @@ const Section = () => {
                     </div>
                 </div>
 
-                {/* Submit online */}
-                <div class="relative m-4 p-4 bg-cover bg-center 320:h-[380px] 1024:h-[200px] 1440:h-[270px] 2000:h-[450px] my-20" style={{ backgroundImage: `url('assests/section/section6.png')` }}>
-                    <div class="absolute 320:bottom-1 320:left-1 bottom-8 left-8 p-4 text-white 1024:p-1 1024:bottom-2 1024:left-4 1440:p-5 1440:bottom-2 2000:p-9 gap-0">
-                        <h3 class="320:text-[32px] text-[48px] font-fairplay text-white 1024:text-black 1024:text-[18px] 1440:text-[28px] 2000:text-[60px] -mb-2">Submit online
-                        </h3>
-                        <p class="320:text-[13px] text-base text-white 1024:text-black 1024:text-[8px] 1440:text-[10px] 2000:text-[16px]">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
-                            .</p>
-                        <button className="bg-[#031428] text-lg text-white rounded-3xl 1440:w-[100px] 1440:h-7 1440:text-[11px] 2000:text-[15px] 2000:w-[150px] 2000:h-11 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2 1440:mt-3 2000:mt-7 320:w-[100px] 320:text-[13px]">Explore</button>
-                    </div>
-                </div>
+                <SubmitBanner
+                    title="Submit online"
+                    subtitle="Your subtitle here"
+                    description="Lorem ipsum dolor sit amet, consectetuer adipscing elit."
+                    buttonText="Submit online"
+                    imageUrl="assests/section/section6.png"
+                />
 
             </div>
         </>
