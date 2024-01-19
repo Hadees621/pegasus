@@ -1,28 +1,28 @@
 import React from "react";
 import { audioBooksData } from "../../homepage/utils/utils";
 import Believe from "./Believe";
+import Banner from "../../../components/Banner"
 
 const Section = () => {
     return (
         <>
-            <div className="bg-[#F1F1F3]  justify-center 320:m-5 1024:h-48 1440:h-60 1535:h-[270px] 2000:h-[370px] 1440:flex-row 1024:mx-40 xl:mx-52 1535:mx-[350px] border border-[#F1F1F3]">
+
+            <Banner title="About us" subtitle="Home — About us" para="Pegasus Elliot MacKenzie are at the forefront of the ever-changing
+                        publishing industry. Possessing the experience and integrity that a
+                        great publisher requires, we have been successfully publishing high
+                        quality books for over 20 years." />
+
+            {/* <div className="bg-[#F1F1F3]  justify-center 320:m-5 1024:h-48 1440:h-60 1535:h-[270px] 2000:h-[370px] 1440:flex-row 1024:mx-40 xl:mx-52 1535:mx-[350px] border border-[#F1F1F3]">
                 <p className="320:text-[12px] 320:m-5 2000:text-sm font-roboto m-10 2000:m-10 1024:text-[8px] 1024:m-4 1440:text-[9px] 1440:m-5">
-                    Home — About us
+                   
                 </p>
                 <div className="flex w-full justify-center">
                     <p className="320:text-4xl 768:text-5xl 1024:text-[25px] 1440:text-[45px] 2000:text-[70px] flex justify-center font-fairplay my-24 border-b-2 border-black shadow-sm w-max 320:mt-16 320:mb-6 1024:mt-12 1024:mb-0 1440:mb-1 2000:mb-3 pb-3">
-                        About us
+                       
                     </p>
                 </div>
-                <div className="flex w-full justify-center items-center 1024:px-32 1440:px-52 1535:px-[100px] 2000:px-[430px]">
-                    <p className="320:text-[12px] 768:text-[14px] 1024:text-[6.5px] 1024:leading-4 1440:text-[10.5px] 1440:leading-6 2000:text-[16px] 2000:leading-10 320:p-5 w-full 320:items-center flex justify-center text-center py-2">
-                        Pegasus Elliot MacKenzie are at the forefront of the ever-changing
-                        publishing industry. Possessing the experience and integrity that a
-                        great publisher requires, we have been successfully publishing high
-                        quality books for over 20 years.
-                    </p>
-                </div>
-            </div>
+                
+            </div> */}
 
             {/* padded section 1 */}
             <div className="w-full justify-center 320:px-6 768:px-12 1024:px-52 1440:px-[290px] 1535:px-[360px] 2000:px-[360px] ">
