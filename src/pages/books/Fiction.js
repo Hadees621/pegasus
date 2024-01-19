@@ -3,6 +3,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/header/Header";
 import Sidebar from "./components/SideBar";
 import { bookData } from "./utils";
+import Banner from "../../components/Banner";
 
 const Fiction = () => {
     const categories = [
@@ -76,12 +77,7 @@ const Fiction = () => {
         <>
             <Header />
             <>
-                <div className="bg-[#F1F1F3] justify-center 320:m-5 1024:h-52 1440:h-72 2560:h-[420px] 1440:flex-row 1024:mx-40 xl:mx-52 2560:mx-96 border border-[#F1F1F3]">
-                    <p className="2560:text-sm font-roboto m-10 2560:m-10 1024:text-[8px] 1024:m-4 1440:text-[9px] 1440:m-5">Books — Fiction</p>
-                    <div className="flex w-full justify-center">
-                        <p className=" 320:text-4xl 768:text-5xl 1024:text-[30px] 1440:text-[45px] 2560:text-7xl flex justify-center font-fairplay my-24 1024:my-10 border-b-2 border-black shadow-sm w-max">Fiction</p>
-                    </div>
-                </div>
+                <Banner title="Fiction" subtitle="Books — Fiction" />
 
                 <div className="flex 320:flex-col 320:items-center 320:gap-10 1024:flex-row 1440:flex-row 320:mx-5 1024:mt-0 1024:gap-2 1440:mt-0 mt-12 1024:mx-40 xl:mx-52 2560:mx-96 ">
 
