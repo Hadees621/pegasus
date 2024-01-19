@@ -5,7 +5,7 @@ const TextSection = () => {
     return (
         <>
             {/* padded section 1 */}
-            <div className="w-full justify-center items-center 320:px-3 425:px-4 768:px-10 1024:px-[240px] 1440:px-[400px] 1535:px-[430px] 2000:px-[500px] 2560:px-[700px] py-28 1024:py-10 1440:py-12 ">
+            <div className="w-full justify-center items-center 320:px-3 425:px-4 768:px-10 1024:px-[240px] 1440:px-[400px] 1535:px-[430px] 2000:px-[500px] 2560:px-[700px] py-28 1024:py-10 1440:py-24">
 
                 <div className="flex flex-col 425:flex-row 425:gap-3 1024:gap-4 1440:gap-14 space-y-5 425:space-y-0">
 
