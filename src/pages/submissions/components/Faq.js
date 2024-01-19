@@ -13,12 +13,9 @@ const FaqItem = ({ faq, defaultAllExpanded, index }) => {
         if (ansRef.current) {
             const newHeight = ansRef.current.offsetHeight;
 
-            // Modify the height based on the screen size
             if (window.innerWidth >= 768) {
-                // Reduce the height for medium screens (adjust this value as needed)
                 // setHeight(newHeight * 0.8);
             } else {
-                // Use the original height for other screen sizes
                 setHeight(newHeight);
             }
         }
