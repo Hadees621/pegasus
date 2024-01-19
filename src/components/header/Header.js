@@ -133,18 +133,22 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
                                     </ul>
 
                                 </div>
-                                <img
-                                    className="lg:hidden h-[65px] w-[130px] my-2"
-                                    src="assests/nav/navlogo.png"
-                                    alt="Logo"
-                                />
+                                <Link to="/" className="logo-link">
+                                    <img
+                                        className="lg:hidden h-[65px] w-[130px] my-2"
+                                        src="assests/nav/navlogo.png"
+                                        alt="Logo"
+                                    />
+                                </Link>
                             </div>
                             <div>
-                                <img
-                                    className="hidden 1024:flex 1024:h-[40px] 1024:w-[70px] 1440:h-[60px] 1440:w-[110px] 2560:h-[110px] 2560:w-[190px] my-2"
-                                    src="assests/nav/navlogo.png"
-                                    alt="Logo"
-                                />
+                                <Link to="/" className="logo-link">
+                                    <img
+                                        className="hidden 1024:flex 1024:h-[40px] 1024:w-[70px] 1440:h-[60px] 1440:w-[110px] 2560:h-[110px] 2560:w-[190px] my-2"
+                                        src="assests/nav/navlogo.png"
+                                        alt="Logo"
+                                    />
+                                </Link>
                             </div>
                             <div className="hidden 1024:flex items-center 1440:gap-10 2560:gap-16 1024:gap-6">
                                 <NavIcons handleSearchClick={handleSearchClick} />
