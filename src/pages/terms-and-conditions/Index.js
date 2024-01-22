@@ -8,7 +8,7 @@ const Index = () => {
     return (
         <>
             <Header />
-            <Section />
+            <Section defaultHeading="Terms & Conditions" />
             <Footer />
         </>
     );

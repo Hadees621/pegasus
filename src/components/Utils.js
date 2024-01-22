@@ -55,6 +55,6 @@ export const FoooterSocialMediaLinks = [
 export const belowFooter = [
     { text: "Shipping & returns", link: "#" },
     { text: "T & C", link: "/terms" },
-    { text: "Policies", link: "#" },
+    { text: "Policies", link: "/terms" },
     { text: "Cookies", link: "#" },
 ];
