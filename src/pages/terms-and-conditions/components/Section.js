@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import PoliciesContent from "./PoliciesContent";
 import ShippingContent from "./ShippingContent";
 import RightsContent from "./RightsContent";
-import Terms from "./Terms";
 import MenuItem from "./MenuItem";
+import Terms from "./Terms";
 
 const Section = () => {
     const [selectedHeading, setSelectedHeading] = useState("Terms & Conditions");
