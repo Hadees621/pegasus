@@ -4,6 +4,7 @@ import MobileMenu from "./header-components/MobileMenu";
 import MegaMenuBooks from "./header-components/MegaMenuBooks";
 import SearchMegaMenu from "./header-components/SearchMegaMenu";
 import { Link } from "react-router-dom";
+import AuthStrip from "../AuthStrip";
 
 const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
     const [isSearchMegaMenuOpen, setIsSearchMegaMenuOpen] = useState(false);
@@ -68,11 +69,8 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
 
     return (
         <>
-            <div className="320:h-[70px] 1024:h-[28px] 1440:h-[50px] 2560:h-[80px] bg-[#EAEBEE] flex items-center justify-end">
-                <p className="text-xl 1024:text-[8px] 1440:text-[12px] 2560:text-[21px] font-fairplay pr-5 md:pr-16 1024:pr-40 1440:pr-52 2560:pr-96">
-                    Sign up | Log in
-                </p>
-            </div>
+
+            <AuthStrip />
 
             <nav className="bg-white border-gray-200">
                 <div className="flex flex-wrap justify-between items-center px-5 md:px-10 1024:px-40 xl:px-52 2560:px-96 py-[3px]">
