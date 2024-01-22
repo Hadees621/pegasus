@@ -8,12 +8,9 @@ const PoliciesContent = () => {
         <>
             <div className="w-full justify-center items-center 320:px-3 425:px-4 768:px-0">
                 <br />
-                <Paragraph text="Our website uses cookies. We will ask you to consent to our use of cookies in accordance with the terms of this policy when you first visit our website. By using our website and agreeing to this policy, you consent to our use of cookies in accordance with the terms of this policy" />
-                <br />
-
                 {policiesData.map((section, index) => (
                     <div key={index}>
-                        <Heading text={section.heading} isBold />
+                        {section.heading && <Heading text={section.heading} />}
                         {section.paragraphs.map((paragraph, idx) => (
                             <Paragraph key={idx} text={paragraph} />
                         ))}
