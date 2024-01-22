@@ -53,8 +53,8 @@ export const FoooterSocialMediaLinks = [
 ];
 
 export const belowFooter = [
-    { text: "Shipping & returns", link: "#" },
+    { text: "Shipping & returns", link: "/terms" },
     { text: "T & C", link: "/terms" },
     { text: "Policies", link: "/terms" },
-    { text: "Cookies", link: "#" },
+    { text: "Cookies", link: "/terms" },
 ];
