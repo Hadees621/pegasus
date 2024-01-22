@@ -76,12 +76,13 @@ const Footer = () => {
                     <div className="flex 320:flex-col 1024:flex-row gap-5 text-center items-center">
                         {belowFooter.map((item, index) => (
                             <li key={index} className="mb-4 list-none 1024:mb-0">
-                                <a href="#" className="text-white text-lg 1024:text-[6px] 1440:text-[9px] 2560:text-[15px] 1024:leading-3">
-                                    {item}
+                                <a href={item.link} className="text-white text-lg 1024:text-[6px] 1440:text-[9px] 2560:text-[15px] 1024:leading-3">
+                                    {item.text}
                                 </a>
                             </li>
                         ))}
                     </div>
+
                 </div>
             </div>
         </footer>
