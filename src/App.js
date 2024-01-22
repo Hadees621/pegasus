@@ -8,8 +8,8 @@ import About from "./pages/about/About";
 import Authors from "./pages/authors/Authors";
 import Features from "./pages/features/Features";
 import Submissions from "./pages/submissions/Submissions";
-import Terms from "./pages/terms-and-conditions/Terms";
-// import Terms from "./pages/terms-and-conditions/Terms";
+import Index from "./pages/terms-and-conditions/Index";
+
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
           <Route path="/authors" element={<Authors />} />
           <Route path="/features" element={<Features />} />
           <Route path="/submissions" element={<Submissions />} />
-          <Route path="/terms" element={<Terms />} />
+          <Route path="/terms" element={<Index />} />
         </Routes>
       </Router>
     </div>
