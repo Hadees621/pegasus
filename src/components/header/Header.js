@@ -152,7 +152,7 @@ const Header = ({ setIsMegaMenuOpen, isMegaMenuOpen, setApplyBlur }) => {
                             </div>
                             <div className="hidden 1024:flex items-center 1440:gap-10 2560:gap-16 1024:gap-6">
                                 <NavIcons handleSearchClick={handleSearchClick} />
-                                
+
                                 <Link to="/submit-online" className="logo-link">
                                     <button className="mt-6 lg:mt-0 2560:h-12 2560:w-48 2560:text-[20px] border border-[#B79248] rounded-full transition duration-300 ease-in-out bg-transparent hover:bg-[#B79248] text-[#B79248] hover:text-white focus:outline-none 1024:h-[23px] 1024:w-[90px] 1024:text-[8.5px] 1440:h-[30px] 1440:w-[110px] 1440:text-[10.5px] font-fairplay">
                                         Submit Online

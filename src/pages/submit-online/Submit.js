@@ -9,7 +9,7 @@ const Submit = () => {
         <>
             <Header />
             <Section />
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 };
