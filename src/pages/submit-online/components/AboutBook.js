@@ -87,7 +87,7 @@ const AboutBook = () => {
                             onChange={handleFileChange}
                         />
 
-                        <div className="relative mb-11 pt-1 1024:mb-6">
+                        <div className="relative mb-11 pt-1 1024:mb-6 2000:mb-16">
                             <>
                                 <div className="mb-2 flex items-center justify-between text-xs">
                                     <div className="text-gray-600">filename.txt</div>
@@ -105,7 +105,7 @@ const AboutBook = () => {
                             onChange={handleFileChange}
                         />
 
-                        <div className="flex flex-col gap-3 mb-3 1024:gap-1 1024:mb-1">
+                        <div className="flex flex-col gap-3 mb-3 1024:gap-1 1024:mb-1 2000:gap-3 2000:mb-6">
                             <div className={`form-check space-x-5 ${selectedOption === 1 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'}`}>
                                 <input
                                     type="radio"
@@ -115,7 +115,7 @@ const AboutBook = () => {
                                     onChange={() => handleRadioChange(1)}
                                     checked={selectedOption === 1}
                                 />
-                                <label className="form-check-label font-fairplay 1024:text-[9px]" htmlFor="radioOption1">
+                                <label className="form-check-label font-fairplay 1024:text-[9px] 2000:text-[16px]" htmlFor="radioOption1">
                                     I have uploaded the completed manuscript (recommended)
                                 </label>
                             </div>
@@ -129,7 +129,7 @@ const AboutBook = () => {
                                     onChange={() => handleRadioChange(2)}
                                     checked={selectedOption === 2}
                                 />
-                                <label className="form-check-label font-fairplay 1024:text-[9px]" htmlFor="radioOption2">
+                                <label className="form-check-label font-fairplay 1024:text-[9px] 2000:text-[16px]" htmlFor="radioOption2">
                                     I have uploaded samples
                                 </label>
                             </div>
@@ -147,7 +147,7 @@ const AboutBook = () => {
                                     id="radio"
                                     name="radio"
                                 />
-                                <label className="form-check-label font-fairplay text-[12px] 1024:text-[9px] text-black">
+                                <label className="form-check-label font-fairplay text-[12px] 1024:text-[9px] 2000:text-[16px] text-black">
                                     I have read and agree to the{" "}
                                     <Link to="/terms" className="text-[#B79248] underline font-fairplay">
                                         Terms and Conditions
@@ -156,7 +156,7 @@ const AboutBook = () => {
                                 </label>
                             </div>
 
-                            <button className="bg-[#42BA7A] text-white px-9 py-[10px] rounded-3xl cursor-pointer text-[12px] font-fairplay 1024:text-[9px] 1024:px-5 1024:py-[5px]">
+                            <button className="bg-[#42BA7A] text-white px-9 py-[10px] rounded-3xl cursor-pointer text-[12px] font-fairplay 1024:text-[9px] 1024:px-5 1024:py-[5px] 2000:text-[18px] 2000:px-11 2000:py-[11px]">
                                 Submit
                             </button>
                         </div>

@@ -8,14 +8,14 @@ const SelectInput = ({ label, id, className, ...props }) => {
   ];
 
   return (
-    <div className={`mb-8 1024:mb-4`}>
-      <label className="block text-[13px] 1024:text-[9px] font-roboto text-[#5D6162] mb-2" htmlFor={id}>
+    <div className={`mb-8 1024:mb-4 2000:mb-8`}>
+      <label className="block text-[13px] 1024:text-[9px] font-roboto text-[#5D6162] mb-2 2000:text-[16px]" htmlFor={id}>
         {label}
       </label>
       <div className="relative">
         <select
           id={id}
-          className={`flex items-center pl-2 w-full border border-[#676B6C] rounded-[4px] h-[40px] text-[#5D6162] appearance-none 1024:h-[28px] 1024:text-[8px] `}
+          className={`flex items-center pl-2 w-full border border-[#676B6C] rounded-[4px] h-[40px] text-[#5D6162] appearance-none 1024:h-[28px] 1024:text-[8px] 2000:h-[40px]`}
           {...props}
         >
           {options.map((option) => (

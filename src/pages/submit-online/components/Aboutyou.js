@@ -6,7 +6,7 @@ const AboutYou = () => {
     return (
         <>
             <div className="flex flex-col w-full">
-                <h1 className="text-[20px] 1024:text-[12px] text-[#B79248] font-fairplay mb-7 mt-5 1024:my-4">
+                <h1 className="text-[20px] 2000:text-[20px] 1024:text-[12px] text-[#B79248] font-fairplay mb-7 mt-5 1024:my-4 2000:mb-7 2000:mt-5">
                     About you
                 </h1>
                 <div className="w-full">
