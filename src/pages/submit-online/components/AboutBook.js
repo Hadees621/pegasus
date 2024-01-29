@@ -77,19 +77,6 @@ const AboutBook = () => {
 
                         />
 
-                        {/* <div className="relative mb-11 pt-1 1024:mb-6 2000:mb-16">
-                            <>
-                                <div className="mb-2 flex items-center justify-between text-xs">
-                                    <div className="text-gray-600">filename.txt</div>
-                                    <div className="text-gray-600">{`${progress}%`}</div>
-                                </div>
-                                <div className="flex h-2 overflow-hidden rounded bg-gray-100 text-[6px]">
-                                    <div style={{ width: `${progress}%` }} className="bg-[#15344C]"></div>
-                                </div>
-                            </>
-                        </div> */}
-
-
                         <FileUploadProgress
                             filename={"filename"}
                             progress={progress}
