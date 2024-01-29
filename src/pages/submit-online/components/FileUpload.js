@@ -5,7 +5,7 @@ const FileUpload = ({ label, onClick, onChange }) => {
         <div className="mb-8 flex justify-between items-center">
             <>
                 <label
-                    className="bg-[#15344C] text-white px-8 py-[12px] rounded-3xl cursor-pointer text-[12px] font-fairplay"
+                    className="bg-[#15344C] text-white text-[9px] px-3 py-2 1440:px-8 1440:py-[12px] rounded-3xl cursor-pointer 1440:text-[12px] font-fairplay"
                     htmlFor="fileUploadButton"
                     onClick={onClick}
                 >
@@ -18,7 +18,7 @@ const FileUpload = ({ label, onClick, onChange }) => {
                     onChange={onChange}
                 />
             </>
-            <h1 className="text-[#5D6162] text-[13px]">( 1 file only in PDF or Word format)</h1>
+            <h1 className="text-[#5D6162] text-[9px] 1440:text-[13px]">( 1 file only in PDF or Word format)</h1>
         </div>
     );
 };

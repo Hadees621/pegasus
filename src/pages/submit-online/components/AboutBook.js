@@ -34,7 +34,7 @@ const AboutBook = () => {
                 <h1 className="text-[20px] text-[#B79248] font-fairplay mb-7 mt-5">
                     About your book
                 </h1>
-                <div className="mb-96 w-full mt-2">
+                <div className="w-full 2000:mt-2">
                     <form>
                         <TextInput label="Pen name" id="inputField1" name="inputField1" />
                         <TextInput label="Book title" id="inputField2" name="inputField2" />
@@ -166,7 +166,6 @@ const AboutBook = () => {
                                 Submit
                             </button>
                         </div>
-
                     </form>
                 </div>
             </div>

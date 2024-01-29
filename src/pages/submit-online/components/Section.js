@@ -12,8 +12,7 @@ const Section = () => {
                 para="Please fill in the form below to submit your work to our editorial team, who will be in touch with you after reviewing your submission. The review process usually takes between 4-6 weeks. Electronic versions of your full manuscript should be in one file and not separate chapters."
             />
 
-            {/* border 1024:gap-x-2 1024:gap-y-2.5 2560:gap-y-6 2560:gap-x-6 1440:gap-x-5 gap-y-7 320:p-5 1024:py-0 1024:mx-52 1440:mx-72 1535: 2560:mx-[550px] 768:gap-x-4 2560:my-9 */}
-            <div className="flex mx-[430px] gap-16">
+            <div className="flex flex-col 1440:mx-[430px] 1440:gap-16 mx-6 mb-20 1024:flex-row 1024:gap-6 1024:mx-[230px] 1440:bg-blue-600">
                 <AboutYou />
                 <AboutBook />
             </div>
