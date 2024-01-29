@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import FileUpload from "./FileUpload.js";
 import RadioGroup from "./RadioGroup";
@@ -11,19 +11,9 @@ const options = [
 ];
 
 const AboutBook = () => {
-    const fileInputRef = useRef(null);
-    const [selectedOption, setSelectedOption] = useState(null);
-
-    const handleButtonClick = () => {
-        fileInputRef.current.click();
-    };
-
-    const handleFileChange = (event) => {
-        const selectedFile = event.target.files[0];
-        console.log("Selected File:", selectedFile);
-    };
-
     const progress = 80;
+
+    const [selectedOption, setSelectedOption] = useState(null);
 
     const handleRadioChange = (option) => {
         setSelectedOption(option);
@@ -83,8 +73,7 @@ const AboutBook = () => {
 
                         <FileUpload
                             label="Upload synopsis"
-                            onClick={handleButtonClick}
-                            onChange={handleFileChange}
+
                         />
 
                         <div className="relative mb-11 pt-1 1024:mb-6 2000:mb-16">
@@ -101,11 +90,9 @@ const AboutBook = () => {
 
                         <FileUpload
                             label="Upload manuscripts"
-                            onClick={handleButtonClick}
-                            onChange={handleFileChange}
                         />
 
-                        <div className="flex flex-col gap-3 mb-3 1024:gap-1 1024:mb-1 2000:gap-3 2000:mb-6">
+                        <div className="flex flex-col gap-3 mb-3 1024:gap-1 1024:mb-1 2000:gap-3 2000:mb-6 justify-center">
                             <div className={`form-check space-x-5 ${selectedOption === 1 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'}`}>
                                 <input
                                     type="radio"
@@ -137,13 +124,11 @@ const AboutBook = () => {
 
                         <SelectInput label={"Where did you hear about us?"} options={options} />
 
-
-
                         <div className="form-check space-x-5 flex justify-between items-center">
                             <div className="space-x-4 items-center flex">
                                 <input
                                     type="radio"
-                                    className="form-check-input border-2 border-black"
+                                    className="form-check-input border-2 border-black text-black"
                                     id="radio"
                                     name="radio"
                                 />
