@@ -4,12 +4,10 @@ const FileUpload = ({ label }) => {
     const fileInputRef = useRef(null);
 
     useEffect(() => {
-        // Ensure that the ref is updated when the component is mounted
         fileInputRef.current = document.getElementById("fileUploadButton");
     }, []);
 
     const handleButtonClick = () => {
-        // Check if fileInputRef.current is truthy before accessing its properties
         if (fileInputRef.current) {
             fileInputRef.current.click();
         }
