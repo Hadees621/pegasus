@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import Select from "react-select";
 import FileUpload from "./FileUpload.js";
 import RadioGroup from "./RadioGroup";
 import TextInput from "./TextInput";
+import SelectInput from "./SelectInput.js";
 
 const options = [
     { value: "option1", label: "Option 1" },
@@ -31,7 +31,7 @@ const AboutBook = () => {
     return (
         <>
             <div className="flex flex-col w-full">
-                <h1 className="text-[20px] text-[#B79248] font-fairplay mb-7 mt-5">
+                <h1 className="text-[20px] 1024:text-[12px] text-[#B79248] font-fairplay mb-7 mt-5 1024:my-4">
                     About your book
                 </h1>
                 <div className="w-full 2000:mt-2">
@@ -39,15 +39,12 @@ const AboutBook = () => {
                         <TextInput label="Pen name" id="inputField1" name="inputField1" />
                         <TextInput label="Book title" id="inputField2" name="inputField2" />
 
-                        <div className="flex gap-4 ">
+                        <div className="flex gap-4  1024:gap-2">
                             <div className="w-[40%]">
                                 <TextInput label="Word count" id="inputField3" name="inputField3" />
                             </div>
                             <div className="flex-1">
-                                <label className="block text-[#5D6162] text-[13px] mb-2" htmlFor="dropdownField">
-                                    Genre
-                                </label>
-                                <Select options={options} isSearchable={true} placeholder={null} />
+                                <SelectInput label={"Genre"} option={options} />
                             </div>
                         </div>
 
@@ -90,7 +87,7 @@ const AboutBook = () => {
                             onChange={handleFileChange}
                         />
 
-                        <div className="relative mb-11 pt-1">
+                        <div className="relative mb-11 pt-1 1024:mb-6">
                             <>
                                 <div className="mb-2 flex items-center justify-between text-xs">
                                     <div className="text-gray-600">filename.txt</div>
@@ -108,7 +105,7 @@ const AboutBook = () => {
                             onChange={handleFileChange}
                         />
 
-                        <div className="flex flex-col gap-3 mb-2">
+                        <div className="flex flex-col gap-3 mb-3 1024:gap-1 1024:mb-1">
                             <div className={`form-check space-x-5 ${selectedOption === 1 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'}`}>
                                 <input
                                     type="radio"
@@ -118,7 +115,7 @@ const AboutBook = () => {
                                     onChange={() => handleRadioChange(1)}
                                     checked={selectedOption === 1}
                                 />
-                                <label className="form-check-label font-fairplay" htmlFor="radioOption1">
+                                <label className="form-check-label font-fairplay 1024:text-[9px]" htmlFor="radioOption1">
                                     I have uploaded the completed manuscript (recommended)
                                 </label>
                             </div>
@@ -132,18 +129,15 @@ const AboutBook = () => {
                                     onChange={() => handleRadioChange(2)}
                                     checked={selectedOption === 2}
                                 />
-                                <label className="form-check-label font-fairplay" htmlFor="radioOption2">
+                                <label className="form-check-label font-fairplay 1024:text-[9px]" htmlFor="radioOption2">
                                     I have uploaded samples
                                 </label>
                             </div>
                         </div>
 
-                        <div className="mb-14">
-                            <label className="block text-[13px] font-roboto text-[#5D6162] mb-2">
-                                Where did you hear about us?
-                            </label>
-                            <Select options={options} isSearchable={true} placeholder={null} />
-                        </div>
+                        <SelectInput label={"Where did you hear about us?"} options={options} />
+
+
 
                         <div className="form-check space-x-5 flex justify-between items-center">
                             <div className="space-x-4 items-center flex">
@@ -153,7 +147,7 @@ const AboutBook = () => {
                                     id="radio"
                                     name="radio"
                                 />
-                                <label className="form-check-label font-fairplay text-[12px] text-black">
+                                <label className="form-check-label font-fairplay text-[12px] 1024:text-[9px] text-black">
                                     I have read and agree to the{" "}
                                     <Link to="/terms" className="text-[#B79248] underline font-fairplay">
                                         Terms and Conditions
@@ -162,7 +156,7 @@ const AboutBook = () => {
                                 </label>
                             </div>
 
-                            <button className="bg-[#42BA7A] text-white px-9 py-[10px] rounded-3xl cursor-pointer text-[12px] font-fairplay">
+                            <button className="bg-[#42BA7A] text-white px-9 py-[10px] rounded-3xl cursor-pointer text-[12px] font-fairplay 1024:text-[9px] 1024:px-5 1024:py-[5px]">
                                 Submit
                             </button>
                         </div>
