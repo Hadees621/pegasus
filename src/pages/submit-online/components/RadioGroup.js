@@ -8,7 +8,7 @@ const RadioGroup = ({ label, options, onChange, selectedOption }) => {
             </label>
             <div className="flex gap-4">
                 {options.map((option) => (
-                    <div key={option.value} className="flex form-check gap-4 1024:gap-2 2000:gap-4">
+                    <div key={option.value} className="flex form-check gap-4 1024:gap-2 2000:gap-4 items-center">
                         <input
                             type="radio"
                             className="form-check-input"
@@ -16,6 +16,7 @@ const RadioGroup = ({ label, options, onChange, selectedOption }) => {
                             name="radioOptions"
                             onChange={() => onChange(option)}
                             checked={selectedOption === option}
+                            style={{ width: "20px", height: "20px" }}
                         />
                         <label className="form-check-label 1024:text-[9px] 2000:text-[16px]" htmlFor={`radio${option.value}`}>
                             {option.label}

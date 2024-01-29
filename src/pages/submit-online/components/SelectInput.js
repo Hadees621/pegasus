@@ -15,11 +15,11 @@ const SelectInput = ({ label, id, className, ...props }) => {
       <div className="relative">
         <select
           id={id}
-          className={`flex items-center pl-2 w-full border border-[#676B6C] rounded-[4px] h-[40px] text-[#5D6162] appearance-none 1024:h-[28px] 1024:text-[8px] 2000:h-[40px]`}
+          className={`flex items-center pl-2 w-full border border-[#676B6C] rounded-[4px] h-[40px] text-[#5D6162] appearance-none 1024:h-[28px] 1024:text-[8px] 2000:h-[40px] 2000:text-[15px]`}
           {...props}
         >
           {options.map((option) => (
-            <option key={option.value} value={option.value} className="1024:text-[8px]">
+            <option key={option.value} value={option.value} className="1024:text-[8px] 2000:text-[15px]">
               {option.label}
             </option>
           ))}

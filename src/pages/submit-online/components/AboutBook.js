@@ -1,9 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import FileUpload from "./FileUpload.js";
 import RadioGroup from "./RadioGroup";
 import TextInput from "./TextInput";
 import SelectInput from "./SelectInput.js";
+import FileUploadProgress from "./FileUploadProgress.js";
 
 const options = [
     { value: "option1", label: "Option 1" },
@@ -11,19 +12,9 @@ const options = [
 ];
 
 const AboutBook = () => {
-    const fileInputRef = useRef(null);
-    const [selectedOption, setSelectedOption] = useState(null);
-
-    const handleButtonClick = () => {
-        fileInputRef.current.click();
-    };
-
-    const handleFileChange = (event) => {
-        const selectedFile = event.target.files[0];
-        console.log("Selected File:", selectedFile);
-    };
-
     const progress = 80;
+
+    const [selectedOption, setSelectedOption] = useState(null);
 
     const handleRadioChange = (option) => {
         setSelectedOption(option);
@@ -31,7 +22,7 @@ const AboutBook = () => {
     return (
         <>
             <div className="flex flex-col w-full">
-                <h1 className="text-[20px] 1024:text-[12px] text-[#B79248] font-fairplay mb-7 mt-5 1024:my-4">
+                <h1 className="text-[20px] 2000:text-[20px] 1024:text-[12px] text-[#B79248] font-fairplay mb-7 mt-5 1024:my-4 2000:mb-7 2000:mt-5">
                     About your book
                 </h1>
                 <div className="w-full 2000:mt-2">
@@ -83,35 +74,26 @@ const AboutBook = () => {
 
                         <FileUpload
                             label="Upload synopsis"
-                            onClick={handleButtonClick}
-                            onChange={handleFileChange}
+
                         />
 
-                        <div className="relative mb-11 pt-1 1024:mb-6 2000:mb-16">
-                            <>
-                                <div className="mb-2 flex items-center justify-between text-xs">
-                                    <div className="text-gray-600">filename.txt</div>
-                                    <div className="text-gray-600">{`${progress}%`}</div>
-                                </div>
-                                <div className="flex h-2 overflow-hidden rounded bg-gray-100 text-[6px]">
-                                    <div style={{ width: `${progress}%` }} className="bg-[#15344C]"></div>
-                                </div>
-                            </>
-                        </div>
+                        <FileUploadProgress
+                            filename={"filename"}
+                            progress={progress}
+                        />
 
                         <FileUpload
                             label="Upload manuscripts"
-                            onClick={handleButtonClick}
-                            onChange={handleFileChange}
                         />
 
-                        <div className="flex flex-col gap-3 mb-3 1024:gap-1 1024:mb-1 2000:gap-3 2000:mb-6">
-                            <div className={`form-check space-x-5 ${selectedOption === 1 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'}`}>
+                        <div className="flex flex-col gap-3 mb-3 1024:gap-1 1024:mb-1 2000:gap-3 2000: justify-center">
+                            <div className={`form-check space-x-5 items-center ${selectedOption === 1 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'}`}>
                                 <input
                                     type="radio"
-                                    className="form-check-input"
+                                    className="form-check-input items-center"
                                     id="radioOption1"
                                     name="radioOptions"
+                                    style={{ width: "20px", height: "20px" }}
                                     onChange={() => handleRadioChange(1)}
                                     checked={selectedOption === 1}
                                 />
@@ -120,12 +102,13 @@ const AboutBook = () => {
                                 </label>
                             </div>
 
-                            <div className={`form-check space-x-5 ${selectedOption === 2 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'} mb-8`}>
+                            <div className={`form-check space-x-5 items-center ${selectedOption === 2 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'} mb-8`}>
                                 <input
                                     type="radio"
-                                    className="form-check-input"
+                                    className="form-check-input items-center"
                                     id="radioOption2"
                                     name="radioOptions"
+                                    style={{ width: "20px", height: "20px" }}
                                     onChange={() => handleRadioChange(2)}
                                     checked={selectedOption === 2}
                                 />
@@ -137,15 +120,14 @@ const AboutBook = () => {
 
                         <SelectInput label={"Where did you hear about us?"} options={options} />
 
-
-
                         <div className="form-check space-x-5 flex justify-between items-center">
                             <div className="space-x-4 items-center flex">
                                 <input
                                     type="radio"
-                                    className="form-check-input border-2 border-black"
+                                    className="form-check-input border-2 border-black text-black"
                                     id="radio"
                                     name="radio"
+                                    style={{ width: "20px", height: "20px" }}
                                 />
                                 <label className="form-check-label font-fairplay text-[12px] 1024:text-[9px] 2000:text-[16px] text-black">
                                     I have read and agree to the{" "}
