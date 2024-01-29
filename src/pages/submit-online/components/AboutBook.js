@@ -4,6 +4,7 @@ import FileUpload from "./FileUpload.js";
 import RadioGroup from "./RadioGroup";
 import TextInput from "./TextInput";
 import SelectInput from "./SelectInput.js";
+import FileUploadProgress from "./FileUploadProgress.js";
 
 const options = [
     { value: "option1", label: "Option 1" },
@@ -76,7 +77,7 @@ const AboutBook = () => {
 
                         />
 
-                        <div className="relative mb-11 pt-1 1024:mb-6 2000:mb-16">
+                        {/* <div className="relative mb-11 pt-1 1024:mb-6 2000:mb-16">
                             <>
                                 <div className="mb-2 flex items-center justify-between text-xs">
                                     <div className="text-gray-600">filename.txt</div>
@@ -86,7 +87,13 @@ const AboutBook = () => {
                                     <div style={{ width: `${progress}%` }} className="bg-[#15344C]"></div>
                                 </div>
                             </>
-                        </div>
+                        </div> */}
+
+
+                        <FileUploadProgress
+                            filename={"filename"}
+                            progress={progress}
+                        />
 
                         <FileUpload
                             label="Upload manuscripts"

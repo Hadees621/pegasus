@@ -16,7 +16,7 @@ const RadioGroup = ({ label, options, onChange, selectedOption }) => {
                             name="radioOptions"
                             onChange={() => onChange(option)}
                             checked={selectedOption === option}
-                            style={{ width: "20px", height: "20px" }} // Set the size as per your requirement
+                            style={{ width: "20px", height: "20px" }}
                         />
                         <label className="form-check-label 1024:text-[9px] 2000:text-[16px]" htmlFor={`radio${option.value}`}>
                             {option.label}
