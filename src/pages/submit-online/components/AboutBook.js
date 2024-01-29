@@ -86,7 +86,7 @@ const AboutBook = () => {
                             label="Upload manuscripts"
                         />
 
-                        <div className="flex flex-col gap-3 mb-3 1024:gap-1 1024:mb-1 2000:gap-3 2000:mb-6 justify-center">
+                        <div className="flex flex-col gap-3 mb-3 1024:gap-1 1024:mb-1 2000:gap-3 2000: justify-center">
                             <div className={`form-check space-x-5 items-center ${selectedOption === 1 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'}`}>
                                 <input
                                     type="radio"
