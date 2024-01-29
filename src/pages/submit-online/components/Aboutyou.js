@@ -20,7 +20,7 @@ const AboutYou = () => {
                             <label className="block mb-2 text-[13px] font-roboto text-[#5D6162]">
                                 Select title
                             </label>
-                            <Select options={options} isSearchable={true} className={'text-[#5D6162]'} />
+                            <Select options={options} isSearchable={true} className={'text-[#5D6162]'} placeholder={null} />
                         </div>
 
                         {[...Array(10)].map((_, index) => (
@@ -45,7 +45,7 @@ const AboutYou = () => {
                             <label className="block text-[13px] font-roboto text-[#5D6162] mb-2">
                                 Please Select a Country
                             </label>
-                            <Select options={options} isSearchable={true} />
+                            <Select options={options} isSearchable={true} placeholder={null} />
                         </div>
                     </form>
                 </div>

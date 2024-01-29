@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import Select from "react-select";
+import FileUpload from "./FileUpload.js";
+import RadioGroup from "./RadioGroup";
+import TextInput from "./TextInput";
 
 const options = [
     { value: "option1", label: "Option 1" },
@@ -7,45 +11,167 @@ const options = [
 ];
 
 const AboutBook = () => {
+    const fileInputRef = useRef(null);
+    const [selectedOption, setSelectedOption] = useState(null);
 
+    const handleButtonClick = () => {
+        fileInputRef.current.click();
+    };
+
+    const handleFileChange = (event) => {
+        const selectedFile = event.target.files[0];
+        console.log("Selected File:", selectedFile);
+    };
+
+    const progress = 80;
+
+    const handleRadioChange = (option) => {
+        setSelectedOption(option);
+    };
     return (
         <>
             <div className="flex flex-col w-full">
-                {/* text-center 425:text-start  425:text-[15px] 768:text-[18px] 1024:text-[10px] 1440:text-[14px] 2000:text-[20px] */}
                 <h1 className="text-[20px] text-[#B79248] font-fairplay mb-7 mt-5">
                     About your book
                 </h1>
-                <div className="mb-96 w-full">
+                <div className="mb-96 w-full mt-2">
                     <form>
-                        {[...Array(3)].map((_, index) => (
-                            <div key={index} className="mb-8">
-                                <label
-                                    className="block text-[#5D6162] text-[13px] mb-2"
-                                    htmlFor={`inputField${index + 1}`}
-                                >
-                                    Input Field {index + 1}
-                                </label>
-                                <input
-                                    type="text"
-                                    id={`inputField${index + 1}`}
-                                    name={`inputField${index + 1}`}
-                                    className="w-full px-3 py-2 border border-[#676B6C] rounded-[4px] h-[40px]"
-                                />
+                        <TextInput label="Pen name" id="inputField1" name="inputField1" />
+                        <TextInput label="Book title" id="inputField2" name="inputField2" />
+
+                        <div className="flex gap-4 ">
+                            <div className="w-[40%]">
+                                <TextInput label="Word count" id="inputField3" name="inputField3" />
                             </div>
-                        ))}
+                            <div className="flex-1">
+                                <label className="block text-[#5D6162] text-[13px] mb-2" htmlFor="dropdownField">
+                                    Genre
+                                </label>
+                                <Select options={options} isSearchable={true} placeholder={null} />
+                            </div>
+                        </div>
 
+                        <RadioGroup
+                            label="Does your book have illustrations?"
+                            options={[
+                                { value: 1, label: "Yes" },
+                                { value: 2, label: "No" },
+                            ]}
+                            onChange={handleRadioChange}
+                            selectedOption={selectedOption}
+                        />
 
-                        <div className="mb-4">
+                        <RadioGroup
+                            label="Who will provide the illustrations?
+"
+                            options={[
+                                { value: 1, label: "Author" },
+                                { value: 2, label: "Publisher" },
+                            ]}
+                            onChange={handleRadioChange}
+                            selectedOption={selectedOption}
+                        />
+
+                        <TextInput label="Additional comments" id="inputField2" name="inputField2" />
+
+                        <RadioGroup
+                            label="Have you had any work published?"
+                            options={[
+                                { value: 1, label: "Yes" },
+                                { value: 2, label: "No" },
+                            ]}
+                            onChange={handleRadioChange}
+                            selectedOption={selectedOption}
+                        />
+
+                        <FileUpload
+                            label="Upload synopsis"
+                            onClick={handleButtonClick}
+                            onChange={handleFileChange}
+                        />
+
+                        <div className="relative mb-11 pt-1">
+                            <>
+                                <div className="mb-2 flex items-center justify-between text-xs">
+                                    <div className="text-gray-600">filename.txt</div>
+                                    <div className="text-gray-600">{`${progress}%`}</div>
+                                </div>
+                                <div className="flex h-2 overflow-hidden rounded bg-gray-100 text-[6px]">
+                                    <div style={{ width: `${progress}%` }} className="bg-[#15344C]"></div>
+                                </div>
+                            </>
+                        </div>
+
+                        <FileUpload
+                            label="Upload manuscripts"
+                            onClick={handleButtonClick}
+                            onChange={handleFileChange}
+                        />
+
+                        <div className="flex flex-col gap-3 mb-2">
+                            <div className={`form-check space-x-5 ${selectedOption === 1 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'}`}>
+                                <input
+                                    type="radio"
+                                    className="form-check-input"
+                                    id="radioOption1"
+                                    name="radioOptions"
+                                    onChange={() => handleRadioChange(1)}
+                                    checked={selectedOption === 1}
+                                />
+                                <label className="form-check-label font-fairplay" htmlFor="radioOption1">
+                                    I have uploaded the completed manuscript (recommended)
+                                </label>
+                            </div>
+
+                            <div className={`form-check space-x-5 ${selectedOption === 2 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'} mb-8`}>
+                                <input
+                                    type="radio"
+                                    className="form-check-input"
+                                    id="radioOption2"
+                                    name="radioOptions"
+                                    onChange={() => handleRadioChange(2)}
+                                    checked={selectedOption === 2}
+                                />
+                                <label className="form-check-label font-fairplay" htmlFor="radioOption2">
+                                    I have uploaded samples
+                                </label>
+                            </div>
+                        </div>
+
+                        <div className="mb-14">
                             <label className="block text-[13px] font-roboto text-[#5D6162] mb-2">
                                 Where did you hear about us?
                             </label>
-                            <Select options={options} isSearchable={true} />
+                            <Select options={options} isSearchable={true} placeholder={null} />
                         </div>
+
+                        <div className="form-check space-x-5 flex justify-between items-center">
+                            <div className="space-x-4 items-center flex">
+                                <input
+                                    type="radio"
+                                    className="form-check-input border-2 border-black"
+                                    id="radio"
+                                    name="radio"
+                                />
+                                <label className="form-check-label font-fairplay text-[12px] text-black">
+                                    I have read and agree to the{" "}
+                                    <Link to="/terms" className="text-[#B79248] underline font-fairplay">
+                                        Terms and Conditions
+                                    </Link>
+                                    .
+                                </label>
+                            </div>
+
+                            <button className="bg-[#42BA7A] text-white px-9 py-[10px] rounded-3xl cursor-pointer text-[12px] font-fairplay">
+                                Submit
+                            </button>
+                        </div>
+
                     </form>
                 </div>
             </div>
         </>
     );
 };
-
 export default AboutBook;
+
