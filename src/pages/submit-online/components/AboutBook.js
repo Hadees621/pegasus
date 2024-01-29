@@ -93,12 +93,13 @@ const AboutBook = () => {
                         />
 
                         <div className="flex flex-col gap-3 mb-3 1024:gap-1 1024:mb-1 2000:gap-3 2000:mb-6 justify-center">
-                            <div className={`form-check space-x-5 ${selectedOption === 1 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'}`}>
+                            <div className={`form-check space-x-5 items-center ${selectedOption === 1 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'}`}>
                                 <input
                                     type="radio"
-                                    className="form-check-input"
+                                    className="form-check-input items-center"
                                     id="radioOption1"
                                     name="radioOptions"
+                                    style={{ width: "20px", height: "20px" }}
                                     onChange={() => handleRadioChange(1)}
                                     checked={selectedOption === 1}
                                 />
@@ -107,12 +108,13 @@ const AboutBook = () => {
                                 </label>
                             </div>
 
-                            <div className={`form-check space-x-5 ${selectedOption === 2 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'} mb-8`}>
+                            <div className={`form-check space-x-5 items-center ${selectedOption === 2 ? 'text-[#2E3059]' : 'text-[#B4B4B4]'} mb-8`}>
                                 <input
                                     type="radio"
-                                    className="form-check-input"
+                                    className="form-check-input items-center"
                                     id="radioOption2"
                                     name="radioOptions"
+                                    style={{ width: "20px", height: "20px" }}
                                     onChange={() => handleRadioChange(2)}
                                     checked={selectedOption === 2}
                                 />
@@ -131,6 +133,7 @@ const AboutBook = () => {
                                     className="form-check-input border-2 border-black text-black"
                                     id="radio"
                                     name="radio"
+                                    style={{ width: "20px", height: "20px" }}
                                 />
                                 <label className="form-check-label font-fairplay text-[12px] 1024:text-[9px] 2000:text-[16px] text-black">
                                     I have read and agree to the{" "}
