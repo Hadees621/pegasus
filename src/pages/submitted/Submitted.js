@@ -11,7 +11,7 @@ const Submitted = () => {
             <div className="320:p-5 1024:px-40 xl:px-52 2560:px-96 bg-[#F0F1F3]">
                 <div className="flex flex-col gap-10 1024:flex-row bg-[#F0F1F3] py-10 1024:gap-8 2000:py-40">
 
-                    <div className="w-full 1024:w-[60%] bg-[#F0F1F3] m-auto space-y-12 1024:space-y-4 1440:space-y-7">
+                    <div className="w-full 1024:w-[60%] bg-[#F0F1F3] m-auto space-y-12 1024:space-y-4 1440:space-y-7 2000:space-y-12" >
 
                         <h1 className="text-[#A18758] font-fairplay text-[40px] leading-[45px] 1024:text-[40px] 1024:leading-[35px] 1440:text-[57px] 1440:leading-[57px] 2000:text-[95px] 2000:leading-[100px] 2000:tracking-[3px] items-center flex">
                             Thank you for submitting online with us.
