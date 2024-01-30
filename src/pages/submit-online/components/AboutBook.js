@@ -138,9 +138,9 @@ const AboutBook = () => {
                                 </label>
                             </div>
 
-                            <button className="bg-[#42BA7A] text-white px-9 py-[10px] rounded-3xl cursor-pointer text-[12px] font-fairplay 1024:text-[9px] 1024:px-5 1024:py-[5px] 2000:text-[18px] 2000:px-11 2000:py-[11px]">
+                            <Link to="/submitted" className="bg-[#42BA7A] text-white px-9 py-[10px] rounded-3xl cursor-pointer text-[12px] font-fairplay 1024:text-[9px] 1024:px-5 1024:py-[5px] 2000:text-[18px] 2000:px-11 2000:py-[11px]">
                                 Submit
-                            </button>
+                            </Link>
                         </div>
                     </form>
                 </div>
