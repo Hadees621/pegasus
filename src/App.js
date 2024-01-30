@@ -11,6 +11,7 @@ import Submissions from "./pages/submissions/Submissions";
 import Index from "./pages/terms-and-conditions/Index";
 import Submit from "./pages/submit-online/Submit";
 import Submitted from "./pages/submitted/Submitted";
+import Process from "./pages/publishing-process/Process";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/terms" element={<Index />} />
           <Route path="/submit-online" element={<Submit />} />
           <Route path="/submitted" element={<Submitted />} />
+          <Route path="/publishing" element={<Process />} />
         </Routes>
       </Router>
     </div>
