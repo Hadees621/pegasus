@@ -3,6 +3,8 @@ import { audioBooksData } from "../../homepage/utils/utils";
 import Believe from "./Believe";
 import Banner from "../../../components/Banner"
 import SubmitBanner from "../../../components/SubmitBanner";
+import { Link } from "react-router-dom";
+
 const Section = () => {
     return (
         <>
@@ -249,7 +251,10 @@ const Section = () => {
                         <h3 class="320:text-[32px] text-[48px] font-fairplay text-[#F8F5EF] 1024:text-[18px] 1440:text-[28px] 2000:text-[60px] -mb-0 leading-10 2000:mb-2">Publishing Process</h3>
                         <p class="320:text-[13px] text-base text-[#F8F5EF] 1024:text-[8px] 1440:text-[10px] 2000:text-[16px]">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
                             .</p>
-                        <button className="bg-[#F8F5EF] text-lg text-black rounded-3xl 1440:w-[100px] 1440:h-7 1440:text-[11px] 2000:text-[15px] 2000:w-[150px] 2000:h-11 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2 1440:mt-3 2000:mt-7 320:w-[100px] 320:text-[13px]">View all</button>
+                        {/* <button className="bg-[#F8F5EF] text-lg text-black rounded-3xl 1440:w-[100px] 1440:h-7 1440:text-[11px] 2000:text-[15px] 2000:w-[150px] 2000:h-11 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2 1440:mt-3 2000:mt-7 320:w-[100px] 320:text-[13px]">View all</button> */}
+                        <Link to="/publishing" className="bg-[#F8F5EF] text-lg text-black rounded-3xl 1440:w-[100px] 1440:h-7 1440:text-[11px] 2000:text-[15px] 2000:w-[150px] 2000:h-11 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2 1440:mt-3 2000:mt-7 320:w-[100px] 320:text-[13px]">
+                            View all
+                        </Link>
                     </div>
                 </div>
 
