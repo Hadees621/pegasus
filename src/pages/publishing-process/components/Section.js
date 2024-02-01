@@ -10,7 +10,6 @@ const Section = () => {
 
             <Middle data={componentsData} />
 
-
             {/* Submit online */}
             <div className="md:px-10 1024:px-40 xl:px-52 2560:px-96 py-10 2000:py-20">
                 <div class="relative m-4 p-4 bg-cover bg-center 320:h-[380px] 2000:h-[480px] 1024:h-[180px] 1440:h-[330px] mt-10" style={{ backgroundImage: `url('assests/section/section6.png')` }}>
