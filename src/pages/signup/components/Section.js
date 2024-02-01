@@ -5,7 +5,7 @@ const Section = () => {
         <>
             <div className="flex flex-col 2000:mx-[430px] 2000:gap-10 mb-20 1024:flex-row 1024:gap-4 1024:mx-[230px] 1440:mx-[350px] 1535:mx-[440px] 1827:mx-[500px] 2560:mx-[530px] 1024:my-10 gap-14 py-20 1024:py-0">
 
-                <form className="w-full bg-[#F5F1E6] rounded-md" >
+                <form className="w-full bg-[#F5F1E6] rounded-[2px]" >
 
                     <div className="mx-5 768:mx-32 1024:mx-6 pb-32 1024:pb-20 1440:pb-32 space-y-5 2000:mx-[70px] 2000:pb-52 2000:space-y-12">
 
@@ -118,13 +118,13 @@ const Section = () => {
                             </div>
                         </div>
 
-                        <button type="submit" className="w-full text-white bg-black h-9 1024:h-7 1024:text-[10px] 2000:h-14 rounded-[28px]">Create account</button>
+                        <button type="submit" className="w-full text-white bg-black h-9 1024:h-7 1024:text-[9px] 2000:h-14 rounded-[28px]">Create account</button>
 
                     </div>
 
                 </form>
 
-                <form className="w-full bg-[#F9FAFA] rounded-md" >
+                <form className="w-full bg-[#F9FAFA] rounded-[2px]" >
 
                     <div className="mx-5 768:mx-16 1024:mx-6 pb-32 1024:pb-20 1440:pb-32 space-y-4 2000:mx-[70px] 2000:pb-52 2000:space-y-12">
 
@@ -178,7 +178,7 @@ const Section = () => {
                             </>
                         </div>
 
-                        <button type="submit" className="w-full text-white bg-black h-9 1024:h-7 1024:text-[10px] 2000:h-14 rounded-[28px]">Log in</button>
+                        <button type="submit" className="w-full text-white bg-black h-9 1024:h-7 1024:text-[9px] 2000:h-14 rounded-[28px]">Log in</button>
 
                     </div>
 
