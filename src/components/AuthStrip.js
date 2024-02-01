@@ -33,7 +33,7 @@ const AuthStrip = () => {
                 </div>
             </div>
 
-            {isLoginModalOpen && <Login />}
+            {isLoginModalOpen && <Login isLoginModalOpen={isLoginModalOpen} setIsLoginModalOpen={setIsLoginModalOpen} />}
         </>
     );
 };
