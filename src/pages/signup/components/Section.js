@@ -3,7 +3,7 @@ import React from "react";
 const Section = () => {
     return (
         <>
-            <div className="flex flex-col 2000:mx-[430px] 2000:gap-10 mb-20 1024:flex-row 1024:gap-4 1024:mx-[230px] 1440:mx-[350px] 1535:mx-[440px] 1827:mx-[500px] 2560:mx-[530px] 1024:my-10 gap-14 py-20 1024:py-0">
+            <div className="flex flex-col 2000:mx-[430px] 2000:gap-10 mb-20 1024:flex-row 1024:gap-4 1024:mx-[230px] 1440:mx-[270px] 1535:mx-[440px] 1827:mx-[500px] 2560:mx-[530px] 1024:my-10 gap-14 py-20 1024:py-0">
 
                 <form className="w-full bg-[#F5F1E6] rounded-[2px]" >
 
@@ -13,7 +13,7 @@ const Section = () => {
 
                             <div className="flex items-center justify-center w-full">
 
-                                <h1 className="text-[#A18758] font-fairplay text-[30px] 1024:text-[20px] 1440:text-[45px] 2000:text-[50px] 2000:tracking-[3px] items-center flex justify-end 2000:pt-16 2000:pb-6">
+                                <h1 className="text-[#A18758] font-fairplay text-[30px] 1024:text-[20px] 1440:text-[35px] 2000:text-[50px] 2000:tracking-[3px] items-center flex justify-end 2000:pt-16 2000:pb-6">
                                     Signup
                                 </h1>
 
@@ -118,7 +118,7 @@ const Section = () => {
                             </div>
                         </div>
 
-                        <button type="submit" className="w-full text-white bg-black h-9 1024:h-7 1024:text-[9px] 2000:h-14 rounded-[28px]">Create account</button>
+                        <button type="submit" className="w-full text-white bg-black h-9 1024:h-7 1024:text-[9px] 1440:h-9 1440:text-[12px] 2000:h-14 rounded-[28px]">Create account</button>
 
                     </div>
 
@@ -132,7 +132,7 @@ const Section = () => {
 
                             <div className="flex items-center justify-center w-full">
 
-                                <h1 className="text-[#A18758] font-fairplay text-[30px] 1024:text-[20px] 1440:text-[45px] 2000:text-[50px] 2000:tracking-[3px] items-center flex justify-end 2000:pt-16 2000:pb-6">
+                                <h1 className="text-[#A18758] font-fairplay text-[30px] 1024:text-[20px] 1440:text-[35px] 2000:text-[50px] 2000:tracking-[3px] items-center flex justify-end 2000:pt-16 2000:pb-6">
                                     Login
                                 </h1>
 
@@ -178,7 +178,7 @@ const Section = () => {
                             </>
                         </div>
 
-                        <button type="submit" className="w-full text-white bg-black h-9 1024:h-7 1024:text-[9px] 2000:h-14 rounded-[28px]">Log in</button>
+                        <button type="submit" className="w-full text-white bg-black h-9 1024:h-7 1024:text-[9px] 1440:h-9 1440:text-[12px] 2000:h-14 rounded-[28px]">Log in</button>
 
                     </div>
 
