@@ -9,43 +9,19 @@ const Section = () => {
             <Banner title="Publishing Process" subtitle="Home - Publishing process" />
 
             <Middle data={componentsData} />
-            {/* <div className="md:px-10 1024:px-40 xl:px-52 2560:px-96 py-32">
-                <div className="flex flex-col 1024:flex-row">
-                    <div className="w-full h-full 1024:w-1/2 pl-60 py-24 pr-28 bg-[#F9FAFA]">
-                        <img
-                            src="assests/publishing/Asset1.png"
-                            alt="Imprint 1"
-                            className="w-full h-full object-cover"
-                        />
+
+            {/* Submit online */}
+            <div className="md:px-10 1024:px-40 xl:px-52 2560:px-96 py-10 2000:py-20">
+                <div class="relative m-4 p-4 bg-cover bg-center 320:h-[380px] 2000:h-[480px] 1024:h-[180px] 1440:h-[330px] mt-10" style={{ backgroundImage: `url('assests/section/section6.png')` }}>
+                    <div class="absolute 320:bottom-1 320:left-1 bottom-8 left-8 p-4 text-white 1024:p-1 1024:bottom-2 1024:left-4 1440:p-5 1440:bottom-2 2560:p-9 gap-0">
+                        <h3 class="320:text-[32px] text-[48px] font-fairplay text-white 1024:text-black 1024:text-[18px] 1440:text-[28px] 2000:text-[60px] -mb-2">Submit online
+                        </h3>
+                        <p class="320:text-[13px] text-base text-white 1024:text-black 1024:text-[8px] 1440:text-[10px] 2560:text-[16px]">Lorem ipsum dolor sit amet, consectetuer adipscing elit.
+                            .</p>
+                        <button className="bg-[#031428] text-lg text-white rounded-3xl 1440:w-[100px] 1440:h-7 1440:text-[11px] 2560:text-[15px] 2560:w-[150px] 2560:h-11 font-fairplay 1024:w-[60px] 1024:h-[18px] 1024:text-[8px] items-center flex justify-center font-extralight mt-2 1440:mt-3 2560:mt-7 320:w-[100px] 320:text-[13px]">Explore</button>
                     </div>
-
-                    <div className="w-full 1024:w-1/2 flex flex-col justify-center pr-80 pl-8 space-y-7" >
-
-                        <div>
-                            <h1 className="font-fairplay text-[30px] text-[#90949D]">1 — Completing your manuscript</h1>
-                            <p className="leading-9">
-                                You’ve done the hard part... You’ve written a book. Your book.
-                                We understand that a manuscript represents much more than just a collection
-                                of words and tales. What is laying on your desk is the product of hundreds of
-                                head scratches and endless cups of coffee (or tea) and those noble grins when
-                                you write those lines you’re so proud of.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="font-bold font-fairplay leading-loose">Top Tip</h3>
-                            <p className="leading-9">
-                                Get your friends and family to review your work once you have finished writing
-                                and improve it as necessary before sending your work to us.
-                            </p>
-                        </div>
-
-                    </div>
-
-
                 </div>
-            </div> */}
-
+            </div>
         </>
     );
 };
