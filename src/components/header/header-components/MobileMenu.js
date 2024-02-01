@@ -188,9 +188,11 @@ const MobileMenu = ({
                             <NavIcons handleMobileSearchClick={handleMobileSearchClick} />
                         </div>
 
-                        <button className="mt-6 lg:mt-0 h-12 w-44 border border-[#B79248] rounded-full transition duration-300 ease-in-out bg-transparent hover:bg-[#B79248] text-[#B79248] hover:text-white focus:outline-none">
-                            Submit Online
-                        </button>
+                        <Link to="/submit-online" className="logo-link">
+                            <button className="mt-6 lg:mt-0 h-12 w-44 border border-[#B79248] rounded-full transition duration-300 ease-in-out bg-transparent hover:bg-[#B79248] text-[#B79248] hover:text-white focus:outline-none">
+                                Submit Online
+                            </button>
+                        </Link>
                     </>
                 )}
 
