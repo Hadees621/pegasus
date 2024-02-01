@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import Login from "../modals/login/Login";
+import { useNavigate } from 'react-router-dom';
 
 const AuthStrip = () => {
+    const navigate = useNavigate();
+
     const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
     const handleLoginClick = () => {
@@ -9,7 +12,7 @@ const AuthStrip = () => {
     };
 
     const handleSignUpClick = () => {
-        console.log("Sign Up clicked");
+        navigate('/signup');
     };
 
     return (
