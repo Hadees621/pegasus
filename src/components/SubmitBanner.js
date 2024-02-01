@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SubmitBanner = ({ title, subtitle, description, buttonText, imageUrl }) => {
     return (
-        <div className="relative m-4 p-4 bg-cover bg-center 320:h-[380px] 2560:h-[580px] 1024:h-[180px] 1440:h-[330px] mt-10" style={{ backgroundImage: `url('${imageUrl}')` }}>
+        <div className="relative m-4 p-4 bg-cover bg-center 320:h-[380px] 2560:h-[450px] 1024:h-[180px] 1440:h-[330px] mt-10" style={{ backgroundImage: `url('${imageUrl}')` }}>
             <div className="absolute 320:bottom-1 320:left-1 bottom-8 left-8 p-4 text-white 1024:p-1 1024:bottom-2 1024:left-4 1440:p-5 1440:bottom-2 2560:p-9 gap-0">
                 <h3 className="320:text-[32px] text-[48px] font-fairplay text-white 1024:text-black 1024:text-[18px] 1440:text-[28px] 2560:text-[60px] -mb-2">
                     {title}
