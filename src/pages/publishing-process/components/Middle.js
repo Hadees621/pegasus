@@ -28,7 +28,7 @@ const Middle = ({ data }) => {
                     </div>
                 )}
                 <div>
-                    <h3 className="font-bold font-fairplay leading-loose 1024:text-[9px] 1440:text-[11px]">Tip tip</h3>
+                    <h3 className="font-bold font-fairplay leading-loose 1024:text-[9px] 1440:text-[11px] 2000:text-[17px]">Top tip</h3>
                     <p className="text-[14px] leading-7 1024:text-[8px] 1024:leading-4 1440:text-[10px] 1440:leading-5 2000:text-[14px] 2000:leading-9">{item.tipDescription}</p>
                 </div>
             </div>
