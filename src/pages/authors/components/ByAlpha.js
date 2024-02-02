@@ -3,19 +3,17 @@ import React, { useState } from "react";
 const ByAlpha = ({ alpha }) => {
     const [currentLetter, setCurrentLetter] = useState(alpha);
 
-    // Function to get the previous letter, handling wrap-around from A to Z
     const getPreviousLetter = (letter) => {
         return letter && letter.length === 1
-            ? letter === 'A' // If current letter is 'A', go to 'Z'
+            ? letter === 'A'
                 ? 'Z'
                 : String.fromCharCode(letter.charCodeAt(0) - 1)
             : null;
     };
 
-    // Function to get the next letter, handling wrap-around from Z to A
     const getNextLetter = (letter) => {
         return letter && letter.length === 1
-            ? letter === 'Z' // If current letter is 'Z', go to 'A'
+            ? letter === 'Z'
                 ? 'A'
                 : String.fromCharCode(letter.charCodeAt(0) + 1)
             : null;
@@ -23,8 +21,6 @@ const ByAlpha = ({ alpha }) => {
 
     const previousLetter = getPreviousLetter(currentLetter);
     const nextLetter = getNextLetter(currentLetter);
-
-    console.log("alpha", alpha);
 
     const handlePreviousClick = () => {
         setCurrentLetter(previousLetter);
@@ -94,16 +90,17 @@ const ByAlpha = ({ alpha }) => {
 
             <div className="flex h-[550px]">
                 <div className="w-1/2 bg-[#EAEBEE]">
-                    <div className="flex flex-col pt-10 pr-48 justify-end items-end w-full cursor-pointer" onClick={handlePreviousClick}>
-                        <h1 className="text-[100px] font-fairplay text-[#8D8F8F]">{getPreviousLetter(currentLetter)}</h1>
+                    <div className="flex flex-col p-10 768:pt-10 768:pr-48 justify-end items-end w-full cursor-pointer" onClick={handlePreviousClick}>
+                        <h1 className="text-[50px] 1024:text-[100px] font-fairplay text-[#8D8F8F]">{getPreviousLetter(currentLetter)}</h1>
+
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" className="w-20 h-12">
                             <path fill="none" stroke="#8D8F8F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 8l-4 4m0 0l4 4m-4-4h20" />
                         </svg>
                     </div>
                 </div>
                 <div className="w-1/2 bg-[#DBDCE2]">
-                    <div className="flex flex-col pt-10 pl-48 justify-end items-start w-full cursor-pointer" onClick={handleNextClick}>
-                        <h1 className="text-[100px] font-fairplay" >{getNextLetter(currentLetter)}</h1>
+                    <div className="flex flex-col p-10 768:pt-10 768:pl-48 justify-end items-start w-full cursor-pointer" onClick={handleNextClick}>
+                        <h1 className="text-[50px] 1024:text-[100px] font-fairplay" >{getNextLetter(currentLetter)}</h1>
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" className="w-20 h-12">
                             <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m18 8l4 4m0 0l-4 4m4-4H2" />
                         </svg>

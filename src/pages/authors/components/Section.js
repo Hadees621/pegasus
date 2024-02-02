@@ -22,7 +22,7 @@ const Section = () => {
 
                 <div className="items-center justify-center 1024:grid  1024:grid-cols-4 gap-y-6 320:flex 320:flex-wrap 320:gap-5 1024:gap-2 1440:gap-2 2000:gap-y-6">
                     {alphabets.split("").map((letter, index) => (
-                        <div key={index} className="group flex flex-col items-center justify-center 320:h-[100px] 320:w-[100px] 1024:h-[80px] 1024:w-[80px] 1440:h-[160px] 1440:w-[160px] 2000:h-[250px] 2000:w-[250px] 1024:border-[0.5px] 1440:border-[1.5px]  border-[#151516] rounded-md hover:bg-[#EEF1F2] cursor-pointer" onClick={() => handleClick(letter)}>
+                        <div key={index} className="group flex flex-col items-center justify-center 320:h-[100px] 320:w-[100px] 1024:h-[80px] 1024:w-[80px] 1440:h-[160px] 1440:w-[160px] 2000:h-[250px] 2000:w-[250px] border-[0.5px] 1440:border-[1.5px]  border-[#151516] rounded-md hover:bg-[#EEF1F2] cursor-pointer" onClick={() => handleClick(letter)}>
                             <h1 className="320:text-[40px] 1024:text-[35px] 1440:text-[80px] 2000:text-[110px] font-fairplay text-[#CCCDCD] group-hover:text-black">
                                 {letter}
                             </h1>
