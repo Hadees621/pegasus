@@ -14,7 +14,7 @@ import Submit from "./pages/submit-online/Submit";
 import Submitted from "./pages/submitted/Submitted";
 import Process from "./pages/publishing-process/Process";
 import Signup from "./pages/signup/Signup";
-
+import ByAlpha from "./pages/authors/components/ByAlpha";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<SearchResults />} />
-          <Route path="/fiction" element={<Fiction />} />
+          <Route path="/books" element={<Fiction />} />
           <Route path="/about" element={<About />} />
           <Route path="/authors" element={<Authors />} />
           <Route path="/features" element={<Features />} />
@@ -34,6 +34,7 @@ function App() {
           <Route path="/submitted" element={<Submitted />} />
           <Route path="/publishing" element={<Process />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/alpha" element={<ByAlpha />} />
         </Routes>
       </Router>
     </div>
