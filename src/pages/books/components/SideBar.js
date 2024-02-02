@@ -1,11 +1,11 @@
 import { useMediaQuery } from '@react-hook/media-query';
 import React, { useEffect, useState } from 'react';
 
-const Sidebar = () => {
+const Sidebar = ({ showPrice }) => {
     const [categoriesOpen, setCategoriesOpen] = useState(true);
     const [imprintsOpen, setImprintsOpen] = useState(true);
     const [formatsOpen, setFormatsOpen] = useState(true);
-
+    const [priceOpen, setPriceOpen] = useState(true);
     const isMediumScreen = useMediaQuery('(max-width: 768px)');
 
     const toggleCategories = () => {
@@ -18,6 +18,19 @@ const Sidebar = () => {
 
     const toggleFormats = () => {
         setFormatsOpen(!formatsOpen);
+    };
+
+    const togglePrice = () => {
+        setPriceOpen(!priceOpen);
+    };
+
+    const priceData = {
+        label: 'Price',
+        inputId: 'price-range-input',
+        min: 0,
+        max: 1000,
+        startText: '£ 0.00',
+        endText: '£ 0.00',
     };
 
     const categoriesData = [
@@ -153,6 +166,64 @@ const Sidebar = () => {
                         </ul>
                     </div>
                 </div>
+
+                <hr className="border-1 border-[#EDEEEE] mt-8" />
+
+                {/* price */}
+                {showPrice &&
+                    (<div className={`mt-10 1024:mt-4 2560:mt-8`}>
+                        <div className='flex my-3 1024:my-0 items-center justify-between cursor-pointer' onClick={togglePrice}>
+                            <p className="text-[21px] font-fairplay text-black 1024:text-[12px] 1440:text-[15px] 2560:text-[21px]">{priceData.label}</p>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" className='1024:w-4 1440:w-6 2560:w-8'>
+                                    <g transform="rotate(180 12 12)">
+                                        <path fill="Black" d="m16.854 13.647l-4.5-4.5a.5.5 0 0 0-.707 0l-4.5 4.5a.5.5 0 0 0 .707.707L12 10.207l4.146 4.147a.498.498 0 0 0 .707 0a.5.5 0 0 0 0-.707" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div className={`block ${priceOpen ? '' : 'hidden'}`}>
+                            <div className="relative my-8">
+                                <label htmlFor={priceData.inputId} className="sr-only">Labels range</label>
+                                <input
+                                    id={priceData.inputId}
+                                    type="range"
+                                    value="1000"
+                                    min={priceData.min}
+                                    max={priceData.max}
+                                    className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                                    style={{
+                                        WebkitAppearance: 'none',
+                                    }}
+                                />
+                                <span className="text-sm text-gray-500 absolute start-0 -bottom-6">{priceData.startText}</span>
+                                <span className="text-sm text-gray-500 absolute end-0 -bottom-6">{priceData.endText}</span>
+                                <style jsx>{`
+        input::-webkit-slider-thumb {
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            background-color: transparent;
+            border: 2px solid black;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        input::-moz-range-thumb {
+            width: 15px;
+            height: 15px;
+            background-color: black;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    `}</style>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    )}
 
                 <hr className="border-1 border-[#EDEEEE] mt-8" />
 

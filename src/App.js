@@ -15,6 +15,7 @@ import Submitted from "./pages/submitted/Submitted";
 import Process from "./pages/publishing-process/Process";
 import Signup from "./pages/signup/Signup";
 import ByAlpha from "./pages/authors/components/ByAlpha";
+import BooksMentioned from "./pages/features/books-mentioned/BooksMentioned";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/publishing" element={<Process />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/alpha" element={<ByAlpha />} />
+          <Route path="/books-mentioned" element={<BooksMentioned />} />
         </Routes>
       </Router>
     </div>
