@@ -72,7 +72,7 @@ const Login = ({ isLoginModalOpen, setIsLoginModalOpen }) => {
                         <button type="submit" className="w-full text-white bg-black h-9 2000:h-14 rounded-[28px]">Log in</button>
 
                         <p className="text-[11px] 1024:text-[9px] 1440:text-[12px] 2000:text-[16px] font-light text-gray-500 text-center">
-                            Not a Member? <a href="#" className="font-medium text-black border-black border-b pb-1">Create an account</a>
+                            Not a Member? <a href="/signup" className="font-medium text-black border-black border-b pb-1">Create an account</a>
                         </p>
 
                     </div>

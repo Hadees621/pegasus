@@ -13,6 +13,7 @@ import Login from "./modals/login/Login";
 import Submit from "./pages/submit-online/Submit";
 import Submitted from "./pages/submitted/Submitted";
 import Process from "./pages/publishing-process/Process";
+import Signup from "./pages/signup/Signup";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/submit-online" element={<Submit />} />
           <Route path="/submitted" element={<Submitted />} />
           <Route path="/publishing" element={<Process />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
     </div>
