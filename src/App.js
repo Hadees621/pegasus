@@ -16,6 +16,7 @@ import Process from "./pages/publishing-process/Process";
 import Signup from "./pages/signup/Signup";
 import ByAlpha from "./pages/authors/components/ByAlpha";
 import BooksMentioned from "./pages/features/books-mentioned/BooksMentioned";
+import Error from "./pages/Error/Error";
 
 function App() {
   return (
@@ -37,6 +38,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/alpha" element={<ByAlpha />} />
           <Route path="/books-mentioned" element={<BooksMentioned />} />
+
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
     </div>
