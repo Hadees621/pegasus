@@ -104,6 +104,7 @@ const Sidebar = ({ showPrice }) => {
         setCategoriesOpen(!isMediumScreen);
         setImprintsOpen(!isMediumScreen);
         setFormatsOpen(!isMediumScreen);
+        setPriceOpen(!isMediumScreen)
     }, [isMediumScreen]);
 
     return (
