@@ -16,6 +16,7 @@ import Process from "./pages/publishing-process/Process";
 import Signup from "./pages/signup/Signup";
 import ByAlpha from "./pages/authors/components/ByAlpha";
 import BooksMentioned from "./pages/features/books-mentioned/BooksMentioned";
+import Events from "./pages/events/Events";
 import Error from "./pages/Error";
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/alpha" element={<ByAlpha />} />
           <Route path="/books-mentioned" element={<BooksMentioned />} />
+          <Route path="/events" element={<Events />} />
+
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>
