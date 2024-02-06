@@ -38,7 +38,6 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/alpha" element={<ByAlpha />} />
           <Route path="/books-mentioned" element={<BooksMentioned />} />
-
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>
