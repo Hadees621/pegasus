@@ -17,7 +17,7 @@ import Signup from "./pages/signup/Signup";
 import ByAlpha from "./pages/authors/components/ByAlpha";
 import BooksMentioned from "./pages/features/books-mentioned/BooksMentioned";
 import Error from "./pages/error/Error";
-import Events from "./pages/events/components/Events";
+import Events from "./pages/events/Events";
 
 function App() {
   return (
