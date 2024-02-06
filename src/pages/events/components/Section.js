@@ -4,35 +4,35 @@ import EventSection from "./EventsSection";
 
 const Section = () => {
     const months = [
-        "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
+        "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
     ];
 
     return (
         <>
             <Banner title="Events" subtitle="Home — Events" />
 
-            <div className="mx-0 1024:flex 1024:justify-evenly 1024:mx-40 xl:mx-52 1535:mx-[350px] py-3 2000:py-10">
-                <div className="grid gap-1 w-full 1024:flex" >
-                    {months.map((month, index) => (
-                        <div className="flex justify-center items-center" key={index}>
-
-                            <p className="text-[14px] 2000:text-[20px] cursor-pointer ">{month}</p>
-                            {index !== months.length - 1 && <p className="text-[6px] 2000:text-[20px] mx-2 hidden 1024:block">|</p>}
-                        </div>
-                    ))}
+            <div className="w- items-center justify-center 1024:px-40 1440:px-0 1535:px-[350px]">
+                <div className="mx-0 1024:flex 1024:justify-evenly py-3 2000:py-8">
+                    <div className="grid gap-1 1440:gap-3 1024:flex" >
+                        {months.map((month, index) => (
+                            <div className="flex justify-center items-center 1440:gap-3 2000:gap-6" key={index}>
+                                <p className="text-[14px] 1024:text-[12px] 1440:text-[14px] 2000:text-[27px] cursor-pointer">{month}</p>
+                                {index !== months.length - 1 && <p className="text-[6px] 1024:text-[13px] 1440:text-[16px] 2000:text-[24px] mx-2 hidden 1024:block">|</p>}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
 
             <div className="flex justify-between items-center 1024:flex-row 1440:flex-row 1024:mt-0 1024:gap-2 1440:mt-0 1024:mx-40 xl:mx-52 2560:mx-96 2000:py-20 py-8 mx-3 375:mx-5">
 
                 <div className="flex items-center justify-center 2560:h-16 2560:w-[15%] 1024:w-[25%] 1440:w-[30%] border-black 1024:justify-start gap-2">
-                    <p className="text-[35px] 1024:text-xs 1440:text-[15px] 2000:text-[60px] font-fairplay text-[#B79248]">February</p>
+                    <p className="text-[35px] 1024:text-[20px] 1440:text-[15px] 2000:text-[60px] font-fairplay text-[#B79248]">February</p>
                 </div>
 
                 <div class="flex relative group">
                     <div className="border">
-                        <button className="flex items-center justify-center gap-12 w-max 1024:px-2 1024:py-1 border-[#D4D4D8]">
+                        <button className="flex items-center justify-center gap-3 2000:gap-12 w-max 1024:px-2 1024:py-1 border-[#D4D4D8]">
                             <p className="text-[15px] 1024:text-[13px] 1440:text-[15px] 2560:text-[22px] font-fairplay p-2">Sort by</p>
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" className="1024:w-5 1440:w-6 2560:w-8">
@@ -43,9 +43,9 @@ const Section = () => {
                                 <div />
                             </div>
                         </button>
-                        <div class="hidden absolute w-max p-4 group-hover:block gap-8 text-[12px] 2000:text-[18px] border">
-                            <p>Date ascending</p>
-                            <p>Date descending</p>
+                        <div class="hidden absolute w-max p-4 group-hover:block gap-3 2000:gap-8 text-[12px] 2000:text-[18px] border">
+                            <p className="cursor-pointer">Date ascending</p>
+                            <p className="cursor-pointer">Date descending</p>
                         </div>
                     </div>
                 </div>
