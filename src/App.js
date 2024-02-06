@@ -16,8 +16,8 @@ import Process from "./pages/publishing-process/Process";
 import Signup from "./pages/signup/Signup";
 import ByAlpha from "./pages/authors/components/ByAlpha";
 import BooksMentioned from "./pages/features/books-mentioned/BooksMentioned";
-import Error from "./pages/error/Error";
 import Events from "./pages/events/Events";
+import Error from "./pages/Error";
 
 function App() {
   return (

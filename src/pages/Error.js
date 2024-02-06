@@ -1,12 +1,13 @@
 import React from "react";
-import Footer from "../../components/Footer";
-import Header from "../../components/header/Header";
+import Footer from "../components/Footer";
+import Header from "../components/header/Header";
 
 const Error = () => {
 
     return (
         <>
             <Header />
+
             <div className="flex flex-col justify-center items-center mb-24 mt-8">
 
                 <h1 className="text-[80px] 2000:text-[150px] font-fairplay text-[#B79248] py-5"> 404 </h1>
@@ -26,6 +27,7 @@ const Error = () => {
                     </div>
                 </div>
             </div>
+
             <Footer />
         </>
     );
