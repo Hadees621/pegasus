@@ -18,6 +18,7 @@ import ByAlpha from "./pages/authors/components/ByAlpha";
 import BooksMentioned from "./pages/features/books-mentioned/BooksMentioned";
 import Events from "./pages/events/Events";
 import Error from "./pages/Error";
+import Sustainability from "./pages/sustainability/Sustainabililty";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/alpha" element={<ByAlpha />} />
           <Route path="/books-mentioned" element={<BooksMentioned />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/sustainability" element={<Sustainability />} />
 
           <Route path="*" element={<Error />} />
         </Routes>
