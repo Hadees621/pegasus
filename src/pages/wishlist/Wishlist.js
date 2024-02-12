@@ -10,7 +10,7 @@ const Wishlist = () => {
         <>
             <Header />
             <Banner title="Wishlist" subtitle="Home — Wishlist" />
-            <div className="1024:mx-36 xl:mx-52 1535:mx-[350px]">
+            <div className="1024:mx-36 xl:mx-52 1535:mx-[320px]">
                 <WishlistBooks />
             </div>
             <Footer />
