@@ -36,7 +36,6 @@ const Middle = ({ }) => {
 
         </div>
     ))
-    // ));
 };
 
 export default Middle;
